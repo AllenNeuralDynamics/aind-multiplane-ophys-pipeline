@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:7308dd36cec89a2a7d9e1305df7e0e2b6759427ef15915bc716da5305a0b77bb
+// hash:sha256:d22de85b6e18e0d3862db0366e307f4ee80a7c058ce7e31436b0080ac08eb95b
 
 nextflow.enable.dsl = 1
 
@@ -22,6 +22,17 @@ capsule_aind_ophys_dff_5_to_capsule_aind_ophys_oasis_event_detection_9_14 = chan
 ophys_mount_to_aind_ophys_mesoscope_image_splitter_15 = channel.fromPath(params.ophys_mount_url + "/", type: 'any')
 ophys_mount_to_processing_json_aggregator_16 = channel.fromPath(params.ophys_mount_url + "/*.json", type: 'any')
 capsule_aind_ophys_oasis_event_detection_9_to_capsule_processingjsonaggregator_11_17 = channel.create()
+ophys_mount_to_aind_ophys_nwb_18 = channel.fromPath(params.ophys_mount_url + "/*", type: 'any')
+capsule_aind_ophys_decrosstalk_roi_images_3_to_capsule_nwb_packaging_subject_capsule_13_19 = channel.create()
+capsule_aind_ophys_motion_correction_1_to_capsule_nwb_packaging_subject_capsule_13_20 = channel.create()
+capsule_aind_ophys_motion_correction_1_to_capsule_nwb_packaging_subject_capsule_13_21 = channel.create()
+capsule_aind_ophys_motion_correction_1_to_capsule_nwb_packaging_subject_capsule_13_22 = channel.create()
+capsule_aind_ophys_motion_correction_1_to_capsule_nwb_packaging_subject_capsule_13_23 = channel.create()
+capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_nwb_packaging_subject_capsule_13_24 = channel.create()
+capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_nwb_packaging_subject_capsule_13_25 = channel.create()
+capsule_aind_ophys_dff_5_to_capsule_nwb_packaging_subject_capsule_13_26 = channel.create()
+capsule_aind_ophys_oasis_event_detection_9_to_capsule_nwb_packaging_subject_capsule_13_27 = channel.create()
+capsule_aind_ophys_nwb_12_to_capsule_nwb_packaging_subject_capsule_13_28 = channel.create()
 
 // capsule - aind-ophys-motion-correction
 process capsule_aind_ophys_motion_correction_1 {
@@ -44,6 +55,10 @@ process capsule_aind_ophys_motion_correction_1 {
 	path 'capsule/results/*' into capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_split_session_json_2_6
 	path 'capsule/results/*' into capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_roi_images_3_7
 	path 'capsule/results/*/motion_correction/*transform.csv' into capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_dff_5_13
+	path 'capsule/results/*/motion_correction/*.png' into capsule_aind_ophys_motion_correction_1_to_capsule_nwb_packaging_subject_capsule_13_20
+	path 'capsule/results/*/motion_correction/*.csv' into capsule_aind_ophys_motion_correction_1_to_capsule_nwb_packaging_subject_capsule_13_21
+	path 'capsule/results/*/motion_correction/*.webm' into capsule_aind_ophys_motion_correction_1_to_capsule_nwb_packaging_subject_capsule_13_22
+	path 'capsule/results/*/motion_correction/*.h5' into capsule_aind_ophys_motion_correction_1_to_capsule_nwb_packaging_subject_capsule_13_23
 
 	script:
 	"""
@@ -136,6 +151,7 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	output:
 	path 'capsule/results/*'
 	path 'capsule/results/*' into capsule_aind_ophys_decrosstalk_roi_images_3_to_capsule_aind_ophys_extraction_suite_2_p_4_11
+	path 'capsule/results/*/decrosstalk/*.h5' into capsule_aind_ophys_decrosstalk_roi_images_3_to_capsule_nwb_packaging_subject_capsule_13_19
 
 	script:
 	"""
@@ -183,6 +199,8 @@ process capsule_aind_ophys_extraction_suite_2_p_4 {
 	output:
 	path 'capsule/results/*'
 	path 'capsule/results/*' into capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_aind_ophys_dff_5_12
+	path 'capsule/results/*/extraction/*.h5' into capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_nwb_packaging_subject_capsule_13_24
+	path 'capsule/results/*/extraction/*.png' into capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_nwb_packaging_subject_capsule_13_25
 
 	script:
 	"""
@@ -229,6 +247,7 @@ process capsule_aind_ophys_dff_5 {
 	output:
 	path 'capsule/results/*'
 	path 'capsule/results/*' into capsule_aind_ophys_dff_5_to_capsule_aind_ophys_oasis_event_detection_9_14
+	path 'capsule/results/*/dff/*.h5' into capsule_aind_ophys_dff_5_to_capsule_nwb_packaging_subject_capsule_13_26
 
 	script:
 	"""
@@ -274,6 +293,7 @@ process capsule_aind_ophys_oasis_event_detection_9 {
 	output:
 	path 'capsule/results/*'
 	path 'capsule/results/*' into capsule_aind_ophys_oasis_event_detection_9_to_capsule_processingjsonaggregator_11_17
+	path 'capsule/results/*/events/*.h5' into capsule_aind_ophys_oasis_event_detection_9_to_capsule_nwb_packaging_subject_capsule_13_27
 
 	script:
 	"""
@@ -385,6 +405,101 @@ process capsule_processingjsonaggregator_11 {
 	cd capsule/code
 	chmod +x run
 	./run
+
+	echo "[${task.tag}] completed!"
+	"""
+}
+
+// capsule - aind-ophys-nwb
+process capsule_aind_ophys_nwb_12 {
+	tag 'capsule-9383700'
+	container "$REGISTRY_HOST/published/8c436e95-8607-4752-8e9f-2b62024f9326:v5"
+
+	cpus 1
+	memory '8 GB'
+
+	input:
+	path 'capsule/data/ophys_session' from ophys_mount_to_aind_ophys_nwb_18
+
+	output:
+	path 'capsule/results/*' into capsule_aind_ophys_nwb_12_to_capsule_nwb_packaging_subject_capsule_13_28
+
+	script:
+	"""
+	#!/usr/bin/env bash
+	set -e
+
+	export CO_CAPSULE_ID=8c436e95-8607-4752-8e9f-2b62024f9326
+	export CO_CPUS=1
+	export CO_MEMORY=8589934592
+
+	mkdir -p capsule
+	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
+	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
+	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
+
+	echo "[${task.tag}] cloning git repo..."
+	git clone --branch v5.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9383700.git" capsule-repo
+	mv capsule-repo/code capsule/code
+	rm -rf capsule-repo
+
+	echo "[${task.tag}] running capsule..."
+	cd capsule/code
+	chmod +x run
+	./run
+
+	echo "[${task.tag}] completed!"
+	"""
+}
+
+// capsule - NWB-Packaging-Subject-Capsule
+process capsule_nwb_packaging_subject_capsule_13 {
+	tag 'capsule-8198603'
+	container "$REGISTRY_HOST/published/bdc9f09f-0005-4d09-aaf9-7e82abd93f19:v2"
+
+	cpus 1
+	memory '8 GB'
+
+	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
+
+	input:
+	path 'capsule/data/processed/' from capsule_aind_ophys_decrosstalk_roi_images_3_to_capsule_nwb_packaging_subject_capsule_13_19.collect()
+	path 'capsule/data/processed/' from capsule_aind_ophys_motion_correction_1_to_capsule_nwb_packaging_subject_capsule_13_20.collect()
+	path 'capsule/data/processed/' from capsule_aind_ophys_motion_correction_1_to_capsule_nwb_packaging_subject_capsule_13_21.collect()
+	path 'capsule/data/processed/' from capsule_aind_ophys_motion_correction_1_to_capsule_nwb_packaging_subject_capsule_13_22.collect()
+	path 'capsule/data/processed/' from capsule_aind_ophys_motion_correction_1_to_capsule_nwb_packaging_subject_capsule_13_23.collect()
+	path 'capsule/data/processed/' from capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_nwb_packaging_subject_capsule_13_24.collect()
+	path 'capsule/data/processed/' from capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_nwb_packaging_subject_capsule_13_25.collect()
+	path 'capsule/data/processed/' from capsule_aind_ophys_dff_5_to_capsule_nwb_packaging_subject_capsule_13_26.collect()
+	path 'capsule/data/processed/' from capsule_aind_ophys_oasis_event_detection_9_to_capsule_nwb_packaging_subject_capsule_13_27.collect()
+	path 'capsule/data/nwb/' from capsule_aind_ophys_nwb_12_to_capsule_nwb_packaging_subject_capsule_13_28.collect()
+
+	output:
+	path 'capsule/results/*'
+
+	script:
+	"""
+	#!/usr/bin/env bash
+	set -e
+
+	export CO_CAPSULE_ID=bdc9f09f-0005-4d09-aaf9-7e82abd93f19
+	export CO_CPUS=1
+	export CO_MEMORY=8589934592
+
+	mkdir -p capsule
+	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
+	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
+	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
+
+	echo "[${task.tag}] cloning git repo..."
+	git clone --branch v2.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8198603.git" capsule-repo
+	mv capsule-repo/code capsule/code
+	rm -rf capsule-repo
+
+	echo "[${task.tag}] running capsule..."
+	cd capsule/code
+	chmod +x run
+	./run ${params.capsule_nwb_packaging_subject_capsule_13_args}
 
 	echo "[${task.tag}] completed!"
 	"""

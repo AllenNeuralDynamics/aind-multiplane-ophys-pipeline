@@ -4,6 +4,10 @@
 		{
 			"id": "36d80b7b-e191-46c8-b25a-b46bddcc60ee",
 			"mount": "ophys_mount"
+		},
+		{
+			"id": "fb4b5cef-4505-4145-b8bd-e41d6863d7a9",
+			"mount": "schemas"
 		}
 	]
 }
