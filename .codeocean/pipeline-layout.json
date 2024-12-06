@@ -157,7 +157,7 @@
 		},
 		{
 			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_nwb_packaging_subject_capsule_13",
-			"selected": true,
+			"selected": false,
 			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 			"target": "capsule_nwb_packaging_subject_capsule_13"
 		},
@@ -327,8 +327,8 @@
 			},
 			"id": "capsule_nwb_packaging_subject_capsule_13",
 			"position": {
-				"x": 1384.3430763960293,
-				"y": -836.9070946355389
+				"x": 961.6242823029238,
+				"y": -920.1017509198203
 			},
 			"selected": false,
 			"type": "capsule"
@@ -336,9 +336,10 @@
 		{
 			"id": "fb4b5cef-4505-4145-b8bd-e41d6863d7a9",
 			"position": {
-				"x": 1128.0359311455898,
-				"y": -1756.946192069
+				"x": 1002.119694607218,
+				"y": -1563.5748288136433
 			},
+			"selected": true,
 			"type": "dataset"
 		},
 		{
@@ -350,10 +351,10 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1733528427203,
+	"timestamp": 1733528595153,
 	"viewport": {
-		"x": 4.139707697509493,
-		"y": 1078.111967653429,
-		"zoom": 0.6969052391554332
+		"x": 348.2130231239821,
+		"y": 858.0030207665279,
+		"zoom": 0.4447401029408506
 	}
 }
