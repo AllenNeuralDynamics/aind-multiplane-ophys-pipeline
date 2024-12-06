@@ -157,6 +157,7 @@
 		},
 		{
 			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_nwb_packaging_subject_capsule_13",
+			"selected": true,
 			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 			"target": "capsule_nwb_packaging_subject_capsule_13"
 		},
@@ -197,7 +198,7 @@
 		},
 		{
 			"id": "reactflow__edge-capsule_aind_ophys_oasis_event_detection_9-capsule_aind_ophys_nwb_12",
-			"selected": true,
+			"selected": false,
 			"source": "capsule_aind_ophys_oasis_event_detection_9",
 			"target": "capsule_aind_ophys_nwb_12"
 		}
@@ -349,10 +350,10 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1733528408017,
+	"timestamp": 1733528427203,
 	"viewport": {
-		"x": 243.1397076975096,
-		"y": 919.111967653429,
+		"x": 4.139707697509493,
+		"y": 1078.111967653429,
 		"zoom": 0.6969052391554332
 	}
 }

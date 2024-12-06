@@ -284,6 +284,15 @@
 			},
 			"inputs": [
 				{
+					"id": "0YzMlCgaBT94ZTbI",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"type": "dataset",
+					"name": "ophys_mount",
+					"source_path": "ophys_mount/",
+					"target_path": "raw",
+					"collect": true
+				},
+				{
 					"id": "46mNLasAi6JrZNJA",
 					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
 					"type": "capsule",
@@ -367,15 +376,6 @@
 					"name": "NWB-Packaging-Subject-Capsule",
 					"target_path": "nwb",
 					"collect": true
-				},
-				{
-					"id": "0YzMlCgaBT94ZTbI",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
-					"type": "dataset",
-					"name": "ophys_mount",
-					"source_path": "ophys_mount/",
-					"target_path": "ophys_session",
-					"collect": true
 				}
 			],
 			"results": {
@@ -402,7 +402,7 @@
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/",
-					"target_path": "raw",
+					"target_path": "ophys_session",
 					"collect": true
 				},
 				{
