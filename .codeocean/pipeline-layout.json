@@ -162,8 +162,14 @@
 		},
 		{
 			"id": "reactflow__edge-capsule_nwb_packaging_subject_capsule_13-capsule_aind_ophys_nwb_12",
+			"selected": true,
 			"source": "capsule_nwb_packaging_subject_capsule_13",
 			"target": "capsule_aind_ophys_nwb_12"
+		},
+		{
+			"id": "reactflow__edge-capsule_aind_ophys_nwb_12-results",
+			"source": "capsule_aind_ophys_nwb_12",
+			"target": "results"
 		}
 	],
 	"nodes": [
@@ -293,7 +299,7 @@
 				"x": 1384.3430763960293,
 				"y": -836.9070946355389
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -313,10 +319,10 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1733528178486,
+	"timestamp": 1733528194663,
 	"viewport": {
-		"x": 127.00436467865904,
-		"y": 563.8012252664773,
+		"x": 185.00436467865904,
+		"y": 365.80122526647733,
 		"zoom": 0.5165695130033424
 	}
 }
