@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:9f370067001d896b6c8460d85551030037165099ff051c3fb506f665320f12f0
+// hash:sha256:8a4b3390705ed5677572e187ec4f75cfa7debb6b6ff379de310d4cca558117da
 
 nextflow.enable.dsl = 1
 
@@ -22,7 +22,7 @@ capsule_aind_ophys_dff_5_to_capsule_aind_ophys_oasis_event_detection_9_14 = chan
 ophys_mount_to_aind_ophys_mesoscope_image_splitter_15 = channel.fromPath(params.ophys_mount_url + "/", type: 'any')
 ophys_mount_to_processing_json_aggregator_16 = channel.fromPath(params.ophys_mount_url + "/*.json", type: 'any')
 capsule_aind_ophys_oasis_event_detection_9_to_capsule_processingjsonaggregator_11_17 = channel.create()
-ophys_mount_to_aind_ophys_nwb_18 = channel.fromPath(params.ophys_mount_url + "/*", type: 'any')
+ophys_mount_to_aind_ophys_nwb_18 = channel.fromPath(params.ophys_mount_url + "/", type: 'any')
 capsule_aind_ophys_decrosstalk_roi_images_3_to_capsule_nwb_packaging_subject_capsule_13_19 = channel.create()
 capsule_aind_ophys_motion_correction_1_to_capsule_nwb_packaging_subject_capsule_13_20 = channel.create()
 capsule_aind_ophys_motion_correction_1_to_capsule_nwb_packaging_subject_capsule_13_21 = channel.create()
@@ -419,7 +419,7 @@ process capsule_aind_ophys_nwb_12 {
 	memory '8 GB'
 
 	input:
-	path 'capsule/data/ophys_session' from ophys_mount_to_aind_ophys_nwb_18
+	path 'capsule/data/ophys_session' from ophys_mount_to_aind_ophys_nwb_18.collect()
 
 	output:
 	path 'capsule/results/*' into capsule_aind_ophys_nwb_12_to_capsule_nwb_packaging_subject_capsule_13_28
