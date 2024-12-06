@@ -308,6 +308,15 @@
 			},
 			"inputs": [
 				{
+					"id": "c0XJinN4LRVeYyho",
+					"source_id": "fb4b5cef-4505-4145-b8bd-e41d6863d7a9",
+					"type": "dataset",
+					"name": "schemas",
+					"source_path": "schemas/",
+					"target_path": "schemas",
+					"collect": true
+				},
+				{
 					"id": "pIF6Ksdz2he60LKJ",
 					"source_id": "capsule_aind_ophys_decrosstalk_roi_images_3",
 					"type": "capsule",
