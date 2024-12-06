@@ -188,7 +188,7 @@
 		},
 		{
 			"id": "reactflow__edge-capsule_aind_ophys_decrosstalk_roi_images_3-capsule_nwb_packaging_subject_capsule_13",
-			"selected": false,
+			"selected": true,
 			"source": "capsule_aind_ophys_decrosstalk_roi_images_3",
 			"target": "capsule_nwb_packaging_subject_capsule_13"
 		},
@@ -200,6 +200,7 @@
 		},
 		{
 			"id": "reactflow__edge-36d80b7b-e191-46c8-b25a-b46bddcc60ee-capsule_nwb_packaging_subject_capsule_13",
+			"selected": false,
 			"source": "36d80b7b-e191-46c8-b25a-b46bddcc60ee",
 			"target": "capsule_nwb_packaging_subject_capsule_13"
 		}
@@ -256,8 +257,8 @@
 			},
 			"id": "capsule_aind_ophys_mesoscope_image_splitter_10",
 			"position": {
-				"x": 675.2002072601372,
-				"y": -1178.1656464077407
+				"x": 623.1670366902295,
+				"y": -1323.2278189056653
 			},
 			"selected": false,
 			"type": "capsule"
@@ -336,8 +337,8 @@
 			},
 			"id": "capsule_nwb_packaging_subject_capsule_13",
 			"position": {
-				"x": 1063.0425616513267,
-				"y": -575.599748754834
+				"x": 1386.278924282572,
+				"y": -660.7449369601377
 			},
 			"selected": false,
 			"type": "capsule"
@@ -351,10 +352,10 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1733524293929,
+	"timestamp": 1733525506983,
 	"viewport": {
-		"x": 146.1374756907519,
-		"y": 1098.0689035627938,
-		"zoom": 0.6342108243368282
+		"x": 195.04802241148155,
+		"y": 1067.013911815393,
+		"zoom": 0.5460232944485395
 	}
 }

@@ -309,11 +309,72 @@
 			},
 			"inputs": [
 				{
+					"id": "fo7ez2y3Mjm5gQAd",
+					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
+					"type": "capsule",
+					"name": "aind-ophys-oasis-event-detection",
+					"source_path": "*/events/*.h5",
+					"target_path": "processed",
+					"collect": true
+				},
+				{
+					"id": "NgNSa3IIHQlXi9rD",
+					"source_id": "capsule_aind_ophys_extraction_suite_2_p_4",
+					"type": "capsule",
+					"name": "aind-ophys-extraction-suite2p",
+					"source_path": "*/extraction/*.h5",
+					"target_path": "processed/",
+					"collect": true
+				},
+				{
+					"id": "7szKZCvjHJGjtPLd",
+					"source_id": "capsule_aind_ophys_extraction_suite_2_p_4",
+					"type": "capsule",
+					"name": "aind-ophys-extraction-suite2p",
+					"source_path": "*/extraction/*.png",
+					"collect": true
+				},
+				{
+					"id": "l551zxq92AlFFOGf",
+					"source_id": "capsule_aind_ophys_motion_correction_1",
+					"type": "capsule",
+					"name": "aind-ophys-motion-correction",
+					"source_path": "*/motion_correction/*.png",
+					"collect": true
+				},
+				{
+					"id": "TpdVyloXUAeoKlDB",
+					"source_id": "capsule_aind_ophys_motion_correction_1",
+					"type": "capsule",
+					"name": "aind-ophys-motion-correction",
+					"source_path": "*/motion_correction/*.csv",
+					"collect": true
+				},
+				{
+					"id": "hsHqi4VBAlb8NnEj",
+					"source_id": "capsule_aind_ophys_motion_correction_1",
+					"type": "capsule",
+					"name": "aind-ophys-motion-correction",
+					"source_path": "*/motion_correction/*.webm",
+					"collect": true
+				},
+				{
+					"id": "Ws9V57DwnNldM0Tq",
+					"source_id": "capsule_aind_ophys_motion_correction_1",
+					"type": "capsule",
+					"name": "aind-ophys-motion-correction",
+					"source_path": "*/motion_correction/*.h5",
+					"target_path": "processed",
+					"collect": true
+				},
+				{
 					"id": "CTLzZrixZbnhLROR",
 					"source_id": "36d80b7b-e191-46c8-b25a-b46bddcc60ee",
 					"type": "dataset",
 					"name": "ophys_mount",
-					"source_path": "ophys_mount/"
+					"source_path": "ophys_mount/",
+					"target_path": "raw",
+					"collect": true
 				},
 				{
 					"id": "c0XJinN4LRVeYyho",
@@ -334,74 +395,11 @@
 					"collect": true
 				},
 				{
-					"id": "l551zxq92AlFFOGf",
-					"source_id": "capsule_aind_ophys_motion_correction_1",
-					"type": "capsule",
-					"name": "aind-ophys-motion-correction",
-					"source_path": "*/motion_correction/*.png",
-					"target_path": "processed",
-					"collect": true
-				},
-				{
-					"id": "TpdVyloXUAeoKlDB",
-					"source_id": "capsule_aind_ophys_motion_correction_1",
-					"type": "capsule",
-					"name": "aind-ophys-motion-correction",
-					"source_path": "*/motion_correction/*.csv",
-					"target_path": "processed",
-					"collect": true
-				},
-				{
-					"id": "hsHqi4VBAlb8NnEj",
-					"source_id": "capsule_aind_ophys_motion_correction_1",
-					"type": "capsule",
-					"name": "aind-ophys-motion-correction",
-					"source_path": "*/motion_correction/*.webm",
-					"target_path": "processed",
-					"collect": true
-				},
-				{
-					"id": "Ws9V57DwnNldM0Tq",
-					"source_id": "capsule_aind_ophys_motion_correction_1",
-					"type": "capsule",
-					"name": "aind-ophys-motion-correction",
-					"source_path": "*/motion_correction/*.h5",
-					"target_path": "processed",
-					"collect": true
-				},
-				{
-					"id": "NgNSa3IIHQlXi9rD",
-					"source_id": "capsule_aind_ophys_extraction_suite_2_p_4",
-					"type": "capsule",
-					"name": "aind-ophys-extraction-suite2p",
-					"source_path": "*/extraction/*.h5",
-					"target_path": "processed/",
-					"collect": true
-				},
-				{
-					"id": "7szKZCvjHJGjtPLd",
-					"source_id": "capsule_aind_ophys_extraction_suite_2_p_4",
-					"type": "capsule",
-					"name": "aind-ophys-extraction-suite2p",
-					"source_path": "*/extraction/*.png",
-					"target_path": "processed",
-					"collect": true
-				},
-				{
 					"id": "xpcTD0h9nmbBn3o9",
 					"source_id": "capsule_aind_ophys_dff_5",
 					"type": "capsule",
 					"name": "aind-ophys-dff",
 					"source_path": "*/dff/*.h5",
-					"target_path": "processed",
-					"collect": true
-				},
-				{
-					"id": "fo7ez2y3Mjm5gQAd",
-					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
-					"type": "capsule",
-					"name": "aind-ophys-oasis-event-detection",
-					"source_path": "*/events/*.h5",
 					"target_path": "processed",
 					"collect": true
 				},
