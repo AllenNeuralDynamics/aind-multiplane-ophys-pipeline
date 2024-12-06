@@ -16,7 +16,7 @@
 			"inputs": [
 				{
 					"id": "shss8a841zxh45G9FnAZJ",
-					"source_id": "36d80b7b-e191-46c8-b25a-b46bddcc60ee",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*json",
@@ -24,7 +24,7 @@
 				},
 				{
 					"id": "0lQ8_66t7slDYYl1N-Ivx",
-					"source_id": "36d80b7b-e191-46c8-b25a-b46bddcc60ee",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*ophys/*platform*",
@@ -32,7 +32,7 @@
 				},
 				{
 					"id": "dW2sgE4QaeP-dBHA85AgR",
-					"source_id": "36d80b7b-e191-46c8-b25a-b46bddcc60ee",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*/*.h5",
@@ -66,7 +66,7 @@
 			"inputs": [
 				{
 					"id": "qjChmoJ20XeaEGPsHOjFC",
-					"source_id": "36d80b7b-e191-46c8-b25a-b46bddcc60ee",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/session.json",
@@ -132,7 +132,7 @@
 			"inputs": [
 				{
 					"id": "Igz2SaWliTICjJ0j",
-					"source_id": "36d80b7b-e191-46c8-b25a-b46bddcc60ee",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/data_description.json",
@@ -140,7 +140,7 @@
 				},
 				{
 					"id": "PWmYV4eEQyVVgD81",
-					"source_id": "36d80b7b-e191-46c8-b25a-b46bddcc60ee",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/session.json",
@@ -229,7 +229,7 @@
 			"inputs": [
 				{
 					"id": "1Yhj3z1s9qpaxr2Ge_QLI",
-					"source_id": "36d80b7b-e191-46c8-b25a-b46bddcc60ee",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*",
@@ -252,7 +252,7 @@
 			"inputs": [
 				{
 					"id": "6vEEC0shND9OPhAmaCKdT",
-					"source_id": "36d80b7b-e191-46c8-b25a-b46bddcc60ee",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*.json",
@@ -285,7 +285,7 @@
 			"inputs": [
 				{
 					"id": "0YzMlCgaBT94ZTbI",
-					"source_id": "36d80b7b-e191-46c8-b25a-b46bddcc60ee",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/",
@@ -308,32 +308,6 @@
 				"memory": 8
 			},
 			"inputs": [
-				{
-					"id": "fo7ez2y3Mjm5gQAd",
-					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
-					"type": "capsule",
-					"name": "aind-ophys-oasis-event-detection",
-					"source_path": "*/events/*.h5",
-					"target_path": "processed",
-					"collect": true
-				},
-				{
-					"id": "NgNSa3IIHQlXi9rD",
-					"source_id": "capsule_aind_ophys_extraction_suite_2_p_4",
-					"type": "capsule",
-					"name": "aind-ophys-extraction-suite2p",
-					"source_path": "*/extraction/*.h5",
-					"target_path": "processed/",
-					"collect": true
-				},
-				{
-					"id": "7szKZCvjHJGjtPLd",
-					"source_id": "capsule_aind_ophys_extraction_suite_2_p_4",
-					"type": "capsule",
-					"name": "aind-ophys-extraction-suite2p",
-					"source_path": "*/extraction/*.png",
-					"collect": true
-				},
 				{
 					"id": "l551zxq92AlFFOGf",
 					"source_id": "capsule_aind_ophys_motion_correction_1",
@@ -368,8 +342,34 @@
 					"collect": true
 				},
 				{
+					"id": "fo7ez2y3Mjm5gQAd",
+					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
+					"type": "capsule",
+					"name": "aind-ophys-oasis-event-detection",
+					"source_path": "*/events/*.h5",
+					"target_path": "processed",
+					"collect": true
+				},
+				{
+					"id": "NgNSa3IIHQlXi9rD",
+					"source_id": "capsule_aind_ophys_extraction_suite_2_p_4",
+					"type": "capsule",
+					"name": "aind-ophys-extraction-suite2p",
+					"source_path": "*/extraction/*.h5",
+					"target_path": "processed/",
+					"collect": true
+				},
+				{
+					"id": "7szKZCvjHJGjtPLd",
+					"source_id": "capsule_aind_ophys_extraction_suite_2_p_4",
+					"type": "capsule",
+					"name": "aind-ophys-extraction-suite2p",
+					"source_path": "*/extraction/*.png",
+					"collect": true
+				},
+				{
 					"id": "CTLzZrixZbnhLROR",
-					"source_id": "36d80b7b-e191-46c8-b25a-b46bddcc60ee",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/",
