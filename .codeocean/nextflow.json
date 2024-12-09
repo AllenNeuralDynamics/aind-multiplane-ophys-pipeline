@@ -90,7 +90,7 @@
 				"id": "1383b25a-ecd2-4c56-8b7f-cde811c0b053",
 				"name": "aind-ophys-decrosstalk-roi-images",
 				"slug": "1533578",
-				"version": 4
+				"version": 5
 			},
 			"resources": {
 				"cpus": 16,
@@ -122,7 +122,7 @@
 				"id": "5e1d659c-e149-4a57-be83-12f5a448a0c9",
 				"name": "aind-ophys-extraction-suite2p",
 				"slug": "9911715",
-				"version": 2,
+				"version": 6,
 				"app_panel": true
 			},
 			"resources": {
@@ -164,7 +164,7 @@
 				"id": "85987e27-601c-4863-811b-71e5b4bdea37",
 				"name": "aind-ophys-dff",
 				"slug": "6574773",
-				"version": 1
+				"version": 3
 			},
 			"resources": {
 				"cpus": 4,
@@ -196,7 +196,7 @@
 				"id": "c6394aab-0db7-47b2-90ba-864866d6755e",
 				"name": "aind-ophys-oasis-event-detection",
 				"slug": "8957649",
-				"version": 2
+				"version": 4
 			},
 			"resources": {
 				"cpus": 4,
@@ -283,6 +283,15 @@
 				"memory": 8
 			},
 			"inputs": [
+				{
+					"id": "s8jL4zo0bIHLNQGK",
+					"source_id": "fb4b5cef-4505-4145-b8bd-e41d6863d7a9",
+					"type": "dataset",
+					"name": "schemas",
+					"source_path": "schemas/",
+					"target_path": "schemas",
+					"collect": true
+				},
 				{
 					"id": "0YzMlCgaBT94ZTbI",
 					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
@@ -403,15 +412,6 @@
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/",
 					"target_path": "ophys_session",
-					"collect": true
-				},
-				{
-					"id": "c0XJinN4LRVeYyho",
-					"source_id": "fb4b5cef-4505-4145-b8bd-e41d6863d7a9",
-					"type": "dataset",
-					"name": "schemas",
-					"source_path": "schemas/",
-					"target_path": "schemas",
 					"collect": true
 				}
 			]

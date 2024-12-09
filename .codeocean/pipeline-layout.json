@@ -150,12 +150,6 @@
 			"target": "capsule_aind_ophys_nwb_12"
 		},
 		{
-			"id": "reactflow__edge-fb4b5cef-4505-4145-b8bd-e41d6863d7a9-capsule_nwb_packaging_subject_capsule_13",
-			"selected": false,
-			"source": "fb4b5cef-4505-4145-b8bd-e41d6863d7a9",
-			"target": "capsule_nwb_packaging_subject_capsule_13"
-		},
-		{
 			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_nwb_packaging_subject_capsule_13",
 			"selected": false,
 			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
@@ -201,6 +195,11 @@
 			"selected": false,
 			"source": "capsule_aind_ophys_oasis_event_detection_9",
 			"target": "capsule_aind_ophys_nwb_12"
+		},
+		{
+			"id": "reactflow__edge-fb4b5cef-4505-4145-b8bd-e41d6863d7a9-capsule_aind_ophys_nwb_12",
+			"source": "fb4b5cef-4505-4145-b8bd-e41d6863d7a9",
+			"target": "capsule_aind_ophys_nwb_12"
 		}
 	],
 	"nodes": [
@@ -219,8 +218,8 @@
 		{
 			"id": "results",
 			"position": {
-				"x": 761.7492147195292,
-				"y": -98.31942642308809
+				"x": 935.0825480528622,
+				"y": 780.5250559987868
 			},
 			"selected": false,
 			"type": "results"
@@ -315,10 +314,10 @@
 			},
 			"id": "capsule_aind_ophys_nwb_12",
 			"position": {
-				"x": 927.8348659632829,
-				"y": -565.5458564084578
+				"x": 1992.7985204195054,
+				"y": -253.5987240390859
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -327,8 +326,8 @@
 			},
 			"id": "capsule_nwb_packaging_subject_capsule_13",
 			"position": {
-				"x": 961.6242823029238,
-				"y": -920.1017509198203
+				"x": 1240.3863779650972,
+				"y": -943.3319255583348
 			},
 			"selected": false,
 			"type": "capsule"
@@ -339,7 +338,7 @@
 				"x": 1002.119694607218,
 				"y": -1563.5748288136433
 			},
-			"selected": true,
+			"selected": false,
 			"type": "dataset"
 		},
 		{
@@ -348,13 +347,14 @@
 				"x": 220.06422842942686,
 				"y": -1528.761341822782
 			},
+			"selected": false,
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1733528595153,
+	"timestamp": 1733777054618,
 	"viewport": {
-		"x": 348.2130231239821,
-		"y": 858.0030207665279,
-		"zoom": 0.4447401029408506
+		"x": -23.658057696040274,
+		"y": 189.1304190813129,
+		"zoom": 0.3
 	}
 }
