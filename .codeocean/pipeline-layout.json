@@ -198,6 +198,7 @@
 		},
 		{
 			"id": "reactflow__edge-fb4b5cef-4505-4145-b8bd-e41d6863d7a9-capsule_aind_ophys_nwb_12",
+			"selected": false,
 			"source": "fb4b5cef-4505-4145-b8bd-e41d6863d7a9",
 			"target": "capsule_aind_ophys_nwb_12"
 		}
@@ -317,7 +318,7 @@
 				"x": 1992.7985204195054,
 				"y": -253.5987240390859
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -351,10 +352,10 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1733777054618,
+	"timestamp": 1734038562261,
 	"viewport": {
-		"x": -23.658057696040274,
-		"y": 189.1304190813129,
+		"x": -21.65805769604026,
+		"y": 555.1304190813129,
 		"zoom": 0.3
 	}
 }

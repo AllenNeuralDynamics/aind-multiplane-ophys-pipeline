@@ -276,7 +276,7 @@
 				"id": "8c436e95-8607-4752-8e9f-2b62024f9326",
 				"name": "aind-ophys-nwb",
 				"slug": "9383700",
-				"version": 5
+				"version": 7
 			},
 			"resources": {
 				"cpus": 1,
@@ -284,21 +284,21 @@
 			},
 			"inputs": [
 				{
+					"id": "0YzMlCgaBT94ZTbI",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"type": "dataset",
+					"name": "ophys_mount",
+					"source_path": "ophys_mount/",
+					"target_path": "multiplane-ophys_raw",
+					"collect": true
+				},
+				{
 					"id": "s8jL4zo0bIHLNQGK",
 					"source_id": "fb4b5cef-4505-4145-b8bd-e41d6863d7a9",
 					"type": "dataset",
 					"name": "schemas",
 					"source_path": "schemas/",
 					"target_path": "schemas",
-					"collect": true
-				},
-				{
-					"id": "0YzMlCgaBT94ZTbI",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
-					"type": "dataset",
-					"name": "ophys_mount",
-					"source_path": "ophys_mount/",
-					"target_path": "raw",
 					"collect": true
 				},
 				{
