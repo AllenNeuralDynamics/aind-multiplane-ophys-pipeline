@@ -163,6 +163,7 @@
 		},
 		{
 			"id": "reactflow__edge-capsule_aind_ophys_nwb_12-results",
+			"selected": false,
 			"source": "capsule_aind_ophys_nwb_12",
 			"target": "results"
 		},
@@ -174,7 +175,7 @@
 		},
 		{
 			"id": "reactflow__edge-capsule_aind_ophys_decrosstalk_roi_images_3-capsule_aind_ophys_nwb_12",
-			"selected": false,
+			"selected": true,
 			"source": "capsule_aind_ophys_decrosstalk_roi_images_3",
 			"target": "capsule_aind_ophys_nwb_12"
 		},
@@ -327,8 +328,8 @@
 			},
 			"id": "capsule_nwb_packaging_subject_capsule_13",
 			"position": {
-				"x": 1240.3863779650972,
-				"y": -943.3319255583348
+				"x": 1643.7197112984306,
+				"y": -1263.3319255583347
 			},
 			"selected": false,
 			"type": "capsule"
@@ -352,10 +353,10 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1734038562261,
+	"timestamp": 1734982681002,
 	"viewport": {
-		"x": -21.65805769604026,
-		"y": 555.1304190813129,
-		"zoom": 0.3
+		"x": 265.0768854127159,
+		"y": 785.6306547451481,
+		"zoom": 0.5460232944485395
 	}
 }
