@@ -151,7 +151,7 @@
 		},
 		{
 			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_nwb_packaging_subject_capsule_13",
-			"selected": false,
+			"selected": true,
 			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 			"target": "capsule_nwb_packaging_subject_capsule_13"
 		},
@@ -175,7 +175,7 @@
 		},
 		{
 			"id": "reactflow__edge-capsule_aind_ophys_decrosstalk_roi_images_3-capsule_aind_ophys_nwb_12",
-			"selected": true,
+			"selected": false,
 			"source": "capsule_aind_ophys_decrosstalk_roi_images_3",
 			"target": "capsule_aind_ophys_nwb_12"
 		},
@@ -268,8 +268,8 @@
 			},
 			"id": "capsule_aind_ophys_decrosstalk_split_session_json_2",
 			"position": {
-				"x": 86.82317547728815,
-				"y": -1033.2091118344501
+				"x": 352.7111436199606,
+				"y": -794.8267955686057
 			},
 			"selected": false,
 			"type": "capsule"
@@ -353,10 +353,10 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1734982681002,
+	"timestamp": 1735098185513,
 	"viewport": {
-		"x": 265.0768854127159,
-		"y": 785.6306547451481,
-		"zoom": 0.5460232944485395
+		"x": -482.7079894037456,
+		"y": 843.785775701201,
+		"zoom": 0.5453424651475562
 	}
 }
