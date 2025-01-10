@@ -151,7 +151,7 @@
 		},
 		{
 			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_nwb_packaging_subject_capsule_13",
-			"selected": true,
+			"selected": false,
 			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 			"target": "capsule_nwb_packaging_subject_capsule_13"
 		},
@@ -319,7 +319,7 @@
 				"x": 1992.7985204195054,
 				"y": -253.5987240390859
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -353,10 +353,10 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1735098185513,
+	"timestamp": 1736553535079,
 	"viewport": {
-		"x": -482.7079894037456,
-		"y": 843.785775701201,
+		"x": -470.7079894037456,
+		"y": 837.785775701201,
 		"zoom": 0.5453424651475562
 	}
 }
