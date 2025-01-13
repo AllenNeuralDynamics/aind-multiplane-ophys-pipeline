@@ -224,6 +224,7 @@
 		},
 		{
 			"id": "reactflow__edge-capsule_aind_ophys_motion_correction_1-capsule_aind_ophys_movie_qc_15",
+			"selected": false,
 			"source": "capsule_aind_ophys_motion_correction_1",
 			"target": "capsule_aind_ophys_movie_qc_15"
 		},
@@ -408,8 +409,8 @@
 			},
 			"id": "capsule_aind_ophys_movie_qc_15",
 			"position": {
-				"x": 2033.6071998839684,
-				"y": -393.07063855456323
+				"x": 1236.940533217302,
+				"y": -476.4039718878966
 			},
 			"selected": false,
 			"type": "capsule"
@@ -423,9 +424,14 @@
 				"x": 1441.7889368055303,
 				"y": 448.2913610825308
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1736804008762
+	"timestamp": 1736804358457,
+	"viewport": {
+		"x": -392.1182635532882,
+		"y": 601.0045648950102,
+		"zoom": 0.6
+	}
 }

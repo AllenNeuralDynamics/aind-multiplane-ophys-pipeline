@@ -494,7 +494,8 @@
 					"id": "OlNB4wYP4I6DaiEY",
 					"source_id": "capsule_aind_ophys_motion_correction_1",
 					"type": "capsule",
-					"name": "aind-ophys-motion-correction"
+					"name": "aind-ophys-motion-correction",
+					"flatten": true
 				}
 			],
 			"results": {

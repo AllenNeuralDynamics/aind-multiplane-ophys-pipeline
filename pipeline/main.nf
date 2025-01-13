@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:68f88bcf692d3473b7b0a42c45413fcd7573c6779222f895ba25785f95dcb5b4
+// hash:sha256:16912415c5ce05cbb23dd5b8070bef3a9eb0871973c97f1629a420c54e39d261
 
 nextflow.enable.dsl = 1
 
@@ -573,7 +573,7 @@ process capsule_aind_ophys_movie_qc_15 {
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	input:
-	path 'capsule/data/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_movie_qc_15_34
+	path 'capsule/data/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_movie_qc_15_34.flatten()
 
 	output:
 	path 'capsule/results/*'
