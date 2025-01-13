@@ -469,7 +469,8 @@
 			"capsule": {
 				"id": "7d1d678b-9541-4be5-ac07-6a3d1e987a80",
 				"name": "aind-ophys-movie-qc",
-				"slug": "1764278"
+				"slug": "1764278",
+				"commit": "01c75a6d568a5db168b53e72df6fc0d6e586d511"
 			},
 			"resources": {
 				"cpus": 16,
@@ -503,9 +504,10 @@
 		{
 			"name": "capsule_aind_ophys_quality_control_aggregator_16",
 			"capsule": {
-				"id": "05b8a796-f8c7-4177-b486-82abfc146e49",
+				"id": "196ffc43-8298-4dfb-ba58-6565d60fd650",
 				"name": "aind-ophys-quality-control-aggregator",
-				"slug": "4691390"
+				"slug": "5787827",
+				"version": 1
 			},
 			"resources": {
 				"cpus": 1,
@@ -522,7 +524,7 @@
 				}
 			],
 			"results": {
-				"id": "05b8a796-f8c7-4177-b486-82abfc146e49"
+				"id": "196ffc43-8298-4dfb-ba58-6565d60fd650"
 			}
 		}
 	]
