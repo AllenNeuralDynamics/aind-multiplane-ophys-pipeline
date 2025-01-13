@@ -466,9 +466,10 @@
 		{
 			"name": "capsule_aind_ophys_movie_qc_15",
 			"capsule": {
-				"id": "7d1d678b-9541-4be5-ac07-6a3d1e987a80",
+				"id": "f52d9390-8569-49bb-9562-2d624b18ee56",
 				"name": "aind-ophys-movie-qc",
-				"slug": "1764278"
+				"slug": "0300037",
+				"version": 3
 			},
 			"resources": {
 				"cpus": 16,

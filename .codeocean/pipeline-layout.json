@@ -234,7 +234,6 @@
 		},
 		{
 			"id": "reactflow__edge-capsule_aind_ophys_movie_qc_15-capsule_aind_ophys_quality_control_aggregator_16",
-			"selected": true,
 			"source": "capsule_aind_ophys_movie_qc_15",
 			"target": "capsule_aind_ophys_quality_control_aggregator_16"
 		},
@@ -393,18 +392,6 @@
 		},
 		{
 			"data": {
-				"capsule_id": "7d1d678b-9541-4be5-ac07-6a3d1e987a80"
-			},
-			"id": "capsule_aind_ophys_movie_qc_15",
-			"position": {
-				"x": 2090.370658687504,
-				"y": -323.6930777946862
-			},
-			"selected": false,
-			"type": "capsule"
-		},
-		{
-			"data": {
 				"capsule_id": "05b8a796-f8c7-4177-b486-82abfc146e49"
 			},
 			"id": "capsule_aind_ophys_quality_control_aggregator_16",
@@ -426,7 +413,24 @@
 			},
 			"selected": false,
 			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "f52d9390-8569-49bb-9562-2d624b18ee56"
+			},
+			"id": "capsule_aind_ophys_movie_qc_15",
+			"position": {
+				"x": 2033.6071998839684,
+				"y": -393.07063855456323
+			},
+			"selected": true,
+			"type": "capsule"
 		}
 	],
-	"timestamp": 1736785386998
+	"timestamp": 1736797458096,
+	"viewport": {
+		"x": -264.6339470718551,
+		"y": 632.6570737313318,
+		"zoom": 0.6342108243368282
+	}
 }
