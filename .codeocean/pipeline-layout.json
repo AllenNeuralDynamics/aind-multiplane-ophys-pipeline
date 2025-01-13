@@ -233,14 +233,14 @@
 			"target": "results"
 		},
 		{
-			"id": "reactflow__edge-capsule_aind_ophys_movie_qc_15-capsule_aind_ophys_quality_control_aggregator_16",
-			"source": "capsule_aind_ophys_movie_qc_15",
-			"target": "capsule_aind_ophys_quality_control_aggregator_16"
-		},
-		{
 			"id": "reactflow__edge-capsule_aind_ophys_motion_correction_1-capsule_aind_ophys_quality_control_aggregator_16",
 			"source": "capsule_aind_ophys_motion_correction_1",
 			"target": "capsule_aind_ophys_quality_control_aggregator_16"
+		},
+		{
+			"id": "reactflow__edge-capsule_aind_ophys_movie_qc_15-results",
+			"source": "capsule_aind_ophys_movie_qc_15",
+			"target": "results"
 		}
 	],
 	"nodes": [
@@ -343,10 +343,10 @@
 			},
 			"id": "capsule_aind_ophys_nwb_12",
 			"position": {
-				"x": 1708.7439941424643,
-				"y": -200.67129025921685
+				"x": 1569.9888726227102,
+				"y": -241.66712161732602
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -423,11 +423,11 @@
 				"x": 2033.6071998839684,
 				"y": -393.07063855456323
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1736797458096,
+	"timestamp": 1736802647862,
 	"viewport": {
 		"x": -264.6339470718551,
 		"y": 632.6570737313318,

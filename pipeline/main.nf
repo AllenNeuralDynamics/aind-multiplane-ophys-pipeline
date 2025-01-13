@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:14cfc6b687dcd28f9ac75642122593be6df92246cbbb9957ede25507f1b714f6
+// hash:sha256:0ed2de0a8f0610c39366d7ba8dca85862e278bb484c89dbd3b4eca8d97f2ceae
 
 nextflow.enable.dsl = 1
 
@@ -39,8 +39,7 @@ capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_nwb_12_31 = channel
 capsule_nwb_packaging_subject_capsule_13_to_capsule_aind_ophys_nwb_12_32 = channel.create()
 ophys_mount_to_nwb_packaging_subject_capsule_33 = channel.fromPath(params.ophys_mount_url + "/", type: 'any')
 capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_movie_qc_15_34 = channel.create()
-capsule_aind_ophys_movie_qc_15_to_capsule_aind_ophys_quality_control_aggregator_16_35 = channel.create()
-capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_quality_control_aggregator_16_36 = channel.create()
+capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_quality_control_aggregator_16_35 = channel.create()
 
 // capsule - aind-ophys-motion-correction
 process capsule_aind_ophys_motion_correction_1 {
@@ -69,7 +68,7 @@ process capsule_aind_ophys_motion_correction_1 {
 	path 'capsule/results/*/motion_correction/*.webm' into capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_nwb_12_30
 	path 'capsule/results/*/motion_correction/*.csv' into capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_nwb_12_31
 	path 'capsule/results/*' into capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_movie_qc_15_34
-	path 'capsule/results/*/motion_correction/*' into capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_quality_control_aggregator_16_36
+	path 'capsule/results/*/motion_correction/*' into capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_quality_control_aggregator_16_35
 
 	script:
 	"""
@@ -187,7 +186,7 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run
+	./run --debug
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -373,7 +372,7 @@ process capsule_aind_ophys_mesoscope_image_splitter_10 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run
+	./run --debug
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -422,7 +421,7 @@ process capsule_aind_pipeline_processing_metadata_aggregator_11 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run ${params.capsule_aind_pipeline_processing_metadata_aggregator_11_args}
+	./run --processor_full_name "Arielle Leon" --copy-ancillary-files True
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -570,11 +569,13 @@ process capsule_aind_ophys_movie_qc_15 {
 	cpus 16
 	memory '128 GB'
 
+	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
+
 	input:
 	path 'capsule/data/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_movie_qc_15_34
 
 	output:
-	path 'capsule/results/*' into capsule_aind_ophys_movie_qc_15_to_capsule_aind_ophys_quality_control_aggregator_16_35
+	path 'capsule/results/*'
 
 	script:
 	"""
@@ -615,8 +616,7 @@ process capsule_aind_ophys_quality_control_aggregator_16 {
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	input:
-	path 'capsule/data/' from capsule_aind_ophys_movie_qc_15_to_capsule_aind_ophys_quality_control_aggregator_16_35.collect()
-	path 'capsule/data/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_quality_control_aggregator_16_36.collect()
+	path 'capsule/data/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_quality_control_aggregator_16_35.collect()
 
 	output:
 	path 'capsule/results/*'
