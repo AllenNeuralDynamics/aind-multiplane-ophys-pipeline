@@ -7,7 +7,8 @@
 				"id": "91a8ed4d-3b9a-49c6-9283-3f16ea5482bf",
 				"name": "aind-ophys-motion-correction",
 				"slug": "7474660",
-				"version": 6
+				"version": 12,
+				"app_panel": true
 			},
 			"resources": {
 				"cpus": 16,
@@ -90,7 +91,7 @@
 				"id": "1383b25a-ecd2-4c56-8b7f-cde811c0b053",
 				"name": "aind-ophys-decrosstalk-roi-images",
 				"slug": "1533578",
-				"version": 5
+				"version": 7
 			},
 			"resources": {
 				"cpus": 16,
@@ -122,7 +123,7 @@
 				"id": "5e1d659c-e149-4a57-be83-12f5a448a0c9",
 				"name": "aind-ophys-extraction-suite2p",
 				"slug": "9911715",
-				"version": 6,
+				"version": 7,
 				"app_panel": true
 			},
 			"resources": {
@@ -164,7 +165,7 @@
 				"id": "85987e27-601c-4863-811b-71e5b4bdea37",
 				"name": "aind-ophys-dff",
 				"slug": "6574773",
-				"version": 3
+				"version": 4
 			},
 			"resources": {
 				"cpus": 4,
@@ -196,7 +197,7 @@
 				"id": "c6394aab-0db7-47b2-90ba-864866d6755e",
 				"name": "aind-ophys-oasis-event-detection",
 				"slug": "8957649",
-				"version": 4
+				"version": 5
 			},
 			"resources": {
 				"cpus": 4,
@@ -238,12 +239,13 @@
 			]
 		},
 		{
-			"name": "capsule_processingjsonaggregator_11",
+			"name": "capsule_aind_pipeline_processing_metadata_aggregator_11",
 			"capsule": {
-				"id": "2fafe85f-e0fa-41a7-b2a6-9ac24b88605d",
-				"name": "Processing json aggregator",
-				"slug": "1054292",
-				"version": 8
+				"id": "d51df783-d892-4304-a129-238a9baea72a",
+				"name": "aind-pipeline-processing-metadata-aggregator",
+				"slug": "8250608",
+				"version": 3,
+				"app_panel": true
 			},
 			"resources": {
 				"cpus": 4,
@@ -251,23 +253,56 @@
 			},
 			"inputs": [
 				{
+					"id": "C1zXqQLcVA7na_kO0SMO8",
+					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
+					"type": "capsule",
+					"name": "aind-ophys-oasis-event-detection",
+					"source_path": "*/*/*data_process.json",
+					"collect": true
+				},
+				{
+					"id": "cXzy72WkHC9eERDT",
+					"source_id": "capsule_aind_ophys_dff_5",
+					"type": "capsule",
+					"name": "aind-ophys-dff",
+					"source_path": "*/*/*data_process.json",
+					"collect": true
+				},
+				{
+					"id": "PKttAu5lncNPNFXR",
+					"source_id": "capsule_aind_ophys_extraction_suite_2_p_4",
+					"type": "capsule",
+					"name": "aind-ophys-extraction-suite2p",
+					"source_path": "*/*/*data_process.json",
+					"collect": true
+				},
+				{
+					"id": "4BBKLsazeIt1o7Hv",
+					"source_id": "capsule_aind_ophys_decrosstalk_roi_images_3",
+					"type": "capsule",
+					"name": "aind-ophys-decrosstalk-roi-images",
+					"source_path": "*/*/*data_process.json",
+					"collect": true
+				},
+				{
+					"id": "NqCq4QARneKqzXwq",
+					"source_id": "capsule_aind_ophys_motion_correction_1",
+					"type": "capsule",
+					"name": "aind-ophys-motion-correction",
+					"source_path": "*/*/*data_process.json",
+					"collect": true
+				},
+				{
 					"id": "6vEEC0shND9OPhAmaCKdT",
 					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*.json",
 					"collect": true
-				},
-				{
-					"id": "C1zXqQLcVA7na_kO0SMO8",
-					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
-					"type": "capsule",
-					"name": "aind-ophys-oasis-event-detection",
-					"collect": true
 				}
 			],
 			"results": {
-				"id": "266b93f8-1b9b-4e1e-9415-4eb9ae8eccb0"
+				"id": "d51df783-d892-4304-a129-238a9baea72a"
 			}
 		},
 		{
@@ -415,6 +450,70 @@
 					"collect": true
 				}
 			]
+		},
+		{
+			"name": "capsule_aind_ophys_movie_qc_14",
+			"capsule": {
+				"id": "7d1d678b-9541-4be5-ac07-6a3d1e987a80",
+				"name": "aind-ophys-movie-qc",
+				"slug": "1764278"
+			},
+			"resources": {
+				"cpus": 16,
+				"memory": 128
+			}
+		},
+		{
+			"name": "capsule_aind_ophys_movie_qc_15",
+			"capsule": {
+				"id": "7d1d678b-9541-4be5-ac07-6a3d1e987a80",
+				"name": "aind-ophys-movie-qc",
+				"slug": "1764278"
+			},
+			"resources": {
+				"cpus": 16,
+				"memory": 128
+			},
+			"inputs": [
+				{
+					"id": "OlNB4wYP4I6DaiEY",
+					"source_id": "capsule_aind_ophys_motion_correction_1",
+					"type": "capsule",
+					"name": "aind-ophys-motion-correction"
+				}
+			]
+		},
+		{
+			"name": "capsule_aind_ophys_quality_control_aggregator_16",
+			"capsule": {
+				"id": "05b8a796-f8c7-4177-b486-82abfc146e49",
+				"name": "aind-ophys-quality-control-aggregator",
+				"slug": "4691390"
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "ElQPXJN4plKFJxXq",
+					"source_id": "capsule_aind_ophys_movie_qc_15",
+					"type": "capsule",
+					"name": "aind-ophys-movie-qc",
+					"collect": true
+				},
+				{
+					"id": "z1Gb5hk6usp2iAFt",
+					"source_id": "capsule_aind_ophys_motion_correction_1",
+					"type": "capsule",
+					"name": "aind-ophys-motion-correction",
+					"source_path": "*/motion_correction/*",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "05b8a796-f8c7-4177-b486-82abfc146e49"
+			}
 		}
 	]
 }
