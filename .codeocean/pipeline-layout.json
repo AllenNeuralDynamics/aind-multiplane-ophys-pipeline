@@ -382,17 +382,6 @@
 		},
 		{
 			"data": {
-				"capsule_id": "7d1d678b-9541-4be5-ac07-6a3d1e987a80"
-			},
-			"id": "capsule_aind_ophys_movie_qc_14",
-			"position": {
-				"x": 1657.026233890256,
-				"y": -762.777163847527
-			},
-			"type": "capsule"
-		},
-		{
-			"data": {
 				"capsule_id": "d51df783-d892-4304-a129-238a9baea72a"
 			},
 			"id": "capsule_aind_pipeline_processing_metadata_aggregator_11",
@@ -409,10 +398,10 @@
 			},
 			"id": "capsule_aind_ophys_movie_qc_15",
 			"position": {
-				"x": 1236.940533217302,
-				"y": -476.4039718878966
+				"x": 1143.6071998839689,
+				"y": -506.4039718878966
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -428,10 +417,10 @@
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1736804358457,
+	"timestamp": 1737076030502,
 	"viewport": {
-		"x": -392.1182635532882,
-		"y": 601.0045648950102,
-		"zoom": 0.6
+		"x": 165.17523602263066,
+		"y": 568.4283520387781,
+		"zoom": 0.3
 	}
 }

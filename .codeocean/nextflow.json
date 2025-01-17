@@ -7,7 +7,7 @@
 				"id": "91a8ed4d-3b9a-49c6-9283-3f16ea5482bf",
 				"name": "aind-ophys-motion-correction",
 				"slug": "7474660",
-				"version": 12,
+				"version": 13,
 				"app_panel": true
 			},
 			"resources": {
@@ -126,7 +126,7 @@
 				"id": "5e1d659c-e149-4a57-be83-12f5a448a0c9",
 				"name": "aind-ophys-extraction-suite2p",
 				"slug": "9911715",
-				"version": 7,
+				"version": 8,
 				"app_panel": true
 			},
 			"resources": {
@@ -324,7 +324,7 @@
 				"id": "8c436e95-8607-4752-8e9f-2b62024f9326",
 				"name": "aind-ophys-nwb",
 				"slug": "9383700",
-				"version": 9
+				"version": 10
 			},
 			"resources": {
 				"cpus": 1,
@@ -463,19 +463,6 @@
 					"collect": true
 				}
 			]
-		},
-		{
-			"name": "capsule_aind_ophys_movie_qc_14",
-			"capsule": {
-				"id": "7d1d678b-9541-4be5-ac07-6a3d1e987a80",
-				"name": "aind-ophys-movie-qc",
-				"slug": "1764278",
-				"commit": "01c75a6d568a5db168b53e72df6fc0d6e586d511"
-			},
-			"resources": {
-				"cpus": 16,
-				"memory": 128
-			}
 		},
 		{
 			"name": "capsule_aind_ophys_movie_qc_15",
