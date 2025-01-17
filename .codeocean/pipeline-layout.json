@@ -251,10 +251,10 @@
 			},
 			"id": "capsule_aind_ophys_motion_correction_1",
 			"position": {
-				"x": 687.1660360350811,
+				"x": 690.4993693684146,
 				"y": -721.1817581337793
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -401,7 +401,7 @@
 				"x": 1143.6071998839689,
 				"y": -506.4039718878966
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -417,7 +417,7 @@
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1737076030502,
+	"timestamp": 1737076037177,
 	"viewport": {
 		"x": 165.17523602263066,
 		"y": 568.4283520387781,

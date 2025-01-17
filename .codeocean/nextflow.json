@@ -8,6 +8,9 @@
 				"name": "aind-ophys-motion-correction",
 				"slug": "7474660",
 				"version": 13,
+				"arguments": [
+					"--debug"
+				],
 				"app_panel": true
 			},
 			"resources": {
@@ -470,7 +473,7 @@
 				"id": "f52d9390-8569-49bb-9562-2d624b18ee56",
 				"name": "aind-ophys-movie-qc",
 				"slug": "0300037",
-				"version": 3
+				"version": 4
 			},
 			"resources": {
 				"cpus": 16,
