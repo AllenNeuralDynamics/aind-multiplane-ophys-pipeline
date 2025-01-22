@@ -8,9 +8,6 @@
 				"name": "aind-ophys-motion-correction",
 				"slug": "7474660",
 				"version": 13,
-				"arguments": [
-					"--debug"
-				],
 				"app_panel": true
 			},
 			"resources": {

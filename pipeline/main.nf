@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:daa711df7ad0824c48381f39cc6c3de4b9434478aa4dcfe0844a29ae83a096ea
+// hash:sha256:ab5e6cf3adeb2113b055e7b8a826dc66b4682b29a93134fc3938e5259d57c310
 
 nextflow.enable.dsl = 1
 
@@ -92,7 +92,7 @@ process capsule_aind_ophys_motion_correction_1 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run --debug
+	./run ${params.capsule_aind_ophys_motion_correction_1_args}
 
 	echo "[${task.tag}] completed!"
 	"""
