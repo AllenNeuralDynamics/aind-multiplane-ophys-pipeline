@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:76aeababcca311b5efbecbe87115d07ffb312b25061f574719af0ca91305683d
+// hash:sha256:f22dcc05d36645932104512a0de66caaa286f3375e66ac155e813f58b67556c9
 
 nextflow.enable.dsl = 1
 
@@ -372,7 +372,7 @@ process capsule_aind_ophys_mesoscope_image_splitter_10 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run --debug
+	./run
 
 	echo "[${task.tag}] completed!"
 	"""

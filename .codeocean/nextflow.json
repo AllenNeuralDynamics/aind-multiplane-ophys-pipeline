@@ -221,10 +221,7 @@
 				"id": "74cf5765-d490-4ff8-accc-8cca3cbd05ae",
 				"name": "aind-ophys-mesoscope-image-splitter",
 				"slug": "4287852",
-				"version": 3,
-				"arguments": [
-					"--debug"
-				]
+				"version": 3
 			},
 			"resources": {
 				"cpus": 16,
