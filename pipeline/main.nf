@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:ab5e6cf3adeb2113b055e7b8a826dc66b4682b29a93134fc3938e5259d57c310
+// hash:sha256:76aeababcca311b5efbecbe87115d07ffb312b25061f574719af0ca91305683d
 
 nextflow.enable.dsl = 1
 
@@ -186,7 +186,7 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run --debug
+	./run
 
 	echo "[${task.tag}] completed!"
 	"""
