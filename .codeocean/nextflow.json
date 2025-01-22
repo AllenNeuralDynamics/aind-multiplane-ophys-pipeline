@@ -99,10 +99,18 @@
 			},
 			"inputs": [
 				{
+					"id": "gtIBTnQ3wqULHXXn",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"type": "dataset",
+					"name": "ophys_mount",
+					"source_path": "ophys_mount/pophys/*/V*_[0-9].h5"
+				},
+				{
 					"id": "_xWzqVThoTLrrFDjgqJ4f",
 					"source_id": "capsule_aind_ophys_motion_correction_1",
 					"type": "capsule",
 					"name": "aind-ophys-motion-correction",
+					"source_path": "V*",
 					"collect": true
 				},
 				{
@@ -476,6 +484,7 @@
 					"source_id": "capsule_aind_ophys_motion_correction_1",
 					"type": "capsule",
 					"name": "aind-ophys-motion-correction",
+					"source_path": "V*",
 					"flatten": true
 				}
 			],
