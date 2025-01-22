@@ -473,7 +473,7 @@
 				"id": "f52d9390-8569-49bb-9562-2d624b18ee56",
 				"name": "aind-ophys-movie-qc",
 				"slug": "0300037",
-				"version": 4
+				"version": 5
 			},
 			"resources": {
 				"cpus": 16,
