@@ -98,19 +98,18 @@
 			"target": "results"
 		},
 		{
-			"id": "reactflow__edge-capsule_aind_ophys_oasis_event_detection_9-capsule_processingjsonaggregator_11",
-			"selected": false,
+			"id": "reactflow__edge-capsule_aind_ophys_oasis_event_detection_9-capsule_aind_pipeline_processing_metadata_aggregator_11",
 			"source": "capsule_aind_ophys_oasis_event_detection_9",
-			"target": "capsule_processingjsonaggregator_11"
+			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
 		},
 		{
-			"id": "reactflow__edge-capsule_processingjsonaggregator_11-resultsresults-start",
-			"source": "capsule_processingjsonaggregator_11",
+			"id": "reactflow__edge-capsule_aind_pipeline_processing_metadata_aggregator_11-resultsresults-start",
+			"source": "capsule_aind_pipeline_processing_metadata_aggregator_11",
 			"target": "results"
 		},
 		{
-			"id": "reactflow__edge-capsule_processingjsonaggregator_11-results",
-			"source": "capsule_processingjsonaggregator_11",
+			"id": "reactflow__edge-capsule_aind_pipeline_processing_metadata_aggregator_11-results",
+			"source": "capsule_aind_pipeline_processing_metadata_aggregator_11",
 			"target": "results"
 		},
 		{
@@ -129,9 +128,9 @@
 			"target": "capsule_aind_ophys_decrosstalk_split_session_json_2"
 		},
 		{
-			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_processingjsonaggregator_11",
+			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_pipeline_processing_metadata_aggregator_11",
 			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
-			"target": "capsule_processingjsonaggregator_11"
+			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
 		},
 		{
 			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_ophys_extraction_suite_2_p_4",
@@ -202,6 +201,47 @@
 			"selected": false,
 			"source": "fb4b5cef-4505-4145-b8bd-e41d6863d7a9",
 			"target": "capsule_aind_ophys_nwb_12"
+		},
+		{
+			"id": "reactflow__edge-capsule_aind_ophys_motion_correction_1-capsule_aind_pipeline_processing_metadata_aggregator_11",
+			"source": "capsule_aind_ophys_motion_correction_1",
+			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
+		},
+		{
+			"id": "reactflow__edge-capsule_aind_ophys_decrosstalk_roi_images_3-capsule_aind_pipeline_processing_metadata_aggregator_11",
+			"source": "capsule_aind_ophys_decrosstalk_roi_images_3",
+			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
+		},
+		{
+			"id": "reactflow__edge-capsule_aind_ophys_extraction_suite_2_p_4-capsule_aind_pipeline_processing_metadata_aggregator_11",
+			"source": "capsule_aind_ophys_extraction_suite_2_p_4",
+			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
+		},
+		{
+			"id": "reactflow__edge-capsule_aind_ophys_dff_5-capsule_aind_pipeline_processing_metadata_aggregator_11",
+			"source": "capsule_aind_ophys_dff_5",
+			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
+		},
+		{
+			"id": "reactflow__edge-capsule_aind_ophys_motion_correction_1-capsule_aind_ophys_movie_qc_15",
+			"selected": false,
+			"source": "capsule_aind_ophys_motion_correction_1",
+			"target": "capsule_aind_ophys_movie_qc_15"
+		},
+		{
+			"id": "reactflow__edge-capsule_aind_ophys_quality_control_aggregator_16-results",
+			"source": "capsule_aind_ophys_quality_control_aggregator_16",
+			"target": "results"
+		},
+		{
+			"id": "reactflow__edge-capsule_aind_ophys_motion_correction_1-capsule_aind_ophys_quality_control_aggregator_16",
+			"source": "capsule_aind_ophys_motion_correction_1",
+			"target": "capsule_aind_ophys_quality_control_aggregator_16"
+		},
+		{
+			"id": "reactflow__edge-capsule_aind_ophys_movie_qc_15-results",
+			"source": "capsule_aind_ophys_movie_qc_15",
+			"target": "results"
 		}
 	],
 	"nodes": [
@@ -211,10 +251,10 @@
 			},
 			"id": "capsule_aind_ophys_motion_correction_1",
 			"position": {
-				"x": 537.166036035081,
-				"y": -941.1817581337795
+				"x": 690.4993693684146,
+				"y": -721.1817581337793
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -244,8 +284,8 @@
 			},
 			"id": "capsule_aind_ophys_oasis_event_detection_9",
 			"position": {
-				"x": 65.92605693886344,
-				"y": -58.84109602324793
+				"x": -316.841495517083,
+				"y": 290.96082990539213
 			},
 			"selected": false,
 			"type": "capsule"
@@ -272,18 +312,6 @@
 				"y": -794.8267955686057
 			},
 			"selected": false,
-			"type": "capsule"
-		},
-		{
-			"data": {
-				"capsule_id": "2fafe85f-e0fa-41a7-b2a6-9ac24b88605d"
-			},
-			"id": "capsule_processingjsonaggregator_11",
-			"position": {
-				"x": 351.7100762195207,
-				"y": 709.4304985959304
-			},
-			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -316,8 +344,8 @@
 			},
 			"id": "capsule_aind_ophys_nwb_12",
 			"position": {
-				"x": 1992.7985204195054,
-				"y": -253.5987240390859
+				"x": 1569.9888726227102,
+				"y": -31.667121617326075
 			},
 			"selected": false,
 			"type": "capsule"
@@ -351,12 +379,48 @@
 			},
 			"selected": false,
 			"type": "dataset"
+		},
+		{
+			"data": {
+				"capsule_id": "d51df783-d892-4304-a129-238a9baea72a"
+			},
+			"id": "capsule_aind_pipeline_processing_metadata_aggregator_11",
+			"position": {
+				"x": 312.38471515679794,
+				"y": 673.673852166541
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "f52d9390-8569-49bb-9562-2d624b18ee56"
+			},
+			"id": "capsule_aind_ophys_movie_qc_15",
+			"position": {
+				"x": 1143.6071998839689,
+				"y": -506.4039718878966
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "196ffc43-8298-4dfb-ba58-6565d60fd650"
+			},
+			"id": "capsule_aind_ophys_quality_control_aggregator_16",
+			"position": {
+				"x": 1441.7889368055303,
+				"y": 448.2913610825308
+			},
+			"selected": false,
+			"type": "capsule"
 		}
 	],
-	"timestamp": 1736553547495,
+	"timestamp": 1737076037177,
 	"viewport": {
-		"x": 119.29201059625439,
-		"y": 488.78577570120103,
-		"zoom": 0.5453424651475562
+		"x": 165.17523602263066,
+		"y": 568.4283520387781,
+		"zoom": 0.3
 	}
 }
