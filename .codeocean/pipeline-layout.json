@@ -413,7 +413,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "05b8a796-f8c7-4177-b486-82abfc146e49"
+				"capsule_id": "4a698b5c-f5f6-4671-8234-dc728d049a68"
 			},
 			"id": "capsule_aind_ophys_quality_control_aggregator_16",
 			"position": {
@@ -424,5 +424,5 @@
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1737573309910
+	"timestamp": 1737577915007
 }
