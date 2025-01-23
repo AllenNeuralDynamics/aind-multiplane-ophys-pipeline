@@ -104,7 +104,16 @@
 					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 					"type": "dataset",
 					"name": "ophys_mount",
-					"source_path": "ophys_mount/pophys/*/V*_[0-9].h5"
+					"source_path": "ophys_mount/pophys/*/V*_[0-9].h5",
+					"collect": true
+				},
+				{
+					"id": "m6VUj7dR88U9j8Xd",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"type": "dataset",
+					"name": "ophys_mount",
+					"source_path": "ophys_mount/*.json",
+					"collect": true
 				},
 				{
 					"id": "_xWzqVThoTLrrFDjgqJ4f",

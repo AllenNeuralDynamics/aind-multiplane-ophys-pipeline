@@ -124,6 +124,7 @@
 		},
 		{
 			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_ophys_decrosstalk_split_session_json_2",
+			"selected": false,
 			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 			"target": "capsule_aind_ophys_decrosstalk_split_session_json_2"
 		},
@@ -315,10 +316,10 @@
 			},
 			"id": "capsule_aind_ophys_decrosstalk_split_session_json_2",
 			"position": {
-				"x": 286.0444769532937,
-				"y": -464.82679556860563
+				"x": 382.71114361996024,
+				"y": -638.160128901939
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -408,7 +409,7 @@
 				"x": 1143.6071998839689,
 				"y": -506.4039718878966
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -420,9 +421,14 @@
 				"x": 1161.7889368055303,
 				"y": 294.9580277491974
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1737577915007
+	"timestamp": 1737594763891,
+	"viewport": {
+		"x": 226.46874783138105,
+		"y": 490.20000000000005,
+		"zoom": 0.3
+	}
 }
