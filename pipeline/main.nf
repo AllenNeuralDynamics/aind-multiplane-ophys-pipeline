@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:502113e003d8c3cb19b93b95e3958143f27216378ea385e2803d23fa2423ca50
+// hash:sha256:833040e0104acc58fa6a2731579e0b8b0135643b82d50d7631d55ce1adfd0688
 
 nextflow.enable.dsl = 1
 
@@ -149,7 +149,7 @@ process capsule_aind_ophys_decrosstalk_split_session_json_2 {
 // capsule - aind-ophys-decrosstalk-roi-images
 process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	tag 'capsule-4612268'
-	container "$REGISTRY_HOST/capsule/e31d29f8-7eee-446b-8f0a-2f027fe6f39b"
+	container "$REGISTRY_HOST/capsule/e31d29f8-7eee-446b-8f0a-2f027fe6f39b:51be0e5e0bdf61d162db3f6d0842f048"
 
 	cpus 16
 	memory '128 GB'
@@ -184,6 +184,7 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 
 	echo "[${task.tag}] cloning git repo..."
 	git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4612268.git" capsule-repo
+	git -C capsule-repo checkout da5e1d2623af6efa6a53d86aa87ddb0a900c9f46 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -376,7 +377,7 @@ process capsule_aind_ophys_mesoscope_image_splitter_10 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run
+	./run --debug
 
 	echo "[${task.tag}] completed!"
 	"""
