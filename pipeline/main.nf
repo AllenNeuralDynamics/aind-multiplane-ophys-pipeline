@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:c598b15e9c1d34e76c19e825ba28a7659b04b030667d7468844085630230d631
+// hash:sha256:502113e003d8c3cb19b93b95e3958143f27216378ea385e2803d23fa2423ca50
 
 nextflow.enable.dsl = 1
 
@@ -13,8 +13,8 @@ capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_split_s
 ophys_mount_to_aind_ophys_decrosstalk_split_session_json_6 = channel.fromPath(params.ophys_mount_url + "/session.json", type: 'any')
 ophys_mount_to_aind_ophys_decrosstalk_roi_images_7 = channel.fromPath(params.ophys_mount_url + "/pophys/*/V*_[0-9].h5", type: 'any')
 ophys_mount_to_aind_ophys_decrosstalk_roi_images_8 = channel.fromPath(params.ophys_mount_url + "/*.json", type: 'any')
-capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_roi_images_3_9 = channel.create()
-capsule_aind_ophys_decrosstalk_split_session_json_2_to_capsule_aind_ophys_decrosstalk_roi_images_3_10 = channel.create()
+capsule_aind_ophys_decrosstalk_split_session_json_2_to_capsule_aind_ophys_decrosstalk_roi_images_3_9 = channel.create()
+capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_roi_images_3_10 = channel.create()
 ophys_mount_to_aind_ophys_extraction_suite2p_11 = channel.fromPath(params.ophys_mount_url + "/data_description.json", type: 'any')
 ophys_mount_to_aind_ophys_extraction_suite2p_12 = channel.fromPath(params.ophys_mount_url + "/session.json", type: 'any')
 capsule_aind_ophys_decrosstalk_roi_images_3_to_capsule_aind_ophys_extraction_suite_2_p_4_13 = channel.create()
@@ -62,7 +62,7 @@ process capsule_aind_ophys_motion_correction_1 {
 	output:
 	path 'capsule/results/*'
 	path 'capsule/results/V*' into capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_split_session_json_2_5
-	path 'capsule/results/V*' into capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_roi_images_3_9
+	path 'capsule/results/V*' into capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_roi_images_3_10
 	path 'capsule/results/*/motion_correction/*transform.csv' into capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_dff_5_15
 	path 'capsule/results/*/*/*data_process.json' into capsule_aind_ophys_motion_correction_1_to_capsule_aind_pipeline_processing_metadata_aggregator_11_22
 	path 'capsule/results/*/motion_correction/*.png' into capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_nwb_12_30
@@ -116,7 +116,7 @@ process capsule_aind_ophys_decrosstalk_split_session_json_2 {
 
 	output:
 	path 'capsule/results/*'
-	path 'capsule/results/*' into capsule_aind_ophys_decrosstalk_split_session_json_2_to_capsule_aind_ophys_decrosstalk_roi_images_3_10
+	path 'capsule/results/*' into capsule_aind_ophys_decrosstalk_split_session_json_2_to_capsule_aind_ophys_decrosstalk_roi_images_3_9
 
 	script:
 	"""
@@ -148,8 +148,8 @@ process capsule_aind_ophys_decrosstalk_split_session_json_2 {
 
 // capsule - aind-ophys-decrosstalk-roi-images
 process capsule_aind_ophys_decrosstalk_roi_images_3 {
-	tag 'capsule-1533578'
-	container "$REGISTRY_HOST/published/1383b25a-ecd2-4c56-8b7f-cde811c0b053:v7"
+	tag 'capsule-4612268'
+	container "$REGISTRY_HOST/capsule/e31d29f8-7eee-446b-8f0a-2f027fe6f39b"
 
 	cpus 16
 	memory '128 GB'
@@ -159,8 +159,8 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	input:
 	path 'capsule/data/' from ophys_mount_to_aind_ophys_decrosstalk_roi_images_7.collect()
 	path 'capsule/data/' from ophys_mount_to_aind_ophys_decrosstalk_roi_images_8.collect()
-	path 'capsule/data/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_roi_images_3_9.collect()
-	path 'capsule/data/' from capsule_aind_ophys_decrosstalk_split_session_json_2_to_capsule_aind_ophys_decrosstalk_roi_images_3_10.flatten()
+	path 'capsule/data/' from capsule_aind_ophys_decrosstalk_split_session_json_2_to_capsule_aind_ophys_decrosstalk_roi_images_3_9.flatten()
+	path 'capsule/data/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_roi_images_3_10.collect()
 
 	output:
 	path 'capsule/results/*'
@@ -173,7 +173,7 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=1383b25a-ecd2-4c56-8b7f-cde811c0b053
+	export CO_CAPSULE_ID=e31d29f8-7eee-446b-8f0a-2f027fe6f39b
 	export CO_CPUS=16
 	export CO_MEMORY=137438953472
 
@@ -183,7 +183,7 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v7.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1533578.git" capsule-repo
+	git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4612268.git" capsule-repo
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
