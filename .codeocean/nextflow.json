@@ -49,7 +49,7 @@
 				}
 			],
 			"results": {
-				"id": "63a8ce2e-f232-4590-9098-36b820202911"
+				"id": "91a8ed4d-3b9a-49c6-9283-3f16ea5482bf"
 			}
 		},
 		{
@@ -92,8 +92,7 @@
 				"id": "e31d29f8-7eee-446b-8f0a-2f027fe6f39b",
 				"name": "aind-ophys-decrosstalk-roi-images",
 				"slug": "4612268",
-				"commit": "da5e1d2623af6efa6a53d86aa87ddb0a900c9f46",
-				"image_tag": "51be0e5e0bdf61d162db3f6d0842f048"
+				"commit": "da5e1d2623af6efa6a53d86aa87ddb0a900c9f46"
 			},
 			"resources": {
 				"cpus": 16,
@@ -240,10 +239,7 @@
 				"id": "74cf5765-d490-4ff8-accc-8cca3cbd05ae",
 				"name": "aind-ophys-mesoscope-image-splitter",
 				"slug": "4287852",
-				"version": 3,
-				"arguments": [
-					"--debug"
-				]
+				"version": 3
 			},
 			"resources": {
 				"cpus": 16,

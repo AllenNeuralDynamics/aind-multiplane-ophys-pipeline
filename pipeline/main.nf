@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:833040e0104acc58fa6a2731579e0b8b0135643b82d50d7631d55ce1adfd0688
+// hash:sha256:89414aaf46862aa49821b7f8966a99dc4836b0a50df1c8d124936a2c71eed488
 
 nextflow.enable.dsl = 1
 
@@ -149,7 +149,7 @@ process capsule_aind_ophys_decrosstalk_split_session_json_2 {
 // capsule - aind-ophys-decrosstalk-roi-images
 process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	tag 'capsule-4612268'
-	container "$REGISTRY_HOST/capsule/e31d29f8-7eee-446b-8f0a-2f027fe6f39b:51be0e5e0bdf61d162db3f6d0842f048"
+	container "$REGISTRY_HOST/capsule/e31d29f8-7eee-446b-8f0a-2f027fe6f39b"
 
 	cpus 16
 	memory '128 GB'
@@ -377,7 +377,7 @@ process capsule_aind_ophys_mesoscope_image_splitter_10 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run --debug
+	./run
 
 	echo "[${task.tag}] completed!"
 	"""
