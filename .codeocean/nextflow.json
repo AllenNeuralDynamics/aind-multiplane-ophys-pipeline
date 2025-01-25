@@ -7,7 +7,7 @@
 				"id": "91a8ed4d-3b9a-49c6-9283-3f16ea5482bf",
 				"name": "aind-ophys-motion-correction",
 				"slug": "7474660",
-				"version": 13,
+				"version": 14,
 				"app_panel": true
 			},
 			"resources": {
@@ -100,11 +100,11 @@
 			},
 			"inputs": [
 				{
-					"id": "gtIBTnQ3wqULHXXn",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
-					"type": "dataset",
-					"name": "ophys_mount",
-					"source_path": "ophys_mount/pophys/*/V*_[0-9].h5",
+					"id": "kCRtPyFKfilDA6Ts",
+					"source_id": "capsule_aind_ophys_mesoscope_image_splitter_10",
+					"type": "capsule",
+					"name": "aind-ophys-mesoscope-image-splitter",
+					"source_path": "*V*_[0-9].h5",
 					"collect": true
 				},
 				{
