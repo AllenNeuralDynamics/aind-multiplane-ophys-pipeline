@@ -12,6 +12,7 @@
 		},
 		{
 			"id": "reactflow__edge-capsule_aind_ophys_motion_correction_1-capsule_aind_ophys_decrosstalk_split_session_json_2",
+			"selected": false,
 			"source": "capsule_aind_ophys_motion_correction_1",
 			"target": "capsule_aind_ophys_decrosstalk_split_session_json_2"
 		},
@@ -305,10 +306,10 @@
 			},
 			"id": "capsule_aind_ophys_decrosstalk_split_session_json_2",
 			"position": {
-				"x": 345.12224382562476,
-				"y": -845.1506878713503
+				"x": 483.3932101563523,
+				"y": -774.544236979064
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -422,14 +423,14 @@
 				"x": 817.6811160254667,
 				"y": -1032.7611267251477
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1737828981127,
+	"timestamp": 1737829165773,
 	"viewport": {
-		"x": 97.05575727427458,
-		"y": 537.1057710708687,
-		"zoom": 0.3455662927048069
+		"x": 145.32886779300782,
+		"y": 435.89471597630296,
+		"zoom": 0.33991228417093466
 	}
 }
