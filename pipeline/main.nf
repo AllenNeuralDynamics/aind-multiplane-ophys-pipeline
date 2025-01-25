@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:4dd550bab1a5b28f73b40334c0f06d13df1d844c383875eef01b40b611be46a5
+// hash:sha256:ecaeae83319e377386e5ae0befb3f95dba590bdb9f14917190ae23616fd7146e
 
 nextflow.enable.dsl = 1
 
@@ -387,7 +387,7 @@ process capsule_aind_ophys_mesoscope_image_splitter_10 {
 // capsule - aind-pipeline-processing-metadata-aggregator
 process capsule_aind_pipeline_processing_metadata_aggregator_11 {
 	tag 'capsule-8250608'
-	container "$REGISTRY_HOST/published/d51df783-d892-4304-a129-238a9baea72a:v3"
+	container "$REGISTRY_HOST/published/d51df783-d892-4304-a129-238a9baea72a:v4"
 
 	cpus 4
 	memory '32 GB'
@@ -420,14 +420,14 @@ process capsule_aind_pipeline_processing_metadata_aggregator_11 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v3.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8250608.git" capsule-repo
+	git clone --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8250608.git" capsule-repo
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run --processor_full_name "Arielle Leon" --copy-ancillary-files True
+	./run --processor_full_name "Arielle Leon" --copy-ancillary-files True --derived-data-description True
 
 	echo "[${task.tag}] completed!"
 	"""
