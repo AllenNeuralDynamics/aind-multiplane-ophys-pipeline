@@ -92,8 +92,7 @@
 				"id": "e31d29f8-7eee-446b-8f0a-2f027fe6f39b",
 				"name": "aind-ophys-decrosstalk-roi-images",
 				"slug": "4612268",
-				"commit": "da5e1d2623af6efa6a53d86aa87ddb0a900c9f46",
-				"image_tag": "51be0e5e0bdf61d162db3f6d0842f048"
+				"commit": "da5e1d2623af6efa6a53d86aa87ddb0a900c9f46"
 			},
 			"resources": {
 				"cpus": 16,
