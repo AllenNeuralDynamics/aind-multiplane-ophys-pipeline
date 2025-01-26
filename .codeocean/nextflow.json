@@ -354,6 +354,42 @@
 			},
 			"inputs": [
 				{
+					"id": "Xb7cOW8SRLqPGKUn",
+					"source_id": "capsule_aind_ophys_motion_correction_1",
+					"type": "capsule",
+					"name": "aind-ophys-motion-correction",
+					"source_path": "*/motion_correction/*.png",
+					"target_path": "processed",
+					"collect": true
+				},
+				{
+					"id": "MCvWeNcbO4iUD7jC",
+					"source_id": "capsule_aind_ophys_motion_correction_1",
+					"type": "capsule",
+					"name": "aind-ophys-motion-correction",
+					"source_path": "*/motion_correction/*.h5",
+					"target_path": "processed",
+					"collect": true
+				},
+				{
+					"id": "xK5mKLMhsok3OMa5",
+					"source_id": "capsule_aind_ophys_motion_correction_1",
+					"type": "capsule",
+					"name": "aind-ophys-motion-correction",
+					"source_path": "*/motion_correction/*.webm",
+					"target_path": "processed",
+					"collect": true
+				},
+				{
+					"id": "eu5oZzfWYse9d7aJ",
+					"source_id": "capsule_aind_ophys_motion_correction_1",
+					"type": "capsule",
+					"name": "aind-ophys-motion-correction",
+					"source_path": "*/motion_correction/*.csv",
+					"target_path": "processed",
+					"collect": true
+				},
+				{
 					"id": "0YzMlCgaBT94ZTbI",
 					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 					"type": "dataset",
@@ -413,39 +449,6 @@
 					"name": "aind-ophys-decrosstalk-roi-images",
 					"source_path": "*/decrosstalk/*.h5",
 					"target_path": "processed",
-					"collect": true
-				},
-				{
-					"id": "Xb7cOW8SRLqPGKUn",
-					"source_id": "capsule_aind_ophys_motion_correction_1",
-					"type": "capsule",
-					"name": "aind-ophys-motion-correction",
-					"source_path": "*/motion_correction/*.png",
-					"collect": true
-				},
-				{
-					"id": "MCvWeNcbO4iUD7jC",
-					"source_id": "capsule_aind_ophys_motion_correction_1",
-					"type": "capsule",
-					"name": "aind-ophys-motion-correction",
-					"source_path": "*/motion_correction/*.h5",
-					"target_path": "processed",
-					"collect": true
-				},
-				{
-					"id": "xK5mKLMhsok3OMa5",
-					"source_id": "capsule_aind_ophys_motion_correction_1",
-					"type": "capsule",
-					"name": "aind-ophys-motion-correction",
-					"source_path": "*/motion_correction/*.webm",
-					"collect": true
-				},
-				{
-					"id": "eu5oZzfWYse9d7aJ",
-					"source_id": "capsule_aind_ophys_motion_correction_1",
-					"type": "capsule",
-					"name": "aind-ophys-motion-correction",
-					"source_path": "*/motion_correction/*.csv",
 					"collect": true
 				},
 				{
