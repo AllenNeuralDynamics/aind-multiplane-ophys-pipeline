@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:566dfce5d7faff61dc811166c6f29e366c86de329a72bf84f5ba1df0fdd6f5e5
+// hash:sha256:9f27a255cedb992b6e8edd54a8fac949ec0e11a8e469391e5e4486cc5af3aa63
 
 nextflow.enable.dsl = 1
 
@@ -106,8 +106,8 @@ process capsule_aind_ophys_decrosstalk_split_session_json_2 {
 	tag 'capsule-4425001'
 	container "$REGISTRY_HOST/published/fc1b1e9a-fb4b-47e8-a223-b06d8eeb1462:v1"
 
-	cpus 1
-	memory '8 GB'
+	cpus 2
+	memory '16 GB'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
@@ -125,8 +125,8 @@ process capsule_aind_ophys_decrosstalk_split_session_json_2 {
 	set -e
 
 	export CO_CAPSULE_ID=fc1b1e9a-fb4b-47e8-a223-b06d8eeb1462
-	export CO_CPUS=1
-	export CO_MEMORY=8589934592
+	export CO_CPUS=2
+	export CO_MEMORY=17179869184
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
