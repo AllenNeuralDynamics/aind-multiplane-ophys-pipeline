@@ -265,6 +265,39 @@
 			"selected": false,
 			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 			"target": "capsule_aind_ophys_oasis_event_detection_9"
+		},
+		{
+			"id": "xy-edge__35d1284e-4dfa-4ac3-9ba8-5ea1ae2fdaeb-capsule_aind_ophys_classifier_17",
+			"selected": false,
+			"source": "35d1284e-4dfa-4ac3-9ba8-5ea1ae2fdaeb",
+			"target": "capsule_aind_ophys_classifier_17"
+		},
+		{
+			"id": "xy-edge__capsule_aind_ophys_classifier_17-results",
+			"source": "capsule_aind_ophys_classifier_17",
+			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_aind_ophys_extraction_suite_2_p_4-capsule_aind_ophys_classifier_17",
+			"source": "capsule_aind_ophys_extraction_suite_2_p_4",
+			"target": "capsule_aind_ophys_classifier_17"
+		},
+		{
+			"id": "xy-edge__55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_ophys_classifier_17",
+			"selected": false,
+			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+			"target": "capsule_aind_ophys_classifier_17"
+		},
+		{
+			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_pipeline_processing_metadata_aggregator_11",
+			"selected": true,
+			"source": "capsule_aind_ophys_classifier_17",
+			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
+		},
+		{
+			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_ophys_quality_control_aggregator_16",
+			"source": "capsule_aind_ophys_classifier_17",
+			"target": "capsule_aind_ophys_quality_control_aggregator_16"
 		}
 	],
 	"nodes": [
@@ -286,7 +319,7 @@
 				"x": -99.69335706107995,
 				"y": -732.3612039408873
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -351,7 +384,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "8c436e95-8607-4752-8e9f-2b62024f9326"
+				"capsule_id": "0be2aae9-3cda-45de-b5f6-870c0b569819"
 			},
 			"id": "capsule_aind_ophys_nwb_12",
 			"position": {
@@ -397,8 +430,8 @@
 			},
 			"id": "capsule_aind_pipeline_processing_metadata_aggregator_11",
 			"position": {
-				"x": 312.38471515679794,
-				"y": 673.673852166541
+				"x": 105.7180484901312,
+				"y": 797.0071854998745
 			},
 			"selected": false,
 			"type": "capsule"
@@ -438,12 +471,33 @@
 			},
 			"selected": false,
 			"type": "capsule"
+		},
+		{
+			"id": "35d1284e-4dfa-4ac3-9ba8-5ea1ae2fdaeb",
+			"position": {
+				"x": -754.9999999999999,
+				"y": -1196.6666666666665
+			},
+			"selected": false,
+			"type": "dataset"
+		},
+		{
+			"data": {
+				"capsule_id": "3819d125-9f03-48f3-ba09-b44c84a7a2c7"
+			},
+			"id": "capsule_aind_ophys_classifier_17",
+			"position": {
+				"x": -906.6666666666666,
+				"y": -129.99999999999983
+			},
+			"selected": false,
+			"type": "capsule"
 		}
 	],
-	"timestamp": 1738017771842,
+	"timestamp": 1738287522759,
 	"viewport": {
-		"x": 196.0455183719199,
-		"y": 452.260723577602,
+		"x": 469.0455183719199,
+		"y": 250.760723577602,
 		"zoom": 0.3
 	}
 }
