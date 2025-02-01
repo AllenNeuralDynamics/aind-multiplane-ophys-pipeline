@@ -290,7 +290,7 @@
 		},
 		{
 			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_pipeline_processing_metadata_aggregator_11",
-			"selected": true,
+			"selected": false,
 			"source": "capsule_aind_ophys_classifier_17",
 			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
 		},
@@ -316,10 +316,10 @@
 			},
 			"id": "capsule_aind_ophys_decrosstalk_roi_images_3",
 			"position": {
-				"x": -99.69335706107995,
-				"y": -732.3612039408873
+				"x": -103.02669039441344,
+				"y": -735.6945372742207
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -487,17 +487,17 @@
 			},
 			"id": "capsule_aind_ophys_classifier_17",
 			"position": {
-				"x": -906.6666666666666,
-				"y": -129.99999999999983
+				"x": -903.3333333333333,
+				"y": -136.66666666666652
 			},
 			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1738287522759,
+	"timestamp": 1738348327617,
 	"viewport": {
-		"x": 469.0455183719199,
-		"y": 250.760723577602,
+		"x": 256.0455183719199,
+		"y": 436.760723577602,
 		"zoom": 0.3
 	}
 }

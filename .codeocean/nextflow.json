@@ -8,9 +8,6 @@
 				"name": "aind-ophys-motion-correction",
 				"slug": "7474660",
 				"version": 14,
-				"arguments": [
-					"--debug"
-				],
 				"app_panel": true
 			},
 			"resources": {
@@ -95,10 +92,7 @@
 				"id": "1383b25a-ecd2-4c56-8b7f-cde811c0b053",
 				"name": "aind-ophys-decrosstalk-roi-images",
 				"slug": "1533578",
-				"version": 7,
-				"arguments": [
-					"--debug"
-				]
+				"version": 7
 			},
 			"resources": {
 				"cpus": 16,
@@ -253,10 +247,7 @@
 				"id": "74cf5765-d490-4ff8-accc-8cca3cbd05ae",
 				"name": "aind-ophys-mesoscope-image-splitter",
 				"slug": "4287852",
-				"version": 3,
-				"arguments": [
-					"--debug"
-				]
+				"version": 3
 			},
 			"resources": {
 				"cpus": 16,
@@ -363,7 +354,7 @@
 				"id": "0be2aae9-3cda-45de-b5f6-870c0b569819",
 				"name": "aind-ophys-nwb",
 				"slug": "7197641",
-				"commit": "188e4b2947ab2984daa5069fbd68a2b11b9c2608"
+				"commit": "e322eb80a5ebe5c202b049ddf8ee27031e78ef17"
 			},
 			"resources": {
 				"cpus": 1,
@@ -576,11 +567,17 @@
 				"version": 1
 			},
 			"resources": {
-				"cpus": 16,
-				"memory": 61,
+				"cpus": 2,
+				"memory": 16,
 				"gpus": 1
 			},
 			"inputs": [
+				{
+					"id": "vfIAm69Gv1WjgSsQ",
+					"source_id": "capsule_aind_ophys_extraction_suite_2_p_4",
+					"type": "capsule",
+					"name": "aind-ophys-extraction-suite2p"
+				},
 				{
 					"id": "HKnQaTnuiUwFzKcA",
 					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
@@ -588,12 +585,6 @@
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/session.json",
 					"collect": true
-				},
-				{
-					"id": "vfIAm69Gv1WjgSsQ",
-					"source_id": "capsule_aind_ophys_extraction_suite_2_p_4",
-					"type": "capsule",
-					"name": "aind-ophys-extraction-suite2p"
 				},
 				{
 					"id": "pSJR1nq4IjVlgd9F",

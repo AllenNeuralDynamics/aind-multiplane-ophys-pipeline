@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:83459dfc5bd92f115c7df5cbb244f41c777f8988db6ae0cf4ca50a757e45d263
+// hash:sha256:80f41ebe9e501c8db6605fb5cda7a309473026660a4a4366b9f252593cc95d53
 
 nextflow.enable.dsl = 1
 
@@ -45,8 +45,8 @@ ophys_mount_to_nwb_packaging_subject_capsule_37 = channel.fromPath(params.ophys_
 capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_movie_qc_15_38 = channel.create()
 capsule_aind_ophys_classifier_17_to_capsule_aind_ophys_quality_control_aggregator_16_39 = channel.create()
 capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_quality_control_aggregator_16_40 = channel.create()
-ophys_mount_to_aind_ophys_classifier_41 = channel.fromPath(params.ophys_mount_url + "/session.json", type: 'any')
-capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_aind_ophys_classifier_17_42 = channel.create()
+capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_aind_ophys_classifier_17_41 = channel.create()
+ophys_mount_to_aind_ophys_classifier_42 = channel.fromPath(params.ophys_mount_url + "/session.json", type: 'any')
 
 // capsule - aind-ophys-motion-correction
 process capsule_aind_ophys_motion_correction_1 {
@@ -99,7 +99,7 @@ process capsule_aind_ophys_motion_correction_1 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run --debug
+	./run ${params.capsule_aind_ophys_motion_correction_1_args}
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -195,7 +195,7 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run --debug
+	./run
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -221,7 +221,7 @@ process capsule_aind_ophys_extraction_suite_2_p_4 {
 	path 'capsule/results/*/*/*data_process.json' into capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_aind_pipeline_processing_metadata_aggregator_11_22
 	path 'capsule/results/*/extraction/*.h5' into capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_aind_ophys_nwb_12_33
 	path 'capsule/results/*/extraction/*.png' into capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_aind_ophys_nwb_12_34
-	path 'capsule/results/*' into capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_aind_ophys_classifier_17_42
+	path 'capsule/results/*' into capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_aind_ophys_classifier_17_41
 
 	script:
 	"""
@@ -384,7 +384,7 @@ process capsule_aind_ophys_mesoscope_image_splitter_10 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run --debug
+	./run
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -484,7 +484,7 @@ process capsule_aind_ophys_nwb_12 {
 
 	echo "[${task.tag}] cloning git repo..."
 	git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-7197641.git" capsule-repo
-	git -C capsule-repo checkout 188e4b2947ab2984daa5069fbd68a2b11b9c2608 --quiet
+	git -C capsule-repo checkout e322eb80a5ebe5c202b049ddf8ee27031e78ef17 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -633,16 +633,16 @@ process capsule_aind_ophys_classifier_17 {
 	tag 'capsule-0630574'
 	container "$REGISTRY_HOST/published/3819d125-9f03-48f3-ba09-b44c84a7a2c7:v1"
 
-	cpus 16
-	memory '61 GB'
+	cpus 2
+	memory '16 GB'
 	accelerator 1
 	label 'gpu'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	input:
-	path 'capsule/data/' from ophys_mount_to_aind_ophys_classifier_41.collect()
-	path 'capsule/data/' from capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_aind_ophys_classifier_17_42
+	path 'capsule/data/' from capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_aind_ophys_classifier_17_41
+	path 'capsule/data/' from ophys_mount_to_aind_ophys_classifier_42.collect()
 
 	output:
 	path 'capsule/results/*/*/*data_process.json' into capsule_aind_ophys_classifier_17_to_capsule_aind_pipeline_processing_metadata_aggregator_11_19
@@ -655,8 +655,8 @@ process capsule_aind_ophys_classifier_17 {
 	set -e
 
 	export CO_CAPSULE_ID=3819d125-9f03-48f3-ba09-b44c84a7a2c7
-	export CO_CPUS=16
-	export CO_MEMORY=65498251264
+	export CO_CPUS=2
+	export CO_MEMORY=17179869184
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
