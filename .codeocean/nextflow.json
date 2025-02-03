@@ -288,6 +288,14 @@
 			},
 			"inputs": [
 				{
+					"id": "rRQfuKH6dtrYvG7M",
+					"source_id": "capsule_aind_ophys_classifier_17",
+					"type": "capsule",
+					"name": "aind-ophys-classifier",
+					"source_path": "*/*/*data_process.json",
+					"collect": true
+				},
+				{
 					"id": "C1zXqQLcVA7na_kO0SMO8",
 					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
 					"type": "capsule",
@@ -346,7 +354,7 @@
 				"id": "8c436e95-8607-4752-8e9f-2b62024f9326",
 				"name": "aind-ophys-nwb",
 				"slug": "9383700",
-				"version": 11
+				"version": 12
 			},
 			"resources": {
 				"cpus": 1,
@@ -529,6 +537,15 @@
 			},
 			"inputs": [
 				{
+					"id": "f7CVKT5Y4FhzucWR",
+					"source_id": "capsule_aind_ophys_classifier_17",
+					"type": "capsule",
+					"name": "aind-ophys-classifier",
+					"source_path": "*/classification/*classification.h5",
+					"target_path": "processed",
+					"collect": true
+				},
+				{
 					"id": "z1Gb5hk6usp2iAFt",
 					"source_id": "capsule_aind_ophys_motion_correction_1",
 					"type": "capsule",
@@ -539,6 +556,47 @@
 			],
 			"results": {
 				"id": "4a698b5c-f5f6-4671-8234-dc728d049a68"
+			}
+		},
+		{
+			"name": "capsule_aind_ophys_classifier_17",
+			"capsule": {
+				"id": "3819d125-9f03-48f3-ba09-b44c84a7a2c7",
+				"name": "aind-ophys-classifier",
+				"slug": "0630574",
+				"version": 1
+			},
+			"resources": {
+				"cpus": 2,
+				"memory": 16,
+				"gpus": 1
+			},
+			"inputs": [
+				{
+					"id": "vfIAm69Gv1WjgSsQ",
+					"source_id": "capsule_aind_ophys_extraction_suite_2_p_4",
+					"type": "capsule",
+					"name": "aind-ophys-extraction-suite2p"
+				},
+				{
+					"id": "HKnQaTnuiUwFzKcA",
+					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"type": "dataset",
+					"name": "ophys_mount",
+					"source_path": "ophys_mount/session.json",
+					"collect": true
+				},
+				{
+					"id": "pSJR1nq4IjVlgd9F",
+					"source_id": "35d1284e-4dfa-4ac3-9ba8-5ea1ae2fdaeb",
+					"type": "dataset",
+					"name": "2p_roi_classifier",
+					"source_path": "2p_roi_classifier/",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "3819d125-9f03-48f3-ba09-b44c84a7a2c7"
 			}
 		}
 	]
