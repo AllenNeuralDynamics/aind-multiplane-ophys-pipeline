@@ -351,10 +351,10 @@
 		{
 			"name": "capsule_aind_ophys_nwb_12",
 			"capsule": {
-				"id": "0be2aae9-3cda-45de-b5f6-870c0b569819",
+				"id": "8c436e95-8607-4752-8e9f-2b62024f9326",
 				"name": "aind-ophys-nwb",
-				"slug": "7197641",
-				"commit": "e322eb80a5ebe5c202b049ddf8ee27031e78ef17"
+				"slug": "9383700",
+				"version": 12
 			},
 			"resources": {
 				"cpus": 1,
