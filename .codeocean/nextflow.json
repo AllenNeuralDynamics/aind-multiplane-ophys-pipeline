@@ -362,6 +362,13 @@
 			},
 			"inputs": [
 				{
+					"id": "yEmfp2Y8ixYKwWtR",
+					"source_id": "capsule_aind_ophys_classifier_17",
+					"type": "capsule",
+					"name": "aind-ophys-classifier",
+					"target_path": "processed"
+				},
+				{
 					"id": "Xb7cOW8SRLqPGKUn",
 					"source_id": "capsule_aind_ophys_motion_correction_1",
 					"type": "capsule",
@@ -568,7 +575,7 @@
 			},
 			"resources": {
 				"cpus": 4,
-				"memory": 128,
+				"memory": 200,
 				"gpus": 1
 			},
 			"inputs": [

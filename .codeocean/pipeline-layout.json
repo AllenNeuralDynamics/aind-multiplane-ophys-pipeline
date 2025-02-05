@@ -298,6 +298,11 @@
 			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_ophys_quality_control_aggregator_16",
 			"source": "capsule_aind_ophys_classifier_17",
 			"target": "capsule_aind_ophys_quality_control_aggregator_16"
+		},
+		{
+			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_ophys_nwb_12",
+			"source": "capsule_aind_ophys_classifier_17",
+			"target": "capsule_aind_ophys_nwb_12"
 		}
 	],
 	"nodes": [
@@ -388,8 +393,8 @@
 			},
 			"id": "capsule_aind_ophys_nwb_12",
 			"position": {
-				"x": 1353.3222059560437,
-				"y": -41.667121617326075
+				"x": 1313.3222059560437,
+				"y": 88.33287838267393
 			},
 			"selected": true,
 			"type": "capsule"
@@ -494,7 +499,7 @@
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1738617241369,
+	"timestamp": 1738781760726,
 	"viewport": {
 		"x": 462.0455183719199,
 		"y": 367.760723577602,
