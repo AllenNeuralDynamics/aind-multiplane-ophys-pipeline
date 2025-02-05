@@ -561,10 +561,11 @@
 		{
 			"name": "capsule_aind_ophys_classifier_17",
 			"capsule": {
-				"id": "3819d125-9f03-48f3-ba09-b44c84a7a2c7",
+				"id": "76a903cf-ce80-4367-8153-f17842748ab9",
 				"name": "aind-ophys-classifier",
-				"slug": "0630574",
-				"version": 1
+				"slug": "7076908",
+				"commit": "b9f3ccfc0e47770d112f5fe8a385bb6b320ca95a",
+				"image_tag": "2680ec26544e38762a67f45fd6818686"
 			},
 			"resources": {
 				"cpus": 4,

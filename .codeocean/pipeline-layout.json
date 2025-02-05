@@ -112,6 +112,7 @@
 		},
 		{
 			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_ophys_mesoscope_image_splitter_10",
+			"selected": false,
 			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
 			"target": "capsule_aind_ophys_mesoscope_image_splitter_10"
 		},
@@ -340,8 +341,8 @@
 			},
 			"id": "capsule_aind_ophys_mesoscope_image_splitter_10",
 			"position": {
-				"x": 738.9190670370353,
-				"y": -1291.3960105602937
+				"x": 758.9190670370353,
+				"y": -1331.3960105602937
 			},
 			"selected": false,
 			"type": "capsule"
@@ -388,8 +389,8 @@
 			},
 			"id": "capsule_aind_ophys_nwb_12",
 			"position": {
-				"x": 1353.3222059560437,
-				"y": -41.667121617326075
+				"x": 1373.3222059560437,
+				"y": 31.66621171600724
 			},
 			"selected": true,
 			"type": "capsule"
@@ -483,7 +484,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "3819d125-9f03-48f3-ba09-b44c84a7a2c7"
+				"capsule_id": "76a903cf-ce80-4367-8153-f17842748ab9"
 			},
 			"id": "capsule_aind_ophys_classifier_17",
 			"position": {
@@ -494,10 +495,10 @@
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1738617241369,
+	"timestamp": 1738796430521,
 	"viewport": {
-		"x": 462.0455183719199,
-		"y": 367.760723577602,
+		"x": 325.04551837191985,
+		"y": 192.76072357760205,
 		"zoom": 0.3
 	}
 }
