@@ -567,8 +567,8 @@
 				"version": 1
 			},
 			"resources": {
-				"cpus": 2,
-				"memory": 16,
+				"cpus": 4,
+				"memory": 128,
 				"gpus": 1
 			},
 			"inputs": [

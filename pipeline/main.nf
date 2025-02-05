@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:09eab2706164938498efa8769a4d8d12cffa3fe000bd7c915a0e243c65de7c47
+// hash:sha256:82a2f587a8e2b9b9f1db8ec4ff5ade6e6cba464f8314cd0d9ccc0a8a632f7cb3
 
 nextflow.enable.dsl = 1
 
@@ -632,8 +632,8 @@ process capsule_aind_ophys_classifier_17 {
 	tag 'capsule-0630574'
 	container "$REGISTRY_HOST/published/3819d125-9f03-48f3-ba09-b44c84a7a2c7:v1"
 
-	cpus 2
-	memory '16 GB'
+	cpus 4
+	memory '128 GB'
 	accelerator 1
 	label 'gpu'
 
@@ -654,8 +654,8 @@ process capsule_aind_ophys_classifier_17 {
 	set -e
 
 	export CO_CAPSULE_ID=3819d125-9f03-48f3-ba09-b44c84a7a2c7
-	export CO_CPUS=2
-	export CO_MEMORY=17179869184
+	export CO_CPUS=4
+	export CO_MEMORY=137438953472
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
