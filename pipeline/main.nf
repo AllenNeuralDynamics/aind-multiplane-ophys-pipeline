@@ -49,7 +49,7 @@ extraction_to_classifier = channel.create()
 mount_to_classifier_session = channel.fromPath(params.ophys_mount_url + "/session.json", type: 'any')
 
 // capsule - aind-ophys-motion-correction
-process capsule_aind_ophys_motion_correction_1 {
+process motion_correction {
 	tag 'capsule-7474660'
 	container "$REGISTRY_HOST/published/91a8ed4d-3b9a-49c6-9283-3f16ea5482bf:v14"
 
@@ -98,14 +98,14 @@ process capsule_aind_ophys_motion_correction_1 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run ${params.capsule_aind_ophys_motion_correction_1_args}
+	./run ${params.motion_correction_args}
 
 	echo "[${task.tag}] completed!"
 	"""
 }
 
 // capsule - aind-ophys-decrosstalk-split-session-json
-process capsule_aind_ophys_decrosstalk_split_session_json_2 {
+process decrosstalk_split {
 	tag 'capsule-4425001'
 	container "$REGISTRY_HOST/published/fc1b1e9a-fb4b-47e8-a223-b06d8eeb1462:v1"
 
@@ -151,7 +151,7 @@ process capsule_aind_ophys_decrosstalk_split_session_json_2 {
 }
 
 // capsule - aind-ophys-decrosstalk-roi-images
-process capsule_aind_ophys_decrosstalk_roi_images_3 {
+process decrosstalk {
 	tag 'capsule-1533578'
 	container "$REGISTRY_HOST/published/1383b25a-ecd2-4c56-8b7f-cde811c0b053:v8"
 
@@ -201,7 +201,7 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 }
 
 // capsule - aind-ophys-extraction-suite2p
-process capsule_aind_ophys_extraction_suite_2_p_4 {
+process extraction {
 	tag 'capsule-9911715'
 	container "$REGISTRY_HOST/published/5e1d659c-e149-4a57-be83-12f5a448a0c9:v8"
 
@@ -244,14 +244,14 @@ process capsule_aind_ophys_extraction_suite_2_p_4 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run ${params.capsule_aind_ophys_extraction_suite_2_p_4_args}
+	./run ${params.extraction_args}
 
 	echo "[${task.tag}] completed!"
 	"""
 }
 
 // capsule - aind-ophys-dff
-process capsule_aind_ophys_dff_5 {
+process dff {
 	tag 'capsule-6574773'
 	container "$REGISTRY_HOST/published/85987e27-601c-4863-811b-71e5b4bdea37:v4"
 
@@ -300,7 +300,7 @@ process capsule_aind_ophys_dff_5 {
 }
 
 // capsule - aind-ophys-oasis-event-detection
-process capsule_aind_ophys_oasis_event_detection_9 {
+process oasis_event_detection {
 	tag 'capsule-8957649'
 	container "$REGISTRY_HOST/published/c6394aab-0db7-47b2-90ba-864866d6755e:v5"
 
@@ -347,7 +347,7 @@ process capsule_aind_ophys_oasis_event_detection_9 {
 }
 
 // capsule - aind-ophys-mesoscope-image-splitter
-process capsule_aind_ophys_mesoscope_image_splitter_10 {
+process image_splitter {
 	tag 'capsule-4287852'
 	container "$REGISTRY_HOST/published/74cf5765-d490-4ff8-accc-8cca3cbd05ae:v3"
 
@@ -390,7 +390,7 @@ process capsule_aind_ophys_mesoscope_image_splitter_10 {
 }
 
 // capsule - aind-pipeline-processing-metadata-aggregator
-process capsule_aind_pipeline_processing_metadata_aggregator_11 {
+process processing_metadata_aggregator {
 	tag 'capsule-8250608'
 	container "$REGISTRY_HOST/published/d51df783-d892-4304-a129-238a9baea72a:v4"
 
@@ -440,7 +440,7 @@ process capsule_aind_pipeline_processing_metadata_aggregator_11 {
 }
 
 // capsule - aind-ophys-nwb
-process capsule_aind_ophys_nwb_12 {
+process ophys_nwb {
 	tag 'capsule-9383700'
 	container "$REGISTRY_HOST/published/8c436e95-8607-4752-8e9f-2b62024f9326:v12"
 
@@ -497,7 +497,7 @@ process capsule_aind_ophys_nwb_12 {
 }
 
 // capsule - NWB-Packaging-Subject-Capsule
-process capsule_nwb_packaging_subject_capsule_13 {
+process subject_nwb {
 	tag 'capsule-8198603'
 	container "$REGISTRY_HOST/published/bdc9f09f-0005-4d09-aaf9-7e82abd93f19:v2"
 
@@ -532,14 +532,14 @@ process capsule_nwb_packaging_subject_capsule_13 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run ${params.capsule_nwb_packaging_subject_capsule_13_args}
+	./run ${params.subject_nwb_args}
 
 	echo "[${task.tag}] completed!"
 	"""
 }
 
 // capsule - aind-ophys-movie-qc
-process capsule_aind_ophys_movie_qc_15 {
+process movie_qc {
 	tag 'capsule-0300037'
 	container "$REGISTRY_HOST/published/f52d9390-8569-49bb-9562-2d624b18ee56:v5"
 
@@ -583,7 +583,7 @@ process capsule_aind_ophys_movie_qc_15 {
 }
 
 // capsule - aind-ophys-quality-control-aggregator
-process capsule_aind_ophys_quality_control_aggregator_16 {
+process qc_aggregator {
 	tag 'capsule-4044810'
 	container "$REGISTRY_HOST/published/4a698b5c-f5f6-4671-8234-dc728d049a68:v2"
 
@@ -628,7 +628,7 @@ process capsule_aind_ophys_quality_control_aggregator_16 {
 }
 
 // capsule - aind-ophys-classifier
-process capsule_aind_ophys_classifier_17 {
+process classifier {
 	tag 'capsule-0630574'
 	container "$REGISTRY_HOST/published/3819d125-9f03-48f3-ba09-b44c84a7a2c7:v3"
 
