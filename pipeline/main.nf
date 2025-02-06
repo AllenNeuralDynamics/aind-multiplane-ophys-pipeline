@@ -59,7 +59,7 @@ process capsule_aind_ophys_motion_correction_1 {
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	input:
-	path 'capsule/data/' from ophys_mount_to_motion_correction_jsons.collect()
+	path 'capsule/data/' from mount_to_motion_correction_jsons.collect()
 	path 'capsule/data/' from mount_to_motion_correction_sync.collect()
 	path 'capsule/data/' from image_splitter_to_motion_correction.flatten()
 
