@@ -1,6 +1,8 @@
 #!/usr/bin/env nextflow
 // hash:sha256:2d993cea68670b11882c764937ddb059bcba089acc6b116e78377e4ca8a69ad7
 
+import groovy.json.JsonSlurper
+
 nextflow.enable.dsl = 1
 
 params.ophys_mount_url = 's3://aind-private-data-prod-o5171v/multiplane-ophys_749013_2024-11-13_14-42-09'
