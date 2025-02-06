@@ -367,7 +367,8 @@
 					"type": "capsule",
 					"name": "aind-ophys-classifier",
 					"source_path": "*/classification/*classification.h5",
-					"target_path": "processed"
+					"target_path": "processed",
+					"collect": true
 				},
 				{
 					"id": "Xb7cOW8SRLqPGKUn",

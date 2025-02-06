@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:c36bd18e852ff4f6a84ef0699270bacf2f4156be0905341fbf88120328f778fd
+// hash:sha256:2d993cea68670b11882c764937ddb059bcba089acc6b116e78377e4ca8a69ad7
 
 nextflow.enable.dsl = 1
 
@@ -452,7 +452,7 @@ process capsule_aind_ophys_nwb_12 {
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	input:
-	path 'capsule/data/processed' from capsule_aind_ophys_classifier_17_to_capsule_aind_ophys_nwb_12_26
+	path 'capsule/data/processed/' from capsule_aind_ophys_classifier_17_to_capsule_aind_ophys_nwb_12_26.collect()
 	path 'capsule/data/processed/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_nwb_12_27.collect()
 	path 'capsule/data/processed/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_nwb_12_28.collect()
 	path 'capsule/data/processed/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_nwb_12_29.collect()
