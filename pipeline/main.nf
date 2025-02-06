@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:4f9bd712216ba2fd169c6a6c64cd964ca27692fdac01cec0498765a62757883a
+// hash:sha256:c36bd18e852ff4f6a84ef0699270bacf2f4156be0905341fbf88120328f778fd
 
 nextflow.enable.dsl = 1
 
@@ -632,7 +632,7 @@ process capsule_aind_ophys_quality_control_aggregator_16 {
 // capsule - aind-ophys-classifier
 process capsule_aind_ophys_classifier_17 {
 	tag 'capsule-0630574'
-	container "$REGISTRY_HOST/published/3819d125-9f03-48f3-ba09-b44c84a7a2c7:v2"
+	container "$REGISTRY_HOST/published/3819d125-9f03-48f3-ba09-b44c84a7a2c7:v3"
 
 	cpus 4
 	memory '200 GB'
@@ -668,7 +668,7 @@ process capsule_aind_ophys_classifier_17 {
 	ln -s "/tmp/data/2p_roi_classifier" "capsule/data/2p_roi_classifier" # id: 35d1284e-4dfa-4ac3-9ba8-5ea1ae2fdaeb
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v2.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0630574.git" capsule-repo
+	git clone --branch v3.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0630574.git" capsule-repo
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
