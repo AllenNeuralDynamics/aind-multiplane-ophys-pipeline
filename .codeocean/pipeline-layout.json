@@ -345,10 +345,10 @@
 			},
 			"id": "capsule_aind_ophys_mesoscope_image_splitter_10",
 			"position": {
-				"x": 738.9190670370353,
-				"y": -1291.3960105602937
+				"x": 438.58834712494183,
+				"y": -1159.5083194894728
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -396,7 +396,7 @@
 				"x": 1313.3222059560437,
 				"y": 88.33287838267393
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -492,17 +492,17 @@
 			},
 			"id": "capsule_aind_ophys_classifier_17",
 			"position": {
-				"x": -903.3333333333333,
+				"x": -909.9999999999999,
 				"y": -136.66666666666652
 			},
 			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1738781760726,
+	"timestamp": 1739212522902,
 	"viewport": {
-		"x": 462.0455183719199,
-		"y": 367.760723577602,
-		"zoom": 0.3
+		"x": -307.3444447196699,
+		"y": 2071.4163243200865,
+		"zoom": 1.4211259342243583
 	}
 }
