@@ -2,12 +2,12 @@
 	"version": 1,
 	"attached_datasets": [
 		{
-			"id": "35d1284e-4dfa-4ac3-9ba8-5ea1ae2fdaeb",
-			"mount": "2p_roi_classifier"
+			"id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
+			"mount": "ophys_mount"
 		},
 		{
-			"id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
-			"mount": "ophys_mount"
+			"id": "35d1284e-4dfa-4ac3-9ba8-5ea1ae2fdaeb",
+			"mount": "2p_roi_classifier"
 		},
 		{
 			"id": "fb4b5cef-4505-4145-b8bd-e41d6863d7a9",

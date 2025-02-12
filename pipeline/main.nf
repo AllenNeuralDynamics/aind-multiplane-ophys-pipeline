@@ -1,12 +1,12 @@
 #!/usr/bin/env nextflow
-// hash:sha256:2d993cea68670b11882c764937ddb059bcba089acc6b116e78377e4ca8a69ad7
+// hash:sha256:3fd6cbd6e830ef46203c2b368deb07425cdb73b944a84ba36f9dbd8050810be6
 
 nextflow.enable.dsl = 1
 
-params.ophys_mount_url = 's3://aind-private-data-prod-o5171v/multiplane-ophys_749013_2024-11-13_14-42-09'
+params.ophys_mount_url = 's3://aind-private-data-prod-o5171v/multiplane-ophys_746540_2024-09-30_14-52-23'
 
 ophys_mount_to_aind_ophys_motion_correction_1 = channel.fromPath(params.ophys_mount_url + "/*json", type: 'any')
-ophys_mount_to_aind_ophys_motion_correction_2 = channel.fromPath(params.ophys_mount_url + "/*ophys/*platform*", type: 'any')
+ophys_mount_to_aind_ophys_motion_correction_2 = channel.fromPath(params.ophys_mount_url + "/pophys", type: 'any')
 ophys_mount_to_aind_ophys_motion_correction_3 = channel.fromPath(params.ophys_mount_url + "/*/*.h5", type: 'any')
 capsule_aind_ophys_mesoscope_image_splitter_10_to_capsule_aind_ophys_motion_correction_1_4 = channel.create()
 capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_split_session_json_2_5 = channel.create()
@@ -51,8 +51,8 @@ ophys_mount_to_aind_ophys_classifier_43 = channel.fromPath(params.ophys_mount_ur
 
 // capsule - aind-ophys-motion-correction
 process capsule_aind_ophys_motion_correction_1 {
-	tag 'capsule-7474660'
-	container "$REGISTRY_HOST/published/91a8ed4d-3b9a-49c6-9283-3f16ea5482bf:v14"
+	tag 'capsule-5379831'
+	container "$REGISTRY_HOST/capsule/63a8ce2e-f232-4590-9098-36b820202911:0da186b632b36a65afc14b406afd4686"
 
 	cpus 16
 	memory '128 GB'
@@ -83,7 +83,7 @@ process capsule_aind_ophys_motion_correction_1 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=91a8ed4d-3b9a-49c6-9283-3f16ea5482bf
+	export CO_CAPSULE_ID=63a8ce2e-f232-4590-9098-36b820202911
 	export CO_CPUS=16
 	export CO_MEMORY=137438953472
 
@@ -93,7 +93,8 @@ process capsule_aind_ophys_motion_correction_1 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v14.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-7474660.git" capsule-repo
+	git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5379831.git" capsule-repo
+	git -C capsule-repo checkout d7786f962b59b541b73d1a813f32d90ad3e4b526 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -350,8 +351,8 @@ process capsule_aind_ophys_oasis_event_detection_9 {
 
 // capsule - aind-ophys-mesoscope-image-splitter
 process capsule_aind_ophys_mesoscope_image_splitter_10 {
-	tag 'capsule-4287852'
-	container "$REGISTRY_HOST/published/74cf5765-d490-4ff8-accc-8cca3cbd05ae:v3"
+	tag 'capsule-0115380'
+	container "$REGISTRY_HOST/capsule/c567666c-dd08-45dd-a824-6a570bd4675d:43a670fd4eacc08b5a31923b9dcbd449"
 
 	cpus 16
 	memory '128 GB'
@@ -368,7 +369,7 @@ process capsule_aind_ophys_mesoscope_image_splitter_10 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=74cf5765-d490-4ff8-accc-8cca3cbd05ae
+	export CO_CAPSULE_ID=c567666c-dd08-45dd-a824-6a570bd4675d
 	export CO_CPUS=16
 	export CO_MEMORY=137438953472
 
@@ -378,7 +379,8 @@ process capsule_aind_ophys_mesoscope_image_splitter_10 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v3.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4287852.git" capsule-repo
+	git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0115380.git" capsule-repo
+	git -C capsule-repo checkout 2874a49570d13c04790bf87f86ed4a61a4345166 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 

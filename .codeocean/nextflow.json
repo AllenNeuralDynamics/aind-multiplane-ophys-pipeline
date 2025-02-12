@@ -4,10 +4,11 @@
 		{
 			"name": "capsule_aind_ophys_motion_correction_1",
 			"capsule": {
-				"id": "91a8ed4d-3b9a-49c6-9283-3f16ea5482bf",
+				"id": "63a8ce2e-f232-4590-9098-36b820202911",
 				"name": "aind-ophys-motion-correction",
-				"slug": "7474660",
-				"version": 14,
+				"slug": "5379831",
+				"commit": "d7786f962b59b541b73d1a813f32d90ad3e4b526",
+				"image_tag": "0da186b632b36a65afc14b406afd4686",
 				"app_panel": true
 			},
 			"resources": {
@@ -17,7 +18,7 @@
 			"inputs": [
 				{
 					"id": "shss8a841zxh45G9FnAZJ",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*json",
@@ -25,15 +26,15 @@
 				},
 				{
 					"id": "0lQ8_66t7slDYYl1N-Ivx",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 					"type": "dataset",
 					"name": "ophys_mount",
-					"source_path": "ophys_mount/*ophys/*platform*",
+					"source_path": "ophys_mount/pophys",
 					"collect": true
 				},
 				{
 					"id": "dW2sgE4QaeP-dBHA85AgR",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*/*.h5",
@@ -75,7 +76,7 @@
 				},
 				{
 					"id": "qjChmoJ20XeaEGPsHOjFC",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/session.json",
@@ -116,7 +117,7 @@
 				},
 				{
 					"id": "LArxCXhABUHL5Lbh",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*.json",
@@ -151,7 +152,7 @@
 			"inputs": [
 				{
 					"id": "Igz2SaWliTICjJ0j",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*.json",
@@ -184,7 +185,7 @@
 			"inputs": [
 				{
 					"id": "KODdbV6tmWHiSyI7",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*.json",
@@ -224,7 +225,7 @@
 			"inputs": [
 				{
 					"id": "SY9soR8Q8U93YM1v",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*.json",
@@ -244,10 +245,11 @@
 		{
 			"name": "capsule_aind_ophys_mesoscope_image_splitter_10",
 			"capsule": {
-				"id": "74cf5765-d490-4ff8-accc-8cca3cbd05ae",
+				"id": "c567666c-dd08-45dd-a824-6a570bd4675d",
 				"name": "aind-ophys-mesoscope-image-splitter",
-				"slug": "4287852",
-				"version": 3
+				"slug": "0115380",
+				"commit": "2874a49570d13c04790bf87f86ed4a61a4345166",
+				"image_tag": "43a670fd4eacc08b5a31923b9dcbd449"
 			},
 			"resources": {
 				"cpus": 16,
@@ -256,7 +258,7 @@
 			"inputs": [
 				{
 					"id": "1Yhj3z1s9qpaxr2Ge_QLI",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*",
@@ -337,7 +339,7 @@
 				},
 				{
 					"id": "6vEEC0shND9OPhAmaCKdT",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*.json",
@@ -408,7 +410,7 @@
 				},
 				{
 					"id": "0YzMlCgaBT94ZTbI",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/",
@@ -497,7 +499,7 @@
 			"inputs": [
 				{
 					"id": "CTLzZrixZbnhLROR",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/",
@@ -589,7 +591,7 @@
 				},
 				{
 					"id": "HKnQaTnuiUwFzKcA",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/session.json",

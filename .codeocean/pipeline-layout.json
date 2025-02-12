@@ -111,30 +111,29 @@
 			"target": "results"
 		},
 		{
-			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_ophys_mesoscope_image_splitter_10",
-			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+			"id": "reactflow__edge-1bfb83fd-7b92-4a1d-827b-9d0acc17eedd-capsule_aind_ophys_mesoscope_image_splitter_10",
+			"selected": false,
+			"source": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 			"target": "capsule_aind_ophys_mesoscope_image_splitter_10"
 		},
 		{
-			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_ophys_motion_correction_1",
-			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+			"id": "reactflow__edge-1bfb83fd-7b92-4a1d-827b-9d0acc17eedd-capsule_aind_ophys_motion_correction_1",
+			"source": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 			"target": "capsule_aind_ophys_motion_correction_1"
 		},
 		{
-			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_ophys_decrosstalk_split_session_json_2",
-			"selected": false,
-			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+			"id": "reactflow__edge-1bfb83fd-7b92-4a1d-827b-9d0acc17eedd-capsule_aind_ophys_decrosstalk_split_session_json_2",
+			"source": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 			"target": "capsule_aind_ophys_decrosstalk_split_session_json_2"
 		},
 		{
-			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_pipeline_processing_metadata_aggregator_11",
-			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+			"id": "reactflow__edge-1bfb83fd-7b92-4a1d-827b-9d0acc17eedd-capsule_aind_pipeline_processing_metadata_aggregator_11",
+			"source": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
 		},
 		{
-			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_ophys_extraction_suite_2_p_4",
-			"selected": false,
-			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+			"id": "reactflow__edge-1bfb83fd-7b92-4a1d-827b-9d0acc17eedd-capsule_aind_ophys_extraction_suite_2_p_4",
+			"source": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 			"target": "capsule_aind_ophys_extraction_suite_2_p_4"
 		},
 		{
@@ -143,15 +142,13 @@
 			"target": "capsule_aind_ophys_oasis_event_detection_9"
 		},
 		{
-			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_ophys_nwb_12",
-			"selected": false,
-			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+			"id": "reactflow__edge-1bfb83fd-7b92-4a1d-827b-9d0acc17eedd-capsule_aind_ophys_nwb_12",
+			"source": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 			"target": "capsule_aind_ophys_nwb_12"
 		},
 		{
-			"id": "reactflow__edge-55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_nwb_packaging_subject_capsule_13",
-			"selected": false,
-			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+			"id": "reactflow__edge-1bfb83fd-7b92-4a1d-827b-9d0acc17eedd-capsule_nwb_packaging_subject_capsule_13",
+			"source": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 			"target": "capsule_nwb_packaging_subject_capsule_13"
 		},
 		{
@@ -243,9 +240,8 @@
 			"target": "results"
 		},
 		{
-			"id": "xy-edge__55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_ophys_decrosstalk_roi_images_3",
-			"selected": false,
-			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+			"id": "xy-edge__1bfb83fd-7b92-4a1d-827b-9d0acc17eedd-capsule_aind_ophys_decrosstalk_roi_images_3",
+			"source": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 			"target": "capsule_aind_ophys_decrosstalk_roi_images_3"
 		},
 		{
@@ -255,15 +251,13 @@
 			"target": "capsule_aind_ophys_decrosstalk_roi_images_3"
 		},
 		{
-			"id": "xy-edge__55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_ophys_dff_5",
-			"selected": false,
-			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+			"id": "xy-edge__1bfb83fd-7b92-4a1d-827b-9d0acc17eedd-capsule_aind_ophys_dff_5",
+			"source": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 			"target": "capsule_aind_ophys_dff_5"
 		},
 		{
-			"id": "xy-edge__55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_ophys_oasis_event_detection_9",
-			"selected": false,
-			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+			"id": "xy-edge__1bfb83fd-7b92-4a1d-827b-9d0acc17eedd-capsule_aind_ophys_oasis_event_detection_9",
+			"source": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 			"target": "capsule_aind_ophys_oasis_event_detection_9"
 		},
 		{
@@ -283,9 +277,8 @@
 			"target": "capsule_aind_ophys_classifier_17"
 		},
 		{
-			"id": "xy-edge__55f83fc7-9cc6-4b3c-8721-cc1f66590eab-capsule_aind_ophys_classifier_17",
-			"selected": false,
-			"source": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+			"id": "xy-edge__1bfb83fd-7b92-4a1d-827b-9d0acc17eedd-capsule_aind_ophys_classifier_17",
+			"source": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 			"target": "capsule_aind_ophys_classifier_17"
 		},
 		{
@@ -341,14 +334,14 @@
 		},
 		{
 			"data": {
-				"capsule_id": "74cf5765-d490-4ff8-accc-8cca3cbd05ae"
+				"capsule_id": "c567666c-dd08-45dd-a824-6a570bd4675d"
 			},
 			"id": "capsule_aind_ophys_mesoscope_image_splitter_10",
 			"position": {
-				"x": 438.58834712494183,
-				"y": -1159.5083194894728
+				"x": 368.66630388698115,
+				"y": -1246.5541284183628
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -421,15 +414,6 @@
 			"type": "dataset"
 		},
 		{
-			"id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
-			"position": {
-				"x": 220.06422842942686,
-				"y": -1528.761341822782
-			},
-			"selected": false,
-			"type": "dataset"
-		},
-		{
 			"data": {
 				"capsule_id": "d51df783-d892-4304-a129-238a9baea72a"
 			},
@@ -467,14 +451,14 @@
 		},
 		{
 			"data": {
-				"capsule_id": "91a8ed4d-3b9a-49c6-9283-3f16ea5482bf"
+				"capsule_id": "63a8ce2e-f232-4590-9098-36b820202911"
 			},
 			"id": "capsule_aind_ophys_motion_correction_1",
 			"position": {
-				"x": 817.6811160254667,
-				"y": -1032.7611267251477
+				"x": 648.2607185329339,
+				"y": -1047.9339928358222
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -497,12 +481,20 @@
 			},
 			"selected": false,
 			"type": "capsule"
+		},
+		{
+			"id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
+			"position": {
+				"x": 220.06422842942686,
+				"y": -1528.761341822782
+			},
+			"type": "dataset"
 		}
 	],
-	"timestamp": 1739212522902,
+	"timestamp": 1739392755085,
 	"viewport": {
-		"x": -307.3444447196699,
-		"y": 2071.4163243200865,
-		"zoom": 1.4211259342243583
+		"x": 430.6993322264391,
+		"y": 631.0753313794291,
+		"zoom": 0.3
 	}
 }
