@@ -7,8 +7,10 @@
 				"id": "63a8ce2e-f232-4590-9098-36b820202911",
 				"name": "aind-ophys-motion-correction",
 				"slug": "5379831",
-				"commit": "d7786f962b59b541b73d1a813f32d90ad3e4b526",
-				"image_tag": "0da186b632b36a65afc14b406afd4686",
+				"commit": "1f56f03b4b077f37457fb35d76857b2c8ac65fa2",
+				"arguments": [
+					"--debug"
+				],
 				"app_panel": true
 			},
 			"resources": {
@@ -90,10 +92,13 @@
 		{
 			"name": "capsule_aind_ophys_decrosstalk_roi_images_3",
 			"capsule": {
-				"id": "1383b25a-ecd2-4c56-8b7f-cde811c0b053",
+				"id": "e31d29f8-7eee-446b-8f0a-2f027fe6f39b",
 				"name": "aind-ophys-decrosstalk-roi-images",
-				"slug": "1533578",
-				"version": 8
+				"slug": "4612268",
+				"commit": "12d68566cceca25d6155b2989a430aee0cea9539",
+				"arguments": [
+					"--debug"
+				]
 			},
 			"resources": {
 				"cpus": 16,
@@ -101,27 +106,35 @@
 			},
 			"inputs": [
 				{
-					"id": "41DF5BdXDa7xt6iEAutyw",
-					"source_id": "capsule_aind_ophys_decrosstalk_split_session_json_2",
-					"type": "capsule",
-					"name": "aind-ophys-decrosstalk-split-session-json",
-					"flatten": true
-				},
-				{
-					"id": "kCRtPyFKfilDA6Ts",
-					"source_id": "capsule_aind_ophys_mesoscope_image_splitter_10",
-					"type": "capsule",
-					"name": "aind-ophys-mesoscope-image-splitter",
-					"source_path": "*/V*_[0-9].h5",
-					"collect": true
-				},
-				{
 					"id": "LArxCXhABUHL5Lbh",
 					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*.json",
 					"collect": true
+				},
+				{
+					"id": "zqpLi2VI7tiofBbS",
+					"source_id": "1bfb83fd-7b92-4a1d-827b-9d0acc17eedd",
+					"type": "dataset",
+					"name": "ophys_mount",
+					"source_path": "ophys_mount/pophys",
+					"collect": true
+				},
+				{
+					"id": "kCRtPyFKfilDA6Ts",
+					"source_id": "capsule_aind_ophys_mesoscope_image_splitter_10",
+					"type": "capsule",
+					"name": "aind-ophys-mesoscope-image-splitter",
+					"source_path": "*/*",
+					"collect": true
+				},
+				{
+					"id": "41DF5BdXDa7xt6iEAutyw",
+					"source_id": "capsule_aind_ophys_decrosstalk_split_session_json_2",
+					"type": "capsule",
+					"name": "aind-ophys-decrosstalk-split-session-json",
+					"flatten": true
 				},
 				{
 					"id": "_xWzqVThoTLrrFDjgqJ4f",
@@ -248,8 +261,7 @@
 				"id": "c567666c-dd08-45dd-a824-6a570bd4675d",
 				"name": "aind-ophys-mesoscope-image-splitter",
 				"slug": "0115380",
-				"commit": "2874a49570d13c04790bf87f86ed4a61a4345166",
-				"image_tag": "43a670fd4eacc08b5a31923b9dcbd449"
+				"commit": "2874a49570d13c04790bf87f86ed4a61a4345166"
 			},
 			"resources": {
 				"cpus": 16,
