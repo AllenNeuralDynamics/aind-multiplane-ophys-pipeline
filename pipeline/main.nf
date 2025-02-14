@@ -1,9 +1,9 @@
 #!/usr/bin/env nextflow
-// hash:sha256:9887c274335902977633ed0233f2d051c34bffa3609b8c4e9d70c5099fda0419
+// hash:sha256:4000254e8e48740a5961f49078adfc0a39ede3f09f55d0435a93297648a1c8cd
 
 nextflow.enable.dsl = 1
 
-params.ophys_mount_url = 's3://aind-private-data-prod-o5171v/multiplane-ophys_746540_2024-09-30_14-52-23'
+params.ophys_mount_url = 's3://aind-private-data-prod-o5171v/multiplane-ophys_767018_2025-02-10_13-04-43'
 
 ophys_mount_to_aind_ophys_motion_correction_1 = channel.fromPath(params.ophys_mount_url + "/*json", type: 'any')
 ophys_mount_to_aind_ophys_motion_correction_2 = channel.fromPath(params.ophys_mount_url + "/pophys", type: 'any')
@@ -52,8 +52,8 @@ ophys_mount_to_aind_ophys_classifier_44 = channel.fromPath(params.ophys_mount_ur
 
 // capsule - aind-ophys-motion-correction
 process capsule_aind_ophys_motion_correction_1 {
-	tag 'capsule-5379831'
-	container "$REGISTRY_HOST/capsule/63a8ce2e-f232-4590-9098-36b820202911"
+	tag 'capsule-7474660'
+	container "$REGISTRY_HOST/published/91a8ed4d-3b9a-49c6-9283-3f16ea5482bf:v15"
 
 	cpus 16
 	memory '128 GB'
@@ -84,7 +84,7 @@ process capsule_aind_ophys_motion_correction_1 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=63a8ce2e-f232-4590-9098-36b820202911
+	export CO_CAPSULE_ID=91a8ed4d-3b9a-49c6-9283-3f16ea5482bf
 	export CO_CPUS=16
 	export CO_MEMORY=137438953472
 
@@ -94,15 +94,14 @@ process capsule_aind_ophys_motion_correction_1 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5379831.git" capsule-repo
-	git -C capsule-repo checkout 1f56f03b4b077f37457fb35d76857b2c8ac65fa2 --quiet
+	git clone --branch v15.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-7474660.git" capsule-repo
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run --debug
+	./run ${params.capsule_aind_ophys_motion_correction_1_args}
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -200,7 +199,7 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run --debug
+	./run
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -354,8 +353,8 @@ process capsule_aind_ophys_oasis_event_detection_9 {
 
 // capsule - aind-ophys-mesoscope-image-splitter
 process capsule_aind_ophys_mesoscope_image_splitter_10 {
-	tag 'capsule-0115380'
-	container "$REGISTRY_HOST/capsule/c567666c-dd08-45dd-a824-6a570bd4675d"
+	tag 'capsule-4287852'
+	container "$REGISTRY_HOST/published/74cf5765-d490-4ff8-accc-8cca3cbd05ae:v5"
 
 	cpus 16
 	memory '128 GB'
@@ -372,7 +371,7 @@ process capsule_aind_ophys_mesoscope_image_splitter_10 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=c567666c-dd08-45dd-a824-6a570bd4675d
+	export CO_CAPSULE_ID=74cf5765-d490-4ff8-accc-8cca3cbd05ae
 	export CO_CPUS=16
 	export CO_MEMORY=137438953472
 
@@ -382,8 +381,7 @@ process capsule_aind_ophys_mesoscope_image_splitter_10 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0115380.git" capsule-repo
-	git -C capsule-repo checkout 2874a49570d13c04790bf87f86ed4a61a4345166 --quiet
+	git clone --branch v5.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4287852.git" capsule-repo
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
