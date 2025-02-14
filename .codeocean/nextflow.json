@@ -7,7 +7,7 @@
 				"id": "91a8ed4d-3b9a-49c6-9283-3f16ea5482bf",
 				"name": "aind-ophys-motion-correction",
 				"slug": "7474660",
-				"version": 14,
+				"version": 15,
 				"app_panel": true
 			},
 			"resources": {
@@ -17,7 +17,7 @@
 			"inputs": [
 				{
 					"id": "shss8a841zxh45G9FnAZJ",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*json",
@@ -25,15 +25,15 @@
 				},
 				{
 					"id": "0lQ8_66t7slDYYl1N-Ivx",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
 					"name": "ophys_mount",
-					"source_path": "ophys_mount/*ophys/*platform*",
+					"source_path": "ophys_mount/pophys",
 					"collect": true
 				},
 				{
 					"id": "dW2sgE4QaeP-dBHA85AgR",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*/*.h5",
@@ -75,7 +75,7 @@
 				},
 				{
 					"id": "qjChmoJ20XeaEGPsHOjFC",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/session.json",
@@ -92,7 +92,7 @@
 				"id": "1383b25a-ecd2-4c56-8b7f-cde811c0b053",
 				"name": "aind-ophys-decrosstalk-roi-images",
 				"slug": "1533578",
-				"version": 8
+				"version": 9
 			},
 			"resources": {
 				"cpus": 16,
@@ -100,27 +100,35 @@
 			},
 			"inputs": [
 				{
-					"id": "41DF5BdXDa7xt6iEAutyw",
-					"source_id": "capsule_aind_ophys_decrosstalk_split_session_json_2",
-					"type": "capsule",
-					"name": "aind-ophys-decrosstalk-split-session-json",
-					"flatten": true
+					"id": "LArxCXhABUHL5Lbh",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+					"type": "dataset",
+					"name": "ophys_mount",
+					"source_path": "ophys_mount/*.json",
+					"collect": true
+				},
+				{
+					"id": "zqpLi2VI7tiofBbS",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+					"type": "dataset",
+					"name": "ophys_mount",
+					"source_path": "ophys_mount/pophys",
+					"collect": true
 				},
 				{
 					"id": "kCRtPyFKfilDA6Ts",
 					"source_id": "capsule_aind_ophys_mesoscope_image_splitter_10",
 					"type": "capsule",
 					"name": "aind-ophys-mesoscope-image-splitter",
-					"source_path": "*/V*_[0-9].h5",
+					"source_path": "*/*",
 					"collect": true
 				},
 				{
-					"id": "LArxCXhABUHL5Lbh",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
-					"type": "dataset",
-					"name": "ophys_mount",
-					"source_path": "ophys_mount/*.json",
-					"collect": true
+					"id": "41DF5BdXDa7xt6iEAutyw",
+					"source_id": "capsule_aind_ophys_decrosstalk_split_session_json_2",
+					"type": "capsule",
+					"name": "aind-ophys-decrosstalk-split-session-json",
+					"flatten": true
 				},
 				{
 					"id": "_xWzqVThoTLrrFDjgqJ4f",
@@ -151,7 +159,7 @@
 			"inputs": [
 				{
 					"id": "Igz2SaWliTICjJ0j",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*.json",
@@ -184,7 +192,7 @@
 			"inputs": [
 				{
 					"id": "KODdbV6tmWHiSyI7",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*.json",
@@ -224,7 +232,7 @@
 			"inputs": [
 				{
 					"id": "SY9soR8Q8U93YM1v",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*.json",
@@ -247,7 +255,7 @@
 				"id": "74cf5765-d490-4ff8-accc-8cca3cbd05ae",
 				"name": "aind-ophys-mesoscope-image-splitter",
 				"slug": "4287852",
-				"version": 3
+				"version": 5
 			},
 			"resources": {
 				"cpus": 16,
@@ -256,7 +264,7 @@
 			"inputs": [
 				{
 					"id": "1Yhj3z1s9qpaxr2Ge_QLI",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*",
@@ -283,8 +291,8 @@
 				"app_panel": true
 			},
 			"resources": {
-				"cpus": 4,
-				"memory": 32
+				"cpus": 2,
+				"memory": 16
 			},
 			"inputs": [
 				{
@@ -337,7 +345,7 @@
 				},
 				{
 					"id": "6vEEC0shND9OPhAmaCKdT",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/*.json",
@@ -408,7 +416,7 @@
 				},
 				{
 					"id": "0YzMlCgaBT94ZTbI",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/",
@@ -497,7 +505,7 @@
 			"inputs": [
 				{
 					"id": "CTLzZrixZbnhLROR",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/",
@@ -589,7 +597,7 @@
 				},
 				{
 					"id": "HKnQaTnuiUwFzKcA",
-					"source_id": "55f83fc7-9cc6-4b3c-8721-cc1f66590eab",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/session.json",
