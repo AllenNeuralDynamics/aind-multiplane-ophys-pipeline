@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0
+
+* Inputs can be split or non-split multiplane ophys data
+
 ## 4.0
 
 * aind-ophys-classifier hotfix deployed for better resource management
