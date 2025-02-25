@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:d6c674cf8e3330558fb4328b9ebb60cfe6e20450bbabe80301afecb4a1dba8c7
+// hash:sha256:7d18ab16f092c273721c1149d7c0dacbfcc6141571d16e3db9f27c0652a56748
 
 nextflow.enable.dsl = 1
 
@@ -101,7 +101,7 @@ process capsule_aind_ophys_motion_correction_1 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run ${params.capsule_aind_ophys_motion_correction_1_args}
+	./run --debug
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -198,7 +198,7 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run
+	./run --debug
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -387,7 +387,7 @@ process capsule_aind_ophys_mesoscope_image_splitter_10 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run
+	./run --debug
 
 	echo "[${task.tag}] completed!"
 	"""
