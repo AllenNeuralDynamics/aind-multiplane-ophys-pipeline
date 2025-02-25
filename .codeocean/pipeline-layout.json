@@ -463,10 +463,10 @@
 			},
 			"id": "capsule_aind_ophys_quality_control_aggregator_16",
 			"position": {
-				"x": 1269.8939090682716,
-				"y": 518.382255806863
+				"x": 1296.066150771031,
+				"y": 538.0114370839326
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -496,10 +496,10 @@
 			},
 			"id": "capsule_aind_ophys_classifier_17",
 			"position": {
-				"x": -526.2380799962879,
-				"y": -186.72846978715492
+				"x": -539.3242008476676,
+				"y": -203.08612085137955
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -511,10 +511,10 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1740454222999,
+	"timestamp": 1740501861817,
 	"viewport": {
-		"x": 231.79044176568584,
-		"y": 247.20558345668832,
+		"x": 206.79044176568584,
+		"y": 202.20558345668832,
 		"zoom": 0.30566735898501673
 	}
 }
