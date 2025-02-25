@@ -337,7 +337,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "e31d29f8-7eee-446b-8f0a-2f027fe6f39b"
+				"capsule_id": "1383b25a-ecd2-4c56-8b7f-cde811c0b053"
 			},
 			"id": "capsule_aind_ophys_decrosstalk_roi_images_3",
 			"position": {
@@ -349,7 +349,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "382062c4-fd31-4812-806b-cc81bad29bf4"
+				"capsule_id": "c6394aab-0db7-47b2-90ba-864866d6755e"
 			},
 			"id": "capsule_aind_ophys_oasis_event_detection_9",
 			"position": {
@@ -397,7 +397,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "c9f136a2-67d7-4adf-b15a-e02af4237fa4"
+				"capsule_id": "5e1d659c-e149-4a57-be83-12f5a448a0c9"
 			},
 			"id": "capsule_aind_ophys_extraction_suite_2_p_4",
 			"position": {
@@ -454,26 +454,26 @@
 		},
 		{
 			"data": {
-				"capsule_id": "4f0eb1d2-88ce-4dfb-82b2-00bb6e2b6546"
+				"capsule_id": "f52d9390-8569-49bb-9562-2d624b18ee56"
 			},
 			"id": "capsule_aind_ophys_movie_qc_15",
 			"position": {
-				"x": 1087.991186265605,
-				"y": -522.7616229521212
+				"x": 1084.71965605276,
+				"y": -516.2185625264314
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
 			"data": {
-				"capsule_id": "05b8a796-f8c7-4177-b486-82abfc146e49"
+				"capsule_id": "4a698b5c-f5f6-4671-8234-dc728d049a68"
 			},
 			"id": "capsule_aind_ophys_quality_control_aggregator_16",
 			"position": {
 				"x": 1083.4166869361102,
 				"y": 495.48154431694854
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -499,7 +499,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "76a903cf-ce80-4367-8153-f17842748ab9"
+				"capsule_id": "3819d125-9f03-48f3-ba09-b44c84a7a2c7"
 			},
 			"id": "capsule_aind_ophys_classifier_17",
 			"position": {
@@ -518,10 +518,10 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1740509011687,
+	"timestamp": 1740516967928,
 	"viewport": {
-		"x": 398.79044176568584,
-		"y": 396.2055834566883,
+		"x": 255.79044176568584,
+		"y": 655.2055834566884,
 		"zoom": 0.30566735898501673
 	}
 }
