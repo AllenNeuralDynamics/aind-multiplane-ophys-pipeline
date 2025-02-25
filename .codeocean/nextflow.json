@@ -567,18 +567,26 @@
 			},
 			"inputs": [
 				{
-					"id": "H1cSBrby21Hi5iyD",
-					"source_id": "capsule_aind_ophys_decrosstalk_roi_images_3",
-					"type": "capsule",
-					"name": "aind-ophys-decrosstalk-roi-images",
-					"source_path": "*/*/*.json",
-					"collect": true
-				},
-				{
 					"id": "9CHXUe1yLmvG0KfK",
 					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
 					"type": "capsule",
 					"name": "aind-ophys-oasis-event-detection",
+					"source_path": "*/*/*.json",
+					"collect": true
+				},
+				{
+					"id": "pg9yfQ9HO7egCSgF",
+					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
+					"type": "capsule",
+					"name": "aind-ophys-oasis-event-detection",
+					"source_path": "*/*/plots/*",
+					"collect": true
+				},
+				{
+					"id": "H1cSBrby21Hi5iyD",
+					"source_id": "capsule_aind_ophys_decrosstalk_roi_images_3",
+					"type": "capsule",
+					"name": "aind-ophys-decrosstalk-roi-images",
 					"source_path": "*/*/*.json",
 					"collect": true
 				},
