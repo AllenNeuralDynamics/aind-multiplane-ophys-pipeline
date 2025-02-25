@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:00e2b0f85fc8117d8326f3a51db1bc615536c9688f5013f02eaf80863a8c7951
+// hash:sha256:4b2d7bedc8d0cb4f3ae56b96cfa1dac5074ec741d1601c28f12749275591e7ad
 
 nextflow.enable.dsl = 1
 
@@ -161,7 +161,7 @@ process capsule_aind_ophys_decrosstalk_split_session_json_2 {
 // capsule - aind-ophys-decrosstalk-roi-images
 process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	tag 'capsule-4612268'
-	container "$REGISTRY_HOST/capsule/e31d29f8-7eee-446b-8f0a-2f027fe6f39b:90a11d3c7a5fc33f1fabb2b9a86ac8f4"
+	container "$REGISTRY_HOST/capsule/e31d29f8-7eee-446b-8f0a-2f027fe6f39b"
 
 	cpus 16
 	memory '128 GB'
@@ -214,7 +214,7 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 // capsule - aind-ophys-extraction-suite2p
 process capsule_aind_ophys_extraction_suite_2_p_4 {
 	tag 'capsule-3592435'
-	container "$REGISTRY_HOST/capsule/c9f136a2-67d7-4adf-b15a-e02af4237fa4:5c573bd731b27103f675f902ccaf1198"
+	container "$REGISTRY_HOST/capsule/c9f136a2-67d7-4adf-b15a-e02af4237fa4"
 
 	cpus 4
 	memory '128 GB'
@@ -315,7 +315,7 @@ process capsule_aind_ophys_dff_5 {
 // capsule - aind-ophys-oasis-event-detection
 process capsule_aind_ophys_oasis_event_detection_9 {
 	tag 'capsule-0298748'
-	container "$REGISTRY_HOST/capsule/382062c4-fd31-4812-806b-cc81bad29bf4:9087c2ff5cc907978b646b11a6cab48d"
+	container "$REGISTRY_HOST/capsule/382062c4-fd31-4812-806b-cc81bad29bf4"
 
 	cpus 4
 	memory '32 GB'
@@ -601,7 +601,7 @@ process capsule_aind_ophys_movie_qc_15 {
 // capsule - aind-ophys-quality-control-aggregator
 process capsule_aind_ophys_quality_control_aggregator_16 {
 	tag 'capsule-4691390'
-	container "$REGISTRY_HOST/capsule/05b8a796-f8c7-4177-b486-82abfc146e49:b902af65b696824e8ca753bf50afa9f3"
+	container "$REGISTRY_HOST/capsule/05b8a796-f8c7-4177-b486-82abfc146e49"
 
 	cpus 1
 	memory '8 GB'
@@ -609,7 +609,7 @@ process capsule_aind_ophys_quality_control_aggregator_16 {
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	input:
-	path 'capsule/data/processed/' from capsule_aind_ophys_classifier_17_to_capsule_aind_ophys_quality_control_aggregator_16_41.collect()
+	path 'capsule/data/' from capsule_aind_ophys_classifier_17_to_capsule_aind_ophys_quality_control_aggregator_16_41.collect()
 	path 'capsule/data/' from capsule_aind_ophys_classifier_17_to_capsule_aind_ophys_quality_control_aggregator_16_42.collect()
 	path 'capsule/data/' from capsule_aind_ophys_oasis_event_detection_9_to_capsule_aind_ophys_quality_control_aggregator_16_43.collect()
 	path 'capsule/data/' from capsule_aind_ophys_oasis_event_detection_9_to_capsule_aind_ophys_quality_control_aggregator_16_44.collect()
@@ -652,7 +652,7 @@ process capsule_aind_ophys_quality_control_aggregator_16 {
 // capsule - aind-ophys-classifier
 process capsule_aind_ophys_classifier_17 {
 	tag 'capsule-7076908'
-	container "$REGISTRY_HOST/capsule/76a903cf-ce80-4367-8153-f17842748ab9:c883b6813d4aa7edee9d73722146a27c"
+	container "$REGISTRY_HOST/capsule/76a903cf-ce80-4367-8153-f17842748ab9"
 
 	cpus 4
 	memory '200 GB'
