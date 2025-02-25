@@ -563,6 +563,22 @@
 			},
 			"inputs": [
 				{
+					"id": "MEXCQnzNK7CwnAlh",
+					"source_id": "capsule_aind_ophys_movie_qc_15",
+					"type": "capsule",
+					"name": "aind-ophys-movie-qc",
+					"source_path": "*/*/*.json",
+					"collect": true
+				},
+				{
+					"id": "9k8xDyXwPo1r9fBf",
+					"source_id": "capsule_aind_ophys_movie_qc_15",
+					"type": "capsule",
+					"name": "aind-ophys-movie-qc",
+					"source_path": "*/*/*.png",
+					"collect": true
+				},
+				{
 					"id": "f7CVKT5Y4FhzucWR",
 					"source_id": "capsule_aind_ophys_classifier_17",
 					"type": "capsule",
