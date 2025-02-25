@@ -96,7 +96,6 @@
 				"name": "aind-ophys-decrosstalk-roi-images",
 				"slug": "4612268",
 				"commit": "c86ef574065ef7fc05a51a8019080b316b843e2d",
-				"image_tag": "90a11d3c7a5fc33f1fabb2b9a86ac8f4",
 				"arguments": [
 					"--debug"
 				]
@@ -157,7 +156,6 @@
 				"name": "aind-ophys-extraction-suite2p",
 				"slug": "3592435",
 				"commit": "408a3fd5c53d92ce088d617b0134f81d640d6de3",
-				"image_tag": "5c573bd731b27103f675f902ccaf1198",
 				"app_panel": true
 			},
 			"resources": {
@@ -231,8 +229,7 @@
 				"id": "382062c4-fd31-4812-806b-cc81bad29bf4",
 				"name": "aind-ophys-oasis-event-detection",
 				"slug": "0298748",
-				"commit": "43aafe91eb3c90f157c248b191133bf5fe98628b",
-				"image_tag": "9087c2ff5cc907978b646b11a6cab48d"
+				"commit": "43aafe91eb3c90f157c248b191133bf5fe98628b"
 			},
 			"resources": {
 				"cpus": 4,
@@ -558,14 +555,30 @@
 				"id": "05b8a796-f8c7-4177-b486-82abfc146e49",
 				"name": "aind-ophys-quality-control-aggregator",
 				"slug": "4691390",
-				"commit": "f61c0c3f82ce1bc8a9fd41c5235a3145de93828d",
-				"image_tag": "b902af65b696824e8ca753bf50afa9f3"
+				"commit": "f61c0c3f82ce1bc8a9fd41c5235a3145de93828d"
 			},
 			"resources": {
 				"cpus": 1,
 				"memory": 8
 			},
 			"inputs": [
+				{
+					"id": "f7CVKT5Y4FhzucWR",
+					"source_id": "capsule_aind_ophys_classifier_17",
+					"type": "capsule",
+					"name": "aind-ophys-classifier",
+					"source_path": "*/*/*.json",
+					"target_path": "processed",
+					"collect": true
+				},
+				{
+					"id": "8icAeijrXrRdMvEM",
+					"source_id": "capsule_aind_ophys_classifier_17",
+					"type": "capsule",
+					"name": "aind-ophys-classifier",
+					"source_path": "*/*/*.png",
+					"collect": true
+				},
 				{
 					"id": "9CHXUe1yLmvG0KfK",
 					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
@@ -599,15 +612,6 @@
 					"collect": true
 				},
 				{
-					"id": "f7CVKT5Y4FhzucWR",
-					"source_id": "capsule_aind_ophys_classifier_17",
-					"type": "capsule",
-					"name": "aind-ophys-classifier",
-					"source_path": "*/*/*.json",
-					"target_path": "processed",
-					"collect": true
-				},
-				{
 					"id": "z1Gb5hk6usp2iAFt",
 					"source_id": "capsule_aind_ophys_motion_correction_1",
 					"type": "capsule",
@@ -626,8 +630,7 @@
 				"id": "76a903cf-ce80-4367-8153-f17842748ab9",
 				"name": "aind-ophys-classifier",
 				"slug": "7076908",
-				"commit": "c20799b370daaa9431690e8a051357bf95974186",
-				"image_tag": "c883b6813d4aa7edee9d73722146a27c"
+				"commit": "c20799b370daaa9431690e8a051357bf95974186"
 			},
 			"resources": {
 				"cpus": 4,

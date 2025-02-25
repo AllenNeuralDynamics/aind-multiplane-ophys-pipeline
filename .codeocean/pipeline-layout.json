@@ -295,6 +295,7 @@
 		},
 		{
 			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_ophys_nwb_12",
+			"selected": false,
 			"source": "capsule_aind_ophys_classifier_17",
 			"target": "capsule_aind_ophys_nwb_12"
 		},
@@ -384,7 +385,7 @@
 				"x": 13.301827295236762,
 				"y": -225.47056526468617
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -495,10 +496,10 @@
 			},
 			"id": "capsule_aind_ophys_classifier_17",
 			"position": {
-				"x": -679.9999999999998,
-				"y": -189.99999999999986
+				"x": -526.2380799962879,
+				"y": -186.72846978715492
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -510,10 +511,10 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1740452780216,
+	"timestamp": 1740454222999,
 	"viewport": {
-		"x": 268.30103190641677,
-		"y": 331.36659131101646,
-		"zoom": 0.3
+		"x": 231.79044176568584,
+		"y": 247.20558345668832,
+		"zoom": 0.30566735898501673
 	}
 }
