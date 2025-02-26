@@ -230,6 +230,7 @@
 		},
 		{
 			"id": "reactflow__edge-capsule_aind_ophys_motion_correction_1-capsule_aind_ophys_quality_control_aggregator_16",
+			"selected": false,
 			"source": "capsule_aind_ophys_motion_correction_1",
 			"target": "capsule_aind_ophys_quality_control_aggregator_16"
 		},
@@ -289,13 +290,39 @@
 		},
 		{
 			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_ophys_quality_control_aggregator_16",
+			"selected": false,
 			"source": "capsule_aind_ophys_classifier_17",
 			"target": "capsule_aind_ophys_quality_control_aggregator_16"
 		},
 		{
 			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_ophys_nwb_12",
+			"selected": false,
 			"source": "capsule_aind_ophys_classifier_17",
 			"target": "capsule_aind_ophys_nwb_12"
+		},
+		{
+			"id": "xy-edge__capsule_aind_ophys_extraction_suite_2_p_4-capsule_aind_ophys_quality_control_aggregator_16",
+			"selected": false,
+			"source": "capsule_aind_ophys_extraction_suite_2_p_4",
+			"target": "capsule_aind_ophys_quality_control_aggregator_16"
+		},
+		{
+			"id": "xy-edge__capsule_aind_ophys_oasis_event_detection_9-capsule_aind_ophys_quality_control_aggregator_16",
+			"selected": false,
+			"source": "capsule_aind_ophys_oasis_event_detection_9",
+			"target": "capsule_aind_ophys_quality_control_aggregator_16"
+		},
+		{
+			"id": "xy-edge__capsule_aind_ophys_decrosstalk_roi_images_3-capsule_aind_ophys_quality_control_aggregator_16",
+			"selected": false,
+			"source": "capsule_aind_ophys_decrosstalk_roi_images_3",
+			"target": "capsule_aind_ophys_quality_control_aggregator_16"
+		},
+		{
+			"id": "xy-edge__capsule_aind_ophys_movie_qc_15-capsule_aind_ophys_quality_control_aggregator_16",
+			"selected": false,
+			"source": "capsule_aind_ophys_movie_qc_15",
+			"target": "capsule_aind_ophys_quality_control_aggregator_16"
 		}
 	],
 	"nodes": [
@@ -314,8 +341,8 @@
 			},
 			"id": "capsule_aind_ophys_decrosstalk_roi_images_3",
 			"position": {
-				"x": 316.1215858355208,
-				"y": -342.06709021324235
+				"x": 366.12158583552105,
+				"y": -382.06709021324235
 			},
 			"selected": false,
 			"type": "capsule"
@@ -374,8 +401,8 @@
 			},
 			"id": "capsule_aind_ophys_extraction_suite_2_p_4",
 			"position": {
-				"x": -301.072860511453,
-				"y": -630.793619458871
+				"x": -124.40619384478623,
+				"y": -627.4602861255378
 			},
 			"selected": false,
 			"type": "capsule"
@@ -422,7 +449,7 @@
 				"x": 529.0513818234645,
 				"y": 747.0071854998745
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -431,8 +458,8 @@
 			},
 			"id": "capsule_aind_ophys_movie_qc_15",
 			"position": {
-				"x": 1143.6071998839689,
-				"y": -506.4039718878966
+				"x": 1084.71965605276,
+				"y": -516.2185625264314
 			},
 			"selected": false,
 			"type": "capsule"
@@ -443,10 +470,10 @@
 			},
 			"id": "capsule_aind_ophys_quality_control_aggregator_16",
 			"position": {
-				"x": 1086.5605757349385,
-				"y": -88.28441085980361
+				"x": 1083.4166869361102,
+				"y": 495.48154431694854
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -455,8 +482,8 @@
 			},
 			"id": "capsule_aind_ophys_motion_correction_1",
 			"position": {
-				"x": 888.7202462461157,
-				"y": -1250.5258783894478
+				"x": 898.7202462461157,
+				"y": -1133.8592117227813
 			},
 			"selected": false,
 			"type": "capsule"
@@ -476,8 +503,8 @@
 			},
 			"id": "capsule_aind_ophys_classifier_17",
 			"position": {
-				"x": -679.9999999999998,
-				"y": -189.99999999999986
+				"x": -539.3242008476676,
+				"y": -203.08612085137955
 			},
 			"selected": false,
 			"type": "capsule"
@@ -491,10 +518,10 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1739573703963,
+	"timestamp": 1740516967928,
 	"viewport": {
-		"x": 354.6060088277728,
-		"y": 469.7673426823171,
-		"zoom": 0.3
+		"x": 255.79044176568584,
+		"y": 655.2055834566884,
+		"zoom": 0.30566735898501673
 	}
 }
