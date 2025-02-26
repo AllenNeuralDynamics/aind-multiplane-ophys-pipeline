@@ -1,5 +1,9 @@
 # Changelog
 
+## 6.0
+
+* Processing capsules with images will now show up in the qc portal
+
 ## 5.0
 
 * Inputs can be split or non-split multiplane ophys data
