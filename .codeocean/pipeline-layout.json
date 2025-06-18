@@ -341,6 +341,11 @@
 			"selected": false,
 			"source": "capsule_aind_ophys_mesoscope_image_splitter_10",
 			"target": "results"
+		},
+		{
+			"id": "xy-edge__1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_movie_qc_new_qc_delete_15",
+			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+			"target": "capsule_aind_ophys_movie_qc_new_qc_delete_15"
 		}
 	],
 	"nodes": [
@@ -386,7 +391,7 @@
 				"x": 595.3329705536478,
 				"y": -1119.8874617516963
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -532,14 +537,14 @@
 				"x": 1371.2572561883715,
 				"y": -344.1858706971228
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1750260755507,
+	"timestamp": 1750267807565,
 	"viewport": {
-		"x": 542.5077117950025,
-		"y": 514.2266050201996,
+		"x": 468.5077117950025,
+		"y": 477.9766050201996,
 		"zoom": 0.5252490779857479
 	}
 }

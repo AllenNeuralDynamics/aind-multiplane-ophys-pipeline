@@ -524,7 +524,7 @@
 				"id": "ae1f5b8c-4a2d-4771-bbb2-212815c180ce",
 				"name": "aind-ophys-movie-qc-new-qc_DELETE",
 				"slug": "1646132",
-				"commit": "4cb3fcf1c4f7f19bc87024e78ab53405bd98a327",
+				"commit": "9feca86073754b7f7818db49f946f51c3f5058ea",
 				"image_tag": "58a8d3c7610bc6f4d06f4a74a01a220f"
 			},
 			"resources": {
@@ -533,11 +533,19 @@
 			},
 			"inputs": [
 				{
+					"id": "ClP14RumzpD8ZZ74",
+					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+					"type": "dataset",
+					"name": "ophys_mount",
+					"source_path": "ophys_mount/",
+					"target_path": "raw",
+					"collect": true
+				},
+				{
 					"id": "fasx3fSWdSFPxCaW",
 					"source_id": "capsule_aind_ophys_mesoscope_image_splitter_10",
 					"type": "capsule",
 					"name": "aind-ophys-mesoscope-image-splitter",
-					"source_path": "V*",
 					"target_path": "zstacks",
 					"collect": true
 				},
