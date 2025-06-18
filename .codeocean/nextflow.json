@@ -270,7 +270,11 @@
 					"source_path": "ophys_mount/*",
 					"collect": true
 				}
-			]
+			],
+			"results": {
+				"id": "74cf5765-d490-4ff8-accc-8cca3cbd05ae",
+				"source_path": "*/*_z_stack_local.h5"
+			}
 		},
 		{
 			"name": "capsule_aind_pipeline_processing_metadata_aggregator_11",
@@ -515,18 +519,28 @@
 			]
 		},
 		{
-			"name": "capsule_aind_ophys_movie_qc_15",
+			"name": "capsule_aind_ophys_movie_qc_new_qc_delete_15",
 			"capsule": {
-				"id": "f52d9390-8569-49bb-9562-2d624b18ee56",
-				"name": "aind-ophys-movie-qc",
-				"slug": "0300037",
-				"version": 6
+				"id": "ae1f5b8c-4a2d-4771-bbb2-212815c180ce",
+				"name": "aind-ophys-movie-qc-new-qc_DELETE",
+				"slug": "1646132",
+				"commit": "4cb3fcf1c4f7f19bc87024e78ab53405bd98a327",
+				"image_tag": "58a8d3c7610bc6f4d06f4a74a01a220f"
 			},
 			"resources": {
 				"cpus": 16,
 				"memory": 128
 			},
 			"inputs": [
+				{
+					"id": "fasx3fSWdSFPxCaW",
+					"source_id": "capsule_aind_ophys_mesoscope_image_splitter_10",
+					"type": "capsule",
+					"name": "aind-ophys-mesoscope-image-splitter",
+					"source_path": "V*",
+					"target_path": "zstacks",
+					"collect": true
+				},
 				{
 					"id": "OlNB4wYP4I6DaiEY",
 					"source_id": "capsule_aind_ophys_motion_correction_1",
@@ -537,7 +551,7 @@
 				}
 			],
 			"results": {
-				"id": "f52d9390-8569-49bb-9562-2d624b18ee56"
+				"id": "ae1f5b8c-4a2d-4771-bbb2-212815c180ce"
 			}
 		},
 		{
@@ -555,17 +569,17 @@
 			"inputs": [
 				{
 					"id": "MEXCQnzNK7CwnAlh",
-					"source_id": "capsule_aind_ophys_movie_qc_15",
+					"source_id": "capsule_aind_ophys_movie_qc_new_qc_delete_15",
 					"type": "capsule",
-					"name": "aind-ophys-movie-qc",
+					"name": "aind-ophys-movie-qc-new-qc_DELETE",
 					"source_path": "*/*/*.json",
 					"collect": true
 				},
 				{
 					"id": "9k8xDyXwPo1r9fBf",
-					"source_id": "capsule_aind_ophys_movie_qc_15",
+					"source_id": "capsule_aind_ophys_movie_qc_new_qc_delete_15",
 					"type": "capsule",
-					"name": "aind-ophys-movie-qc",
+					"name": "aind-ophys-movie-qc-new-qc_DELETE",
 					"source_path": "*/*/*.png",
 					"collect": true
 				},
