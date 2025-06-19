@@ -524,7 +524,7 @@
 				"id": "ae1f5b8c-4a2d-4771-bbb2-212815c180ce",
 				"name": "aind-ophys-movie-qc-new-qc_DELETE",
 				"slug": "1646132",
-				"commit": "9feca86073754b7f7818db49f946f51c3f5058ea",
+				"commit": "e9fcbb83b3d4254492e2810ece3afa1951a453cb",
 				"image_tag": "58a8d3c7610bc6f4d06f4a74a01a220f"
 			},
 			"resources": {
