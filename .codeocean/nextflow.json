@@ -537,7 +537,7 @@
 					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
 					"name": "ophys_mount",
-					"source_path": "ophys_mount/",
+					"source_path": "ophys_mount/session.json",
 					"target_path": "raw",
 					"collect": true
 				},

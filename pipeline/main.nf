@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:ac564d8df9d41486bc0656d0c59b395a16fdbb3ffdb61c1b3093aa7d8c3721d4
+// hash:sha256:cd00a1ef3102901fce6f9838bc9ae643ac203837e5fbd86c321753ecd18c6169
 
 nextflow.enable.dsl = 1
 
@@ -44,7 +44,7 @@ capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_aind_ophys_nwb_12_36 = chan
 capsule_aind_ophys_decrosstalk_roi_images_3_to_capsule_aind_ophys_nwb_12_37 = channel.create()
 capsule_nwb_packaging_subject_capsule_13_to_capsule_aind_ophys_nwb_12_38 = channel.create()
 ophys_mount_to_nwb_packaging_subject_capsule_39 = channel.fromPath(params.ophys_mount_url + "/", type: 'any')
-ophys_mount_to_aind_ophys_movie_qc_new_qc_delete_40 = channel.fromPath(params.ophys_mount_url + "/", type: 'any')
+ophys_mount_to_aind_ophys_movie_qc_new_qc_delete_40 = channel.fromPath(params.ophys_mount_url + "/session.json", type: 'any')
 capsule_aind_ophys_mesoscope_image_splitter_10_to_capsule_aind_ophys_movie_qc_new_qc_delete_15_41 = channel.create()
 capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_movie_qc_new_qc_delete_15_42 = channel.create()
 capsule_aind_ophys_movie_qc_new_qc_delete_15_to_capsule_aind_ophys_quality_control_aggregator_16_43 = channel.create()
@@ -610,7 +610,7 @@ process capsule_aind_ophys_movie_qc_new_qc_delete_15 {
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	input:
-	path 'capsule/data/raw' from ophys_mount_to_aind_ophys_movie_qc_new_qc_delete_40.collect()
+	path 'capsule/data/raw/' from ophys_mount_to_aind_ophys_movie_qc_new_qc_delete_40.collect()
 	path 'capsule/data/zstacks/' from capsule_aind_ophys_mesoscope_image_splitter_10_to_capsule_aind_ophys_movie_qc_new_qc_delete_15_41.collect()
 	path 'capsule/data/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_movie_qc_new_qc_delete_15_42.flatten()
 
