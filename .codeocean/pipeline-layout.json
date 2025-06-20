@@ -231,15 +231,14 @@
 			"target": "capsule_aind_ophys_movie_qc_new_qc_delete_15"
 		},
 		{
-			"id": "reactflow__edge-capsule_aind_ophys_quality_control_aggregator_16-results",
-			"source": "capsule_aind_ophys_quality_control_aggregator_16",
+			"id": "reactflow__edge-capsule_aind_ophys_quality_control_aggregator_test_todelete_16-results",
+			"source": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
 			"target": "results"
 		},
 		{
-			"id": "reactflow__edge-capsule_aind_ophys_motion_correction_1-capsule_aind_ophys_quality_control_aggregator_16",
-			"selected": false,
+			"id": "reactflow__edge-capsule_aind_ophys_motion_correction_1-capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
 			"source": "capsule_aind_ophys_motion_correction_1",
-			"target": "capsule_aind_ophys_quality_control_aggregator_16"
+			"target": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16"
 		},
 		{
 			"id": "reactflow__edge-capsule_aind_ophys_movie_qc_new_qc_delete_15-results",
@@ -296,10 +295,9 @@
 			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
 		},
 		{
-			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_ophys_quality_control_aggregator_16",
-			"selected": false,
+			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
 			"source": "capsule_aind_ophys_classifier_17",
-			"target": "capsule_aind_ophys_quality_control_aggregator_16"
+			"target": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16"
 		},
 		{
 			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_ophys_nwb_12",
@@ -308,27 +306,24 @@
 			"target": "capsule_aind_ophys_nwb_12"
 		},
 		{
-			"id": "xy-edge__capsule_aind_ophys_extraction_suite_2_p_4-capsule_aind_ophys_quality_control_aggregator_16",
-			"selected": false,
+			"id": "xy-edge__capsule_aind_ophys_extraction_suite_2_p_4-capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
 			"source": "capsule_aind_ophys_extraction_suite_2_p_4",
-			"target": "capsule_aind_ophys_quality_control_aggregator_16"
+			"target": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16"
 		},
 		{
-			"id": "xy-edge__capsule_aind_ophys_oasis_event_detection_9-capsule_aind_ophys_quality_control_aggregator_16",
-			"selected": false,
+			"id": "xy-edge__capsule_aind_ophys_oasis_event_detection_9-capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
 			"source": "capsule_aind_ophys_oasis_event_detection_9",
-			"target": "capsule_aind_ophys_quality_control_aggregator_16"
+			"target": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16"
 		},
 		{
-			"id": "xy-edge__capsule_aind_ophys_decrosstalk_roi_images_3-capsule_aind_ophys_quality_control_aggregator_16",
-			"selected": false,
+			"id": "xy-edge__capsule_aind_ophys_decrosstalk_roi_images_3-capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
 			"source": "capsule_aind_ophys_decrosstalk_roi_images_3",
-			"target": "capsule_aind_ophys_quality_control_aggregator_16"
+			"target": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16"
 		},
 		{
-			"id": "xy-edge__capsule_aind_ophys_movie_qc_new_qc_delete_15-capsule_aind_ophys_quality_control_aggregator_16",
+			"id": "xy-edge__capsule_aind_ophys_movie_qc_new_qc_delete_15-capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
 			"source": "capsule_aind_ophys_movie_qc_new_qc_delete_15",
-			"target": "capsule_aind_ophys_quality_control_aggregator_16"
+			"target": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16"
 		},
 		{
 			"id": "xy-edge__capsule_aind_ophys_mesoscope_image_splitter_10-capsule_aind_ophys_movie_qc_new_qc_delete_15",
@@ -477,18 +472,6 @@
 		},
 		{
 			"data": {
-				"capsule_id": "4a698b5c-f5f6-4671-8234-dc728d049a68"
-			},
-			"id": "capsule_aind_ophys_quality_control_aggregator_16",
-			"position": {
-				"x": 1336.7500202694432,
-				"y": 448.814877650282
-			},
-			"selected": false,
-			"type": "capsule"
-		},
-		{
-			"data": {
 				"capsule_id": "91a8ed4d-3b9a-49c6-9283-3f16ea5482bf"
 			},
 			"id": "capsule_aind_ophys_motion_correction_1",
@@ -539,12 +522,19 @@
 			},
 			"selected": false,
 			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "cf6e6d94-0001-46fb-a636-f97d22dad85a"
+			},
+			"id": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
+			"position": {
+				"x": 1336.7500202694432,
+				"y": 448.814877650282
+			},
+			"selected": true,
+			"type": "capsule"
 		}
 	],
-	"timestamp": 1750267807565,
-	"viewport": {
-		"x": 468.5077117950025,
-		"y": 477.9766050201996,
-		"zoom": 0.5252490779857479
-	}
+	"timestamp": 1750455320733
 }

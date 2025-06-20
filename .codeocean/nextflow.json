@@ -563,12 +563,12 @@
 			}
 		},
 		{
-			"name": "capsule_aind_ophys_quality_control_aggregator_16",
+			"name": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
 			"capsule": {
-				"id": "4a698b5c-f5f6-4671-8234-dc728d049a68",
-				"name": "aind-ophys-quality-control-aggregator",
-				"slug": "4044810",
-				"version": 3
+				"id": "cf6e6d94-0001-46fb-a636-f97d22dad85a",
+				"name": "aind-ophys-quality-control-aggregator-TEST-TODELETE",
+				"slug": "6655551",
+				"app_panel": true
 			},
 			"resources": {
 				"cpus": 1,
@@ -649,7 +649,7 @@
 				}
 			],
 			"results": {
-				"id": "4a698b5c-f5f6-4671-8234-dc728d049a68"
+				"id": "cf6e6d94-0001-46fb-a636-f97d22dad85a"
 			}
 		},
 		{
