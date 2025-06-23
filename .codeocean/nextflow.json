@@ -270,11 +270,7 @@
 					"source_path": "ophys_mount/*",
 					"collect": true
 				}
-			],
-			"results": {
-				"id": "74cf5765-d490-4ff8-accc-8cca3cbd05ae",
-				"source_path": "*/*_z_stack_local.h5"
-			}
+			]
 		},
 		{
 			"name": "capsule_aind_pipeline_processing_metadata_aggregator_11",
@@ -524,7 +520,7 @@
 				"id": "ae1f5b8c-4a2d-4771-bbb2-212815c180ce",
 				"name": "aind-ophys-movie-qc-new-qc_DELETE",
 				"slug": "1646132",
-				"commit": "e9fcbb83b3d4254492e2810ece3afa1951a453cb",
+				"commit": "ccbc282653578b9fa918d1f73f8e43911c150c00",
 				"image_tag": "58a8d3c7610bc6f4d06f4a74a01a220f"
 			},
 			"resources": {
@@ -568,7 +564,8 @@
 				"id": "cf6e6d94-0001-46fb-a636-f97d22dad85a",
 				"name": "aind-ophys-quality-control-aggregator-TEST-TODELETE",
 				"slug": "6655551",
-				"app_panel": true
+				"commit": "3e905ce45fb7156778fcad3b8a0e84a20abbbafa",
+				"image_tag": "b902af65b696824e8ca753bf50afa9f3"
 			},
 			"resources": {
 				"cpus": 1,

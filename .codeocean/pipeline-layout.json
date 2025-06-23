@@ -95,6 +95,7 @@
 		},
 		{
 			"id": "reactflow__edge-capsule_aind_ophys_decrosstalk_split_session_json_2-results",
+			"selected": false,
 			"source": "capsule_aind_ophys_decrosstalk_split_session_json_2",
 			"target": "results"
 		},
@@ -125,6 +126,7 @@
 		},
 		{
 			"id": "reactflow__edge-1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_decrosstalk_split_session_json_2",
+			"selected": false,
 			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 			"target": "capsule_aind_ophys_decrosstalk_split_session_json_2"
 		},
@@ -147,6 +149,7 @@
 		},
 		{
 			"id": "reactflow__edge-1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_nwb_12",
+			"selected": false,
 			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 			"target": "capsule_aind_ophys_nwb_12"
 		},
@@ -332,12 +335,6 @@
 			"target": "capsule_aind_ophys_movie_qc_new_qc_delete_15"
 		},
 		{
-			"id": "xy-edge__capsule_aind_ophys_mesoscope_image_splitter_10-results",
-			"selected": false,
-			"source": "capsule_aind_ophys_mesoscope_image_splitter_10",
-			"target": "results"
-		},
-		{
 			"id": "xy-edge__1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_movie_qc_new_qc_delete_15",
 			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 			"target": "capsule_aind_ophys_movie_qc_new_qc_delete_15"
@@ -386,7 +383,7 @@
 				"x": 595.3329705536478,
 				"y": -1119.8874617516963
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -532,9 +529,14 @@
 				"x": 1336.7500202694432,
 				"y": 448.814877650282
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1750455320733
+	"timestamp": 1750710647944,
+	"viewport": {
+		"x": 384.41683187861815,
+		"y": 827.6911073137753,
+		"zoom": 0.6516570115503029
+	}
 }

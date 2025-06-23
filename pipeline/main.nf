@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:191fb04674f1573325d45a8c7d8a8e97ad32448d84fb2a81b831e411746359ea
+// hash:sha256:b14de54fa07507e4c0faa031d3dc21355bad54d82ca4828bbc17a4c7c2150eec
 
 nextflow.enable.dsl = 1
 
@@ -395,15 +395,12 @@ process capsule_aind_ophys_mesoscope_image_splitter_10 {
 	cpus 16
 	memory '120 GB'
 
-	publishDir "$RESULTS_PATH", saveAs: { filename -> filename.matches("capsule/results/.*/.*_z_stack_local\\.h5") ? new File(filename).getName() : null }
-
 	input:
 	path 'capsule/data' from ophys_mount_to_aind_ophys_mesoscope_image_splitter_19.collect()
 
 	output:
 	path 'capsule/results/*_[0-9]' into capsule_aind_ophys_mesoscope_image_splitter_10_to_capsule_aind_ophys_motion_correction_1_4
 	path 'capsule/results/*/*' into capsule_aind_ophys_mesoscope_image_splitter_10_to_capsule_aind_ophys_decrosstalk_roi_images_3_9
-	path 'capsule/results/*/*_z_stack_local.h5'
 	path 'capsule/results/*' into capsule_aind_ophys_mesoscope_image_splitter_10_to_capsule_aind_ophys_movie_qc_new_qc_delete_15_41
 
 	script:
@@ -639,7 +636,7 @@ process capsule_aind_ophys_movie_qc_new_qc_delete_15 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1646132.git" capsule-repo
 	fi
-	git -C capsule-repo checkout e9fcbb83b3d4254492e2810ece3afa1951a453cb --quiet
+	git -C capsule-repo checkout ccbc282653578b9fa918d1f73f8e43911c150c00 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -655,7 +652,7 @@ process capsule_aind_ophys_movie_qc_new_qc_delete_15 {
 // capsule - aind-ophys-quality-control-aggregator-TEST-TODELETE
 process capsule_aind_ophys_quality_control_aggregator_test_todelete_16 {
 	tag 'capsule-6655551'
-	container "$REGISTRY_HOST/capsule/cf6e6d94-0001-46fb-a636-f97d22dad85a"
+	container "$REGISTRY_HOST/capsule/cf6e6d94-0001-46fb-a636-f97d22dad85a:b902af65b696824e8ca753bf50afa9f3"
 
 	cpus 1
 	memory '7.5 GB'
@@ -696,13 +693,14 @@ process capsule_aind_ophys_quality_control_aggregator_test_todelete_16 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6655551.git" capsule-repo
 	fi
+	git -C capsule-repo checkout 3e905ce45fb7156778fcad3b8a0e84a20abbbafa --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run ${params.capsule_aind_ophys_quality_control_aggregator_test_todelete_16_args}
+	./run
 
 	echo "[${task.tag}] completed!"
 	"""
