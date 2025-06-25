@@ -520,7 +520,7 @@
 				"id": "ae1f5b8c-4a2d-4771-bbb2-212815c180ce",
 				"name": "aind-ophys-movie-qc-new-qc_DELETE",
 				"slug": "1646132",
-				"commit": "ccbc282653578b9fa918d1f73f8e43911c150c00",
+				"commit": "674b91a1e2a88d40a4f2115b45d7b67f5e72e2b0",
 				"image_tag": "58a8d3c7610bc6f4d06f4a74a01a220f"
 			},
 			"resources": {
@@ -564,8 +564,9 @@
 				"id": "cf6e6d94-0001-46fb-a636-f97d22dad85a",
 				"name": "aind-ophys-quality-control-aggregator-TEST-TODELETE",
 				"slug": "6655551",
-				"commit": "3e905ce45fb7156778fcad3b8a0e84a20abbbafa",
-				"image_tag": "b902af65b696824e8ca753bf50afa9f3"
+				"commit": "fe69f26e464f6138007efffc5d03ae032bc35215",
+				"image_tag": "b902af65b696824e8ca753bf50afa9f3",
+				"app_panel": true
 			},
 			"resources": {
 				"cpus": 1,

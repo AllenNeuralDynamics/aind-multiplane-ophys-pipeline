@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:b14de54fa07507e4c0faa031d3dc21355bad54d82ca4828bbc17a4c7c2150eec
+// hash:sha256:d39a7ddda1706c74b99659cbd35a1e0945dc9675a079add216184d47a2dcd133
 
 nextflow.enable.dsl = 1
 
@@ -636,7 +636,7 @@ process capsule_aind_ophys_movie_qc_new_qc_delete_15 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1646132.git" capsule-repo
 	fi
-	git -C capsule-repo checkout ccbc282653578b9fa918d1f73f8e43911c150c00 --quiet
+	git -C capsule-repo checkout 674b91a1e2a88d40a4f2115b45d7b67f5e72e2b0 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -693,14 +693,14 @@ process capsule_aind_ophys_quality_control_aggregator_test_todelete_16 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6655551.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 3e905ce45fb7156778fcad3b8a0e84a20abbbafa --quiet
+	git -C capsule-repo checkout fe69f26e464f6138007efffc5d03ae032bc35215 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run
+	./run ${params.capsule_aind_ophys_quality_control_aggregator_test_todelete_16_args}
 
 	echo "[${task.tag}] completed!"
 	"""
