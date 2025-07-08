@@ -228,24 +228,23 @@
 			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
 		},
 		{
-			"id": "reactflow__edge-capsule_aind_ophys_motion_correction_1-capsule_aind_ophys_movie_qc_new_qc_delete_15",
-			"selected": false,
+			"id": "reactflow__edge-capsule_aind_ophys_motion_correction_1-capsule_aind_ophys_movie_qc_15",
 			"source": "capsule_aind_ophys_motion_correction_1",
-			"target": "capsule_aind_ophys_movie_qc_new_qc_delete_15"
+			"target": "capsule_aind_ophys_movie_qc_15"
 		},
 		{
-			"id": "reactflow__edge-capsule_aind_ophys_quality_control_aggregator_test_todelete_16-results",
-			"source": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
+			"id": "reactflow__edge-capsule_aind_ophys_quality_control_aggregator_16-results",
+			"source": "capsule_aind_ophys_quality_control_aggregator_16",
 			"target": "results"
 		},
 		{
-			"id": "reactflow__edge-capsule_aind_ophys_motion_correction_1-capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
+			"id": "reactflow__edge-capsule_aind_ophys_motion_correction_1-capsule_aind_ophys_quality_control_aggregator_16",
 			"source": "capsule_aind_ophys_motion_correction_1",
-			"target": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16"
+			"target": "capsule_aind_ophys_quality_control_aggregator_16"
 		},
 		{
-			"id": "reactflow__edge-capsule_aind_ophys_movie_qc_new_qc_delete_15-results",
-			"source": "capsule_aind_ophys_movie_qc_new_qc_delete_15",
+			"id": "reactflow__edge-capsule_aind_ophys_movie_qc_15-results",
+			"source": "capsule_aind_ophys_movie_qc_15",
 			"target": "results"
 		},
 		{
@@ -298,9 +297,9 @@
 			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
 		},
 		{
-			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
+			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_ophys_quality_control_aggregator_16",
 			"source": "capsule_aind_ophys_classifier_17",
-			"target": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16"
+			"target": "capsule_aind_ophys_quality_control_aggregator_16"
 		},
 		{
 			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_ophys_nwb_12",
@@ -309,35 +308,34 @@
 			"target": "capsule_aind_ophys_nwb_12"
 		},
 		{
-			"id": "xy-edge__capsule_aind_ophys_extraction_suite_2_p_4-capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
+			"id": "xy-edge__capsule_aind_ophys_extraction_suite_2_p_4-capsule_aind_ophys_quality_control_aggregator_16",
 			"source": "capsule_aind_ophys_extraction_suite_2_p_4",
-			"target": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16"
+			"target": "capsule_aind_ophys_quality_control_aggregator_16"
 		},
 		{
-			"id": "xy-edge__capsule_aind_ophys_oasis_event_detection_9-capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
+			"id": "xy-edge__capsule_aind_ophys_oasis_event_detection_9-capsule_aind_ophys_quality_control_aggregator_16",
 			"source": "capsule_aind_ophys_oasis_event_detection_9",
-			"target": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16"
+			"target": "capsule_aind_ophys_quality_control_aggregator_16"
 		},
 		{
-			"id": "xy-edge__capsule_aind_ophys_decrosstalk_roi_images_3-capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
+			"id": "xy-edge__capsule_aind_ophys_decrosstalk_roi_images_3-capsule_aind_ophys_quality_control_aggregator_16",
 			"source": "capsule_aind_ophys_decrosstalk_roi_images_3",
-			"target": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16"
+			"target": "capsule_aind_ophys_quality_control_aggregator_16"
 		},
 		{
-			"id": "xy-edge__capsule_aind_ophys_movie_qc_new_qc_delete_15-capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
-			"source": "capsule_aind_ophys_movie_qc_new_qc_delete_15",
-			"target": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16"
+			"id": "xy-edge__capsule_aind_ophys_movie_qc_15-capsule_aind_ophys_quality_control_aggregator_16",
+			"source": "capsule_aind_ophys_movie_qc_15",
+			"target": "capsule_aind_ophys_quality_control_aggregator_16"
 		},
 		{
-			"id": "xy-edge__capsule_aind_ophys_mesoscope_image_splitter_10-capsule_aind_ophys_movie_qc_new_qc_delete_15",
-			"selected": false,
+			"id": "xy-edge__capsule_aind_ophys_mesoscope_image_splitter_10-capsule_aind_ophys_movie_qc_15",
 			"source": "capsule_aind_ophys_mesoscope_image_splitter_10",
-			"target": "capsule_aind_ophys_movie_qc_new_qc_delete_15"
+			"target": "capsule_aind_ophys_movie_qc_15"
 		},
 		{
-			"id": "xy-edge__1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_movie_qc_new_qc_delete_15",
+			"id": "xy-edge__1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_movie_qc_15",
 			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
-			"target": "capsule_aind_ophys_movie_qc_new_qc_delete_15"
+			"target": "capsule_aind_ophys_movie_qc_15"
 		}
 	],
 	"nodes": [
@@ -364,14 +362,14 @@
 		},
 		{
 			"data": {
-				"capsule_id": "c6394aab-0db7-47b2-90ba-864866d6755e"
+				"capsule_id": "382062c4-fd31-4812-806b-cc81bad29bf4"
 			},
 			"id": "capsule_aind_ophys_oasis_event_detection_9",
 			"position": {
 				"x": -200.17482885041636,
 				"y": 364.2941632387254
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -510,33 +508,33 @@
 		},
 		{
 			"data": {
-				"capsule_id": "ae1f5b8c-4a2d-4771-bbb2-212815c180ce"
+				"capsule_id": "4f0eb1d2-88ce-4dfb-82b2-00bb6e2b6546"
 			},
-			"id": "capsule_aind_ophys_movie_qc_new_qc_delete_15",
+			"id": "capsule_aind_ophys_movie_qc_15",
 			"position": {
 				"x": 1371.2572561883715,
 				"y": -344.1858706971228
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
 			"data": {
-				"capsule_id": "cf6e6d94-0001-46fb-a636-f97d22dad85a"
+				"capsule_id": "05b8a796-f8c7-4177-b486-82abfc146e49"
 			},
-			"id": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
+			"id": "capsule_aind_ophys_quality_control_aggregator_16",
 			"position": {
 				"x": 1336.7500202694432,
 				"y": 448.814877650282
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1750710647944,
+	"timestamp": 1751997397122,
 	"viewport": {
-		"x": 384.41683187861815,
-		"y": 827.6911073137753,
-		"zoom": 0.6516570115503029
+		"x": -349.9290085319776,
+		"y": 421.9487027380296,
+		"zoom": 0.6940415030017923
 	}
 }

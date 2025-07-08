@@ -220,14 +220,15 @@
 		{
 			"name": "capsule_aind_ophys_oasis_event_detection_9",
 			"capsule": {
-				"id": "c6394aab-0db7-47b2-90ba-864866d6755e",
+				"id": "382062c4-fd31-4812-806b-cc81bad29bf4",
 				"name": "aind-ophys-oasis-event-detection",
-				"slug": "8957649",
-				"version": 6
+				"slug": "0298748",
+				"commit": "ff130fe918cb3baaaa5e25c9cbe9c71623765cdf",
+				"image_tag": "67251ad8ae4e0aac237c4c5d89c9ab11"
 			},
 			"resources": {
-				"cpus": 4,
-				"memory": 32
+				"cpus": 1,
+				"memory": 8
 			},
 			"inputs": [
 				{
@@ -515,17 +516,15 @@
 			]
 		},
 		{
-			"name": "capsule_aind_ophys_movie_qc_new_qc_delete_15",
+			"name": "capsule_aind_ophys_movie_qc_15",
 			"capsule": {
-				"id": "ae1f5b8c-4a2d-4771-bbb2-212815c180ce",
+				"id": "4f0eb1d2-88ce-4dfb-82b2-00bb6e2b6546",
 				"name": "aind-ophys-movie-qc-new-qc_DELETE",
-				"slug": "1646132",
-				"commit": "674b91a1e2a88d40a4f2115b45d7b67f5e72e2b0",
-				"image_tag": "58a8d3c7610bc6f4d06f4a74a01a220f"
+				"slug": "2921644"
 			},
 			"resources": {
-				"cpus": 16,
-				"memory": 128
+				"cpus": 8,
+				"memory": 64
 			},
 			"inputs": [
 				{
@@ -555,17 +554,15 @@
 				}
 			],
 			"results": {
-				"id": "ae1f5b8c-4a2d-4771-bbb2-212815c180ce"
+				"id": "f52d9390-8569-49bb-9562-2d624b18ee56"
 			}
 		},
 		{
-			"name": "capsule_aind_ophys_quality_control_aggregator_test_todelete_16",
+			"name": "capsule_aind_ophys_quality_control_aggregator_16",
 			"capsule": {
-				"id": "cf6e6d94-0001-46fb-a636-f97d22dad85a",
+				"id": "05b8a796-f8c7-4177-b486-82abfc146e49",
 				"name": "aind-ophys-quality-control-aggregator-TEST-TODELETE",
-				"slug": "6655551",
-				"commit": "fe69f26e464f6138007efffc5d03ae032bc35215",
-				"image_tag": "b902af65b696824e8ca753bf50afa9f3",
+				"slug": "4691390",
 				"app_panel": true
 			},
 			"resources": {
@@ -574,18 +571,33 @@
 			},
 			"inputs": [
 				{
-					"id": "MEXCQnzNK7CwnAlh",
-					"source_id": "capsule_aind_ophys_movie_qc_new_qc_delete_15",
+					"id": "9CHXUe1yLmvG0KfK",
+					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
 					"type": "capsule",
-					"name": "aind-ophys-movie-qc-new-qc_DELETE",
+					"name": "aind-ophys-oasis-event-detection",
+					"source_path": "*/events/*.json",
+					"collect": true
+				},
+				{
+					"id": "pg9yfQ9HO7egCSgF",
+					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
+					"type": "capsule",
+					"name": "aind-ophys-oasis-event-detection",
+					"collect": true
+				},
+				{
+					"id": "MEXCQnzNK7CwnAlh",
+					"source_id": "capsule_aind_ophys_movie_qc_15",
+					"type": "capsule",
+					"name": "aind-ophys-movie-qc",
 					"source_path": "*/*/*.json",
 					"collect": true
 				},
 				{
 					"id": "9k8xDyXwPo1r9fBf",
-					"source_id": "capsule_aind_ophys_movie_qc_new_qc_delete_15",
+					"source_id": "capsule_aind_ophys_movie_qc_15",
 					"type": "capsule",
-					"name": "aind-ophys-movie-qc-new-qc_DELETE",
+					"name": "aind-ophys-movie-qc",
 					"source_path": "*/*/*.png",
 					"collect": true
 				},
@@ -603,22 +615,6 @@
 					"type": "capsule",
 					"name": "aind-ophys-classifier",
 					"source_path": "*/*/*.png",
-					"collect": true
-				},
-				{
-					"id": "9CHXUe1yLmvG0KfK",
-					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
-					"type": "capsule",
-					"name": "aind-ophys-oasis-event-detection",
-					"source_path": "*/*/*.json",
-					"collect": true
-				},
-				{
-					"id": "pg9yfQ9HO7egCSgF",
-					"source_id": "capsule_aind_ophys_oasis_event_detection_9",
-					"type": "capsule",
-					"name": "aind-ophys-oasis-event-detection",
-					"source_path": "*/*/plots/*",
 					"collect": true
 				},
 				{
@@ -647,7 +643,7 @@
 				}
 			],
 			"results": {
-				"id": "cf6e6d94-0001-46fb-a636-f97d22dad85a"
+				"id": "4a698b5c-f5f6-4671-8234-dc728d049a68"
 			}
 		},
 		{
