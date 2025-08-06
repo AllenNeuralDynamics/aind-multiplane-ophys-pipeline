@@ -1,0 +1,11 @@
+{
+	"version": 1,
+	"processes": [
+		"capsule_aind_ophys_motion_correction_1",
+		"capsule_aind_ophys_extraction_suite_2_p_4",
+		"capsule_aind_pipeline_processing_metadata_aggregator_11",
+		"capsule_nwb_packaging_subject_capsule_13",
+		"capsule_aind_pophys_converter_capsule_10",
+		"capsule_aind_ophys_quality_control_aggregator_16"
+	]
+}
