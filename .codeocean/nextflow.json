@@ -41,9 +41,9 @@
 				},
 				{
 					"id": "e3ILeCgPeE-S53SaaV6PR",
-					"source_id": "capsule_aind_ophys_mesoscope_image_splitter_10",
+					"source_id": "capsule_aind_pophys_converter_capsule_10",
 					"type": "capsule",
-					"name": "aind-ophys-mesoscope-image-splitter",
+					"name": "aind-pophys-converter-capsule",
 					"source_path": "*_[0-9]",
 					"flatten": true
 				}
@@ -100,6 +100,13 @@
 			},
 			"inputs": [
 				{
+					"id": "kCRtPyFKfilDA6Ts",
+					"source_id": "capsule_aind_pophys_converter_capsule_10",
+					"type": "capsule",
+					"name": "aind-pophys-converter-capsule",
+					"collect": true
+				},
+				{
 					"id": "LArxCXhABUHL5Lbh",
 					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
@@ -113,14 +120,6 @@
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/pophys",
-					"collect": true
-				},
-				{
-					"id": "kCRtPyFKfilDA6Ts",
-					"source_id": "capsule_aind_ophys_mesoscope_image_splitter_10",
-					"type": "capsule",
-					"name": "aind-ophys-mesoscope-image-splitter",
-					"source_path": "*/*",
 					"collect": true
 				},
 				{
@@ -220,14 +219,15 @@
 		{
 			"name": "capsule_aind_ophys_oasis_event_detection_9",
 			"capsule": {
-				"id": "c6394aab-0db7-47b2-90ba-864866d6755e",
+				"id": "382062c4-fd31-4812-806b-cc81bad29bf4",
 				"name": "aind-ophys-oasis-event-detection",
-				"slug": "8957649",
-				"version": 6
+				"slug": "0298748",
+				"commit": "ff130fe918cb3baaaa5e25c9cbe9c71623765cdf",
+				"image_tag": "67251ad8ae4e0aac237c4c5d89c9ab11"
 			},
 			"resources": {
-				"cpus": 4,
-				"memory": 32
+				"cpus": 1,
+				"memory": 8
 			},
 			"inputs": [
 				{
@@ -250,12 +250,13 @@
 			}
 		},
 		{
-			"name": "capsule_aind_ophys_mesoscope_image_splitter_10",
+			"name": "capsule_aind_pophys_converter_capsule_10",
 			"capsule": {
-				"id": "74cf5765-d490-4ff8-accc-8cca3cbd05ae",
-				"name": "aind-ophys-mesoscope-image-splitter",
-				"slug": "4287852",
-				"version": 5
+				"id": "d05f6de4-c0fb-46af-8c9f-a4acb4081497",
+				"name": "aind-pophys-converter-capsule",
+				"slug": "2840051",
+				"version": 2,
+				"app_panel": true
 			},
 			"resources": {
 				"cpus": 16,
@@ -517,14 +518,15 @@
 		{
 			"name": "capsule_aind_ophys_movie_qc_15",
 			"capsule": {
-				"id": "f52d9390-8569-49bb-9562-2d624b18ee56",
+				"id": "4f0eb1d2-88ce-4dfb-82b2-00bb6e2b6546",
 				"name": "aind-ophys-movie-qc",
-				"slug": "0300037",
-				"version": 6
+				"slug": "2921644",
+				"commit": "4a22cc7de94dc1baad4d7153245d200c75de057e",
+				"image_tag": "5d9cd8bf7135e57df12d4e323ee49523"
 			},
 			"resources": {
-				"cpus": 16,
-				"memory": 128
+				"cpus": 8,
+				"memory": 64
 			},
 			"inputs": [
 				{
@@ -543,10 +545,12 @@
 		{
 			"name": "capsule_aind_ophys_quality_control_aggregator_16",
 			"capsule": {
-				"id": "4a698b5c-f5f6-4671-8234-dc728d049a68",
+				"id": "05b8a796-f8c7-4177-b486-82abfc146e49",
 				"name": "aind-ophys-quality-control-aggregator",
-				"slug": "4044810",
-				"version": 3
+				"slug": "4691390",
+				"commit": "256e52d2f49f820c0eda042dfc9d2592addca87d",
+				"image_tag": "403e107d59039fd6f96ee2fc6c1b673e",
+				"app_panel": true
 			},
 			"resources": {
 				"cpus": 1,

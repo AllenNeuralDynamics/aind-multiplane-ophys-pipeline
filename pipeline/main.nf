@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:1c01b741ddb143ceb1b8b23cee4f359695b31ae4c9179cd03461fe4ce8441ba0
+// hash:sha256:7f8ebcaad7afa7b573fe92cc6b17d0988f933fcac93f241867401ff3db95ac58
 
 nextflow.enable.dsl = 1
 
@@ -8,12 +8,12 @@ params.ophys_mount_url = 's3://aind-private-data-prod-o5171v/multiplane-ophys_76
 ophys_mount_to_aind_ophys_motion_correction_1 = channel.fromPath(params.ophys_mount_url + "/*json", type: 'any')
 ophys_mount_to_aind_ophys_motion_correction_2 = channel.fromPath(params.ophys_mount_url + "/pophys", type: 'any')
 ophys_mount_to_aind_ophys_motion_correction_3 = channel.fromPath(params.ophys_mount_url + "/*/*.h5", type: 'any')
-capsule_aind_ophys_mesoscope_image_splitter_10_to_capsule_aind_ophys_motion_correction_1_4 = channel.create()
+capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_motion_correction_1_4 = channel.create()
 capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_split_session_json_2_5 = channel.create()
 ophys_mount_to_aind_ophys_decrosstalk_split_session_json_6 = channel.fromPath(params.ophys_mount_url + "/session.json", type: 'any')
-ophys_mount_to_aind_ophys_decrosstalk_roi_images_7 = channel.fromPath(params.ophys_mount_url + "/*.json", type: 'any')
-ophys_mount_to_aind_ophys_decrosstalk_roi_images_8 = channel.fromPath(params.ophys_mount_url + "/pophys", type: 'any')
-capsule_aind_ophys_mesoscope_image_splitter_10_to_capsule_aind_ophys_decrosstalk_roi_images_3_9 = channel.create()
+capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_decrosstalk_roi_images_3_7 = channel.create()
+ophys_mount_to_aind_ophys_decrosstalk_roi_images_8 = channel.fromPath(params.ophys_mount_url + "/*.json", type: 'any')
+ophys_mount_to_aind_ophys_decrosstalk_roi_images_9 = channel.fromPath(params.ophys_mount_url + "/pophys", type: 'any')
 capsule_aind_ophys_decrosstalk_split_session_json_2_to_capsule_aind_ophys_decrosstalk_roi_images_3_10 = channel.create()
 capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_roi_images_3_11 = channel.create()
 ophys_mount_to_aind_ophys_extraction_suite2p_12 = channel.fromPath(params.ophys_mount_url + "/*.json", type: 'any')
@@ -23,7 +23,7 @@ capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_aind_ophys_dff_5_15 = chann
 capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_dff_5_16 = channel.create()
 ophys_mount_to_aind_ophys_oasis_event_detection_17 = channel.fromPath(params.ophys_mount_url + "/*.json", type: 'any')
 capsule_aind_ophys_dff_5_to_capsule_aind_ophys_oasis_event_detection_9_18 = channel.create()
-ophys_mount_to_aind_ophys_mesoscope_image_splitter_19 = channel.fromPath(params.ophys_mount_url + "/", type: 'any')
+ophys_mount_to_aind_pophys_converter_capsule_19 = channel.fromPath(params.ophys_mount_url + "/", type: 'any')
 capsule_aind_ophys_classifier_17_to_capsule_aind_pipeline_processing_metadata_aggregator_11_20 = channel.create()
 capsule_aind_ophys_oasis_event_detection_9_to_capsule_aind_pipeline_processing_metadata_aggregator_11_21 = channel.create()
 capsule_aind_ophys_dff_5_to_capsule_aind_pipeline_processing_metadata_aggregator_11_22 = channel.create()
@@ -63,7 +63,7 @@ process capsule_aind_ophys_motion_correction_1 {
 	container "$REGISTRY_HOST/published/91a8ed4d-3b9a-49c6-9283-3f16ea5482bf:v15"
 
 	cpus 16
-	memory '128 GB'
+	memory '120 GB'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
@@ -71,7 +71,7 @@ process capsule_aind_ophys_motion_correction_1 {
 	path 'capsule/data/' from ophys_mount_to_aind_ophys_motion_correction_1.collect()
 	path 'capsule/data/' from ophys_mount_to_aind_ophys_motion_correction_2.collect()
 	path 'capsule/data/' from ophys_mount_to_aind_ophys_motion_correction_3.collect()
-	path 'capsule/data/' from capsule_aind_ophys_mesoscope_image_splitter_10_to_capsule_aind_ophys_motion_correction_1_4.flatten()
+	path 'capsule/data/' from capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_motion_correction_1_4.flatten()
 
 	output:
 	path 'capsule/results/*'
@@ -93,7 +93,7 @@ process capsule_aind_ophys_motion_correction_1 {
 
 	export CO_CAPSULE_ID=91a8ed4d-3b9a-49c6-9283-3f16ea5482bf
 	export CO_CPUS=16
-	export CO_MEMORY=137438953472
+	export CO_MEMORY=128849018880
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -101,7 +101,11 @@ process capsule_aind_ophys_motion_correction_1 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v15.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-7474660.git" capsule-repo
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 --branch v15.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-7474660.git" capsule-repo
+	else
+		git clone --branch v15.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-7474660.git" capsule-repo
+	fi
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -120,7 +124,7 @@ process capsule_aind_ophys_decrosstalk_split_session_json_2 {
 	container "$REGISTRY_HOST/published/fc1b1e9a-fb4b-47e8-a223-b06d8eeb1462:v1"
 
 	cpus 2
-	memory '16 GB'
+	memory '15 GB'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
@@ -139,7 +143,7 @@ process capsule_aind_ophys_decrosstalk_split_session_json_2 {
 
 	export CO_CAPSULE_ID=fc1b1e9a-fb4b-47e8-a223-b06d8eeb1462
 	export CO_CPUS=2
-	export CO_MEMORY=17179869184
+	export CO_MEMORY=16106127360
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -147,7 +151,11 @@ process capsule_aind_ophys_decrosstalk_split_session_json_2 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4425001.git" capsule-repo
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4425001.git" capsule-repo
+	else
+		git clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4425001.git" capsule-repo
+	fi
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -166,14 +174,14 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	container "$REGISTRY_HOST/published/1383b25a-ecd2-4c56-8b7f-cde811c0b053:v10"
 
 	cpus 16
-	memory '128 GB'
+	memory '120 GB'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	input:
-	path 'capsule/data/' from ophys_mount_to_aind_ophys_decrosstalk_roi_images_7.collect()
+	path 'capsule/data/' from capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_decrosstalk_roi_images_3_7.collect()
 	path 'capsule/data/' from ophys_mount_to_aind_ophys_decrosstalk_roi_images_8.collect()
-	path 'capsule/data/' from capsule_aind_ophys_mesoscope_image_splitter_10_to_capsule_aind_ophys_decrosstalk_roi_images_3_9.collect()
+	path 'capsule/data/' from ophys_mount_to_aind_ophys_decrosstalk_roi_images_9.collect()
 	path 'capsule/data/' from capsule_aind_ophys_decrosstalk_split_session_json_2_to_capsule_aind_ophys_decrosstalk_roi_images_3_10.flatten()
 	path 'capsule/data/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_roi_images_3_11.collect()
 
@@ -191,7 +199,7 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 
 	export CO_CAPSULE_ID=1383b25a-ecd2-4c56-8b7f-cde811c0b053
 	export CO_CPUS=16
-	export CO_MEMORY=137438953472
+	export CO_MEMORY=128849018880
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -199,7 +207,11 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v10.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1533578.git" capsule-repo
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 --branch v10.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1533578.git" capsule-repo
+	else
+		git clone --branch v10.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1533578.git" capsule-repo
+	fi
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -218,7 +230,7 @@ process capsule_aind_ophys_extraction_suite_2_p_4 {
 	container "$REGISTRY_HOST/published/5e1d659c-e149-4a57-be83-12f5a448a0c9:v9"
 
 	cpus 4
-	memory '128 GB'
+	memory '120 GB'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
@@ -242,7 +254,7 @@ process capsule_aind_ophys_extraction_suite_2_p_4 {
 
 	export CO_CAPSULE_ID=5e1d659c-e149-4a57-be83-12f5a448a0c9
 	export CO_CPUS=4
-	export CO_MEMORY=137438953472
+	export CO_MEMORY=128849018880
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -250,7 +262,11 @@ process capsule_aind_ophys_extraction_suite_2_p_4 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v9.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9911715.git" capsule-repo
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 --branch v9.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9911715.git" capsule-repo
+	else
+		git clone --branch v9.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9911715.git" capsule-repo
+	fi
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -269,7 +285,7 @@ process capsule_aind_ophys_dff_5 {
 	container "$REGISTRY_HOST/published/85987e27-601c-4863-811b-71e5b4bdea37:v4"
 
 	cpus 4
-	memory '32 GB'
+	memory '30 GB'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
@@ -291,7 +307,7 @@ process capsule_aind_ophys_dff_5 {
 
 	export CO_CAPSULE_ID=85987e27-601c-4863-811b-71e5b4bdea37
 	export CO_CPUS=4
-	export CO_MEMORY=34359738368
+	export CO_MEMORY=32212254720
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -299,7 +315,11 @@ process capsule_aind_ophys_dff_5 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6574773.git" capsule-repo
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6574773.git" capsule-repo
+	else
+		git clone --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6574773.git" capsule-repo
+	fi
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -314,11 +334,11 @@ process capsule_aind_ophys_dff_5 {
 
 // capsule - aind-ophys-oasis-event-detection
 process capsule_aind_ophys_oasis_event_detection_9 {
-	tag 'capsule-8957649'
-	container "$REGISTRY_HOST/published/c6394aab-0db7-47b2-90ba-864866d6755e:v6"
+	tag 'capsule-0298748'
+	container "$REGISTRY_HOST/capsule/382062c4-fd31-4812-806b-cc81bad29bf4:67251ad8ae4e0aac237c4c5d89c9ab11"
 
-	cpus 4
-	memory '32 GB'
+	cpus 1
+	memory '7.5 GB'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
@@ -338,9 +358,9 @@ process capsule_aind_ophys_oasis_event_detection_9 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=c6394aab-0db7-47b2-90ba-864866d6755e
-	export CO_CPUS=4
-	export CO_MEMORY=34359738368
+	export CO_CAPSULE_ID=382062c4-fd31-4812-806b-cc81bad29bf4
+	export CO_CPUS=1
+	export CO_MEMORY=8053063680
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -348,7 +368,12 @@ process capsule_aind_ophys_oasis_event_detection_9 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v6.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8957649.git" capsule-repo
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0298748.git" capsule-repo
+	else
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0298748.git" capsule-repo
+	fi
+	git -C capsule-repo checkout ff130fe918cb3baaaa5e25c9cbe9c71623765cdf --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -361,29 +386,29 @@ process capsule_aind_ophys_oasis_event_detection_9 {
 	"""
 }
 
-// capsule - aind-ophys-mesoscope-image-splitter
-process capsule_aind_ophys_mesoscope_image_splitter_10 {
-	tag 'capsule-4287852'
-	container "$REGISTRY_HOST/published/74cf5765-d490-4ff8-accc-8cca3cbd05ae:v5"
+// capsule - aind-pophys-converter-capsule
+process capsule_aind_pophys_converter_capsule_10 {
+	tag 'capsule-2840051'
+	container "$REGISTRY_HOST/published/d05f6de4-c0fb-46af-8c9f-a4acb4081497:v2"
 
 	cpus 16
-	memory '128 GB'
+	memory '120 GB'
 
 	input:
-	path 'capsule/data' from ophys_mount_to_aind_ophys_mesoscope_image_splitter_19.collect()
+	path 'capsule/data' from ophys_mount_to_aind_pophys_converter_capsule_19.collect()
 
 	output:
-	path 'capsule/results/*_[0-9]' into capsule_aind_ophys_mesoscope_image_splitter_10_to_capsule_aind_ophys_motion_correction_1_4
-	path 'capsule/results/*/*' into capsule_aind_ophys_mesoscope_image_splitter_10_to_capsule_aind_ophys_decrosstalk_roi_images_3_9
+	path 'capsule/results/*_[0-9]' into capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_motion_correction_1_4
+	path 'capsule/results/*' into capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_decrosstalk_roi_images_3_7
 
 	script:
 	"""
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=74cf5765-d490-4ff8-accc-8cca3cbd05ae
+	export CO_CAPSULE_ID=d05f6de4-c0fb-46af-8c9f-a4acb4081497
 	export CO_CPUS=16
-	export CO_MEMORY=137438953472
+	export CO_MEMORY=128849018880
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -391,14 +416,18 @@ process capsule_aind_ophys_mesoscope_image_splitter_10 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v5.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4287852.git" capsule-repo
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 --branch v2.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2840051.git" capsule-repo
+	else
+		git clone --branch v2.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2840051.git" capsule-repo
+	fi
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run
+	./run ${params.capsule_aind_pophys_converter_capsule_10_args}
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -410,7 +439,7 @@ process capsule_aind_pipeline_processing_metadata_aggregator_11 {
 	container "$REGISTRY_HOST/published/d51df783-d892-4304-a129-238a9baea72a:v4"
 
 	cpus 2
-	memory '16 GB'
+	memory '15 GB'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
@@ -433,7 +462,7 @@ process capsule_aind_pipeline_processing_metadata_aggregator_11 {
 
 	export CO_CAPSULE_ID=d51df783-d892-4304-a129-238a9baea72a
 	export CO_CPUS=2
-	export CO_MEMORY=17179869184
+	export CO_MEMORY=16106127360
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -441,7 +470,11 @@ process capsule_aind_pipeline_processing_metadata_aggregator_11 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8250608.git" capsule-repo
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8250608.git" capsule-repo
+	else
+		git clone --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8250608.git" capsule-repo
+	fi
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -460,7 +493,7 @@ process capsule_aind_ophys_nwb_12 {
 	container "$REGISTRY_HOST/published/8c436e95-8607-4752-8e9f-2b62024f9326:v12"
 
 	cpus 1
-	memory '8 GB'
+	memory '7.5 GB'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
@@ -488,7 +521,7 @@ process capsule_aind_ophys_nwb_12 {
 
 	export CO_CAPSULE_ID=8c436e95-8607-4752-8e9f-2b62024f9326
 	export CO_CPUS=1
-	export CO_MEMORY=8589934592
+	export CO_MEMORY=8053063680
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -498,7 +531,11 @@ process capsule_aind_ophys_nwb_12 {
 	ln -s "/tmp/data/schemas" "capsule/data/schemas" # id: fb4b5cef-4505-4145-b8bd-e41d6863d7a9
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v12.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9383700.git" capsule-repo
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 --branch v12.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9383700.git" capsule-repo
+	else
+		git clone --branch v12.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9383700.git" capsule-repo
+	fi
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -517,7 +554,7 @@ process capsule_nwb_packaging_subject_capsule_13 {
 	container "$REGISTRY_HOST/published/bdc9f09f-0005-4d09-aaf9-7e82abd93f19:v2"
 
 	cpus 1
-	memory '8 GB'
+	memory '7.5 GB'
 
 	input:
 	path 'capsule/data/ophys_session' from ophys_mount_to_nwb_packaging_subject_capsule_39.collect()
@@ -532,7 +569,7 @@ process capsule_nwb_packaging_subject_capsule_13 {
 
 	export CO_CAPSULE_ID=bdc9f09f-0005-4d09-aaf9-7e82abd93f19
 	export CO_CPUS=1
-	export CO_MEMORY=8589934592
+	export CO_MEMORY=8053063680
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -540,7 +577,11 @@ process capsule_nwb_packaging_subject_capsule_13 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v2.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8198603.git" capsule-repo
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 --branch v2.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8198603.git" capsule-repo
+	else
+		git clone --branch v2.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8198603.git" capsule-repo
+	fi
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -555,11 +596,11 @@ process capsule_nwb_packaging_subject_capsule_13 {
 
 // capsule - aind-ophys-movie-qc
 process capsule_aind_ophys_movie_qc_15 {
-	tag 'capsule-0300037'
-	container "$REGISTRY_HOST/published/f52d9390-8569-49bb-9562-2d624b18ee56:v6"
+	tag 'capsule-2921644'
+	container "$REGISTRY_HOST/capsule/4f0eb1d2-88ce-4dfb-82b2-00bb6e2b6546:5d9cd8bf7135e57df12d4e323ee49523"
 
-	cpus 16
-	memory '128 GB'
+	cpus 8
+	memory '60 GB'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
@@ -576,9 +617,9 @@ process capsule_aind_ophys_movie_qc_15 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=f52d9390-8569-49bb-9562-2d624b18ee56
-	export CO_CPUS=16
-	export CO_MEMORY=137438953472
+	export CO_CAPSULE_ID=4f0eb1d2-88ce-4dfb-82b2-00bb6e2b6546
+	export CO_CPUS=8
+	export CO_MEMORY=64424509440
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -586,7 +627,12 @@ process capsule_aind_ophys_movie_qc_15 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v6.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0300037.git" capsule-repo
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2921644.git" capsule-repo
+	else
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2921644.git" capsule-repo
+	fi
+	git -C capsule-repo checkout 4a22cc7de94dc1baad4d7153245d200c75de057e --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -601,11 +647,11 @@ process capsule_aind_ophys_movie_qc_15 {
 
 // capsule - aind-ophys-quality-control-aggregator
 process capsule_aind_ophys_quality_control_aggregator_16 {
-	tag 'capsule-4044810'
-	container "$REGISTRY_HOST/published/4a698b5c-f5f6-4671-8234-dc728d049a68:v3"
+	tag 'capsule-4691390'
+	container "$REGISTRY_HOST/capsule/05b8a796-f8c7-4177-b486-82abfc146e49:403e107d59039fd6f96ee2fc6c1b673e"
 
 	cpus 1
-	memory '8 GB'
+	memory '7.5 GB'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
@@ -628,9 +674,9 @@ process capsule_aind_ophys_quality_control_aggregator_16 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=4a698b5c-f5f6-4671-8234-dc728d049a68
+	export CO_CAPSULE_ID=05b8a796-f8c7-4177-b486-82abfc146e49
 	export CO_CPUS=1
-	export CO_MEMORY=8589934592
+	export CO_MEMORY=8053063680
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -638,14 +684,19 @@ process capsule_aind_ophys_quality_control_aggregator_16 {
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v3.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4044810.git" capsule-repo
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4691390.git" capsule-repo
+	else
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4691390.git" capsule-repo
+	fi
+	git -C capsule-repo checkout 256e52d2f49f820c0eda042dfc9d2592addca87d --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run
+	./run ${params.capsule_aind_ophys_quality_control_aggregator_16_args}
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -691,7 +742,11 @@ process capsule_aind_ophys_classifier_17 {
 	ln -s "/tmp/data/2p_roi_classifier" "capsule/data/2p_roi_classifier" # id: 35d1284e-4dfa-4ac3-9ba8-5ea1ae2fdaeb
 
 	echo "[${task.tag}] cloning git repo..."
-	git clone --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0630574.git" capsule-repo
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0630574.git" capsule-repo
+	else
+		git clone --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0630574.git" capsule-repo
+	fi
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
