@@ -41,9 +41,9 @@
 				},
 				{
 					"id": "e3ILeCgPeE-S53SaaV6PR",
-					"source_id": "capsule_aind_pophys_converter_capsule_10",
+					"source_id": "capsule_aind_ophys_mesoscope_image_splitter_10",
 					"type": "capsule",
-					"name": "aind-pophys-converter-capsule",
+					"name": "aind-ophys-mesoscope-image-splitter",
 					"source_path": "*_[0-9]",
 					"flatten": true
 				}
@@ -100,13 +100,6 @@
 			},
 			"inputs": [
 				{
-					"id": "kCRtPyFKfilDA6Ts",
-					"source_id": "capsule_aind_pophys_converter_capsule_10",
-					"type": "capsule",
-					"name": "aind-pophys-converter-capsule",
-					"collect": true
-				},
-				{
 					"id": "LArxCXhABUHL5Lbh",
 					"source_id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
 					"type": "dataset",
@@ -120,6 +113,14 @@
 					"type": "dataset",
 					"name": "ophys_mount",
 					"source_path": "ophys_mount/pophys",
+					"collect": true
+				},
+				{
+					"id": "kCRtPyFKfilDA6Ts",
+					"source_id": "capsule_aind_ophys_mesoscope_image_splitter_10",
+					"type": "capsule",
+					"name": "aind-ophys-mesoscope-image-splitter",
+					"source_path": "*/*",
 					"collect": true
 				},
 				{
@@ -145,14 +146,15 @@
 		{
 			"name": "capsule_aind_ophys_extraction_suite_2_p_4",
 			"capsule": {
-				"id": "c9f136a2-67d7-4adf-b15a-e02af4237fa4",
-				"name": "aind-ophys-extraction",
-				"slug": "3592435",
+				"id": "5e1d659c-e149-4a57-be83-12f5a448a0c9",
+				"name": "aind-ophys-extraction-suite2p",
+				"slug": "9911715",
+				"version": 9,
 				"app_panel": true
 			},
 			"resources": {
-				"cpus": 1,
-				"memory": 8
+				"cpus": 4,
+				"memory": 128
 			},
 			"inputs": [
 				{
@@ -218,13 +220,14 @@
 		{
 			"name": "capsule_aind_ophys_oasis_event_detection_9",
 			"capsule": {
-				"id": "382062c4-fd31-4812-806b-cc81bad29bf4",
+				"id": "c6394aab-0db7-47b2-90ba-864866d6755e",
 				"name": "aind-ophys-oasis-event-detection",
-				"slug": "0298748"
+				"slug": "8957649",
+				"version": 6
 			},
 			"resources": {
-				"cpus": 1,
-				"memory": 8
+				"cpus": 4,
+				"memory": 32
 			},
 			"inputs": [
 				{
@@ -247,12 +250,12 @@
 			}
 		},
 		{
-			"name": "capsule_aind_pophys_converter_capsule_10",
+			"name": "capsule_aind_ophys_mesoscope_image_splitter_10",
 			"capsule": {
-				"id": "56956b65-72a4-4248-9718-468df22b23ff",
-				"name": "aind-pophys-converter-capsule",
-				"slug": "0547799",
-				"app_panel": true
+				"id": "74cf5765-d490-4ff8-accc-8cca3cbd05ae",
+				"name": "aind-ophys-mesoscope-image-splitter",
+				"slug": "4287852",
+				"version": 5
 			},
 			"resources": {
 				"cpus": 16,
@@ -514,13 +517,14 @@
 		{
 			"name": "capsule_aind_ophys_movie_qc_15",
 			"capsule": {
-				"id": "4f0eb1d2-88ce-4dfb-82b2-00bb6e2b6546",
+				"id": "f52d9390-8569-49bb-9562-2d624b18ee56",
 				"name": "aind-ophys-movie-qc",
-				"slug": "2921644"
+				"slug": "0300037",
+				"version": 6
 			},
 			"resources": {
-				"cpus": 8,
-				"memory": 64
+				"cpus": 16,
+				"memory": 128
 			},
 			"inputs": [
 				{
@@ -539,10 +543,10 @@
 		{
 			"name": "capsule_aind_ophys_quality_control_aggregator_16",
 			"capsule": {
-				"id": "05b8a796-f8c7-4177-b486-82abfc146e49",
+				"id": "4a698b5c-f5f6-4671-8234-dc728d049a68",
 				"name": "aind-ophys-quality-control-aggregator",
-				"slug": "4691390",
-				"app_panel": true
+				"slug": "4044810",
+				"version": 3
 			},
 			"resources": {
 				"cpus": 1,
