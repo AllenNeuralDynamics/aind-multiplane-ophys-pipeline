@@ -377,7 +377,7 @@
 				"x": 582.2656250763047,
 				"y": -638.1492181389341
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -410,10 +410,10 @@
 			},
 			"id": "capsule_aind_ophys_nwb_12",
 			"position": {
-				"x": 740.7326019073585,
-				"y": -73.69928496701968
+				"x": 307.3992685740251,
+				"y": -233.69928496701968
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -527,7 +527,7 @@
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1754929669500,
+	"timestamp": 1754930491708,
 	"viewport": {
 		"x": 273.24206860764775,
 		"y": 634.6884079891988,

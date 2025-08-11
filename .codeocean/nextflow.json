@@ -369,6 +369,15 @@
 			},
 			"inputs": [
 				{
+					"id": "0YzMlCgaBT94ZTbI",
+					"source_id": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
+					"type": "dataset",
+					"name": "ophys_mount",
+					"source_path": "ophys_mount/",
+					"target_path": "raw",
+					"collect": true
+				},
+				{
 					"id": "yEmfp2Y8ixYKwWtR",
 					"source_id": "capsule_aind_ophys_classifier_17",
 					"type": "capsule",
@@ -411,15 +420,6 @@
 					"name": "aind-ophys-motion-correction",
 					"source_path": "*/motion_correction/*.csv",
 					"target_path": "processed",
-					"collect": true
-				},
-				{
-					"id": "0YzMlCgaBT94ZTbI",
-					"source_id": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
-					"type": "dataset",
-					"name": "ophys_mount",
-					"source_path": "ophys_mount/",
-					"target_path": "multiplane-ophys_raw",
 					"collect": true
 				},
 				{
