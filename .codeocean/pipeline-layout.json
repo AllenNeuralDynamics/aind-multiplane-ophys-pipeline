@@ -83,9 +83,8 @@
 			"target": "results"
 		},
 		{
-			"id": "reactflow__edge-capsule_aind_ophys_mesoscope_image_splitter_10-capsule_aind_ophys_motion_correction_1",
-			"selected": false,
-			"source": "capsule_aind_ophys_mesoscope_image_splitter_10",
+			"id": "reactflow__edge-capsule_aind_pophys_converter_capsule_10-capsule_aind_ophys_motion_correction_1",
+			"source": "capsule_aind_pophys_converter_capsule_10",
 			"target": "capsule_aind_ophys_motion_correction_1"
 		},
 		{
@@ -115,31 +114,28 @@
 			"target": "results"
 		},
 		{
-			"id": "reactflow__edge-1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_mesoscope_image_splitter_10",
-			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
-			"target": "capsule_aind_ophys_mesoscope_image_splitter_10"
+			"id": "reactflow__edge-8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_aind_pophys_converter_capsule_10",
+			"source": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
+			"target": "capsule_aind_pophys_converter_capsule_10"
 		},
 		{
-			"id": "reactflow__edge-1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_motion_correction_1",
-			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+			"id": "reactflow__edge-8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_aind_ophys_motion_correction_1",
+			"source": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
 			"target": "capsule_aind_ophys_motion_correction_1"
 		},
 		{
-			"id": "reactflow__edge-1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_decrosstalk_split_session_json_2",
-			"selected": false,
-			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+			"id": "reactflow__edge-8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_aind_ophys_decrosstalk_split_session_json_2",
+			"source": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
 			"target": "capsule_aind_ophys_decrosstalk_split_session_json_2"
 		},
 		{
-			"id": "reactflow__edge-1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_pipeline_processing_metadata_aggregator_11",
-			"selected": false,
-			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+			"id": "reactflow__edge-8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_aind_pipeline_processing_metadata_aggregator_11",
+			"source": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
 			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
 		},
 		{
-			"id": "reactflow__edge-1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_extraction_suite_2_p_4",
-			"selected": false,
-			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+			"id": "reactflow__edge-8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_aind_ophys_extraction_suite_2_p_4",
+			"source": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
 			"target": "capsule_aind_ophys_extraction_suite_2_p_4"
 		},
 		{
@@ -148,14 +144,13 @@
 			"target": "capsule_aind_ophys_oasis_event_detection_9"
 		},
 		{
-			"id": "reactflow__edge-1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_nwb_12",
-			"selected": false,
-			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+			"id": "reactflow__edge-8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_aind_ophys_nwb_12",
+			"source": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
 			"target": "capsule_aind_ophys_nwb_12"
 		},
 		{
-			"id": "reactflow__edge-1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_nwb_packaging_subject_capsule_13",
-			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+			"id": "reactflow__edge-8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_nwb_packaging_subject_capsule_13",
+			"source": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
 			"target": "capsule_nwb_packaging_subject_capsule_13"
 		},
 		{
@@ -213,7 +208,6 @@
 		},
 		{
 			"id": "reactflow__edge-capsule_aind_ophys_decrosstalk_roi_images_3-capsule_aind_pipeline_processing_metadata_aggregator_11",
-			"selected": false,
 			"source": "capsule_aind_ophys_decrosstalk_roi_images_3",
 			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
 		},
@@ -248,25 +242,23 @@
 			"target": "results"
 		},
 		{
-			"id": "xy-edge__1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_decrosstalk_roi_images_3",
-			"selected": false,
-			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+			"id": "xy-edge__8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_aind_ophys_decrosstalk_roi_images_3",
+			"source": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
 			"target": "capsule_aind_ophys_decrosstalk_roi_images_3"
 		},
 		{
-			"id": "xy-edge__capsule_aind_ophys_mesoscope_image_splitter_10-capsule_aind_ophys_decrosstalk_roi_images_3",
-			"selected": false,
-			"source": "capsule_aind_ophys_mesoscope_image_splitter_10",
+			"id": "xy-edge__capsule_aind_pophys_converter_capsule_10-capsule_aind_ophys_decrosstalk_roi_images_3",
+			"source": "capsule_aind_pophys_converter_capsule_10",
 			"target": "capsule_aind_ophys_decrosstalk_roi_images_3"
 		},
 		{
-			"id": "xy-edge__1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_dff_5",
-			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+			"id": "xy-edge__8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_aind_ophys_dff_5",
+			"source": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
 			"target": "capsule_aind_ophys_dff_5"
 		},
 		{
-			"id": "xy-edge__1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_oasis_event_detection_9",
-			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+			"id": "xy-edge__8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_aind_ophys_oasis_event_detection_9",
+			"source": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
 			"target": "capsule_aind_ophys_oasis_event_detection_9"
 		},
 		{
@@ -286,13 +278,12 @@
 			"target": "capsule_aind_ophys_classifier_17"
 		},
 		{
-			"id": "xy-edge__1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_classifier_17",
-			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+			"id": "xy-edge__8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_aind_ophys_classifier_17",
+			"source": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
 			"target": "capsule_aind_ophys_classifier_17"
 		},
 		{
 			"id": "xy-edge__capsule_aind_ophys_classifier_17-capsule_aind_pipeline_processing_metadata_aggregator_11",
-			"selected": false,
 			"source": "capsule_aind_ophys_classifier_17",
 			"target": "capsule_aind_pipeline_processing_metadata_aggregator_11"
 		},
@@ -328,14 +319,19 @@
 			"target": "capsule_aind_ophys_quality_control_aggregator_16"
 		},
 		{
-			"id": "xy-edge__capsule_aind_ophys_mesoscope_image_splitter_10-capsule_aind_ophys_movie_qc_15",
-			"source": "capsule_aind_ophys_mesoscope_image_splitter_10",
+			"id": "xy-edge__capsule_aind_pophys_converter_capsule_10-capsule_aind_ophys_movie_qc_15",
+			"source": "capsule_aind_pophys_converter_capsule_10",
 			"target": "capsule_aind_ophys_movie_qc_15"
 		},
 		{
-			"id": "xy-edge__1d41a92d-2f10-40d1-830d-83ba23aca8bd-capsule_aind_ophys_movie_qc_15",
-			"source": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
+			"id": "xy-edge__8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_aind_ophys_movie_qc_15",
+			"source": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
 			"target": "capsule_aind_ophys_movie_qc_15"
+		},
+		{
+			"id": "xy-edge__8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_aind_ophys_quality_control_aggregator_16",
+			"source": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
+			"target": "capsule_aind_ophys_quality_control_aggregator_16"
 		}
 	],
 	"nodes": [
@@ -350,7 +346,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "1383b25a-ecd2-4c56-8b7f-cde811c0b053"
+				"capsule_id": "e31d29f8-7eee-446b-8f0a-2f027fe6f39b"
 			},
 			"id": "capsule_aind_ophys_decrosstalk_roi_images_3",
 			"position": {
@@ -369,18 +365,6 @@
 				"x": -200.17482885041636,
 				"y": 364.2941632387254
 			},
-			"selected": true,
-			"type": "capsule"
-		},
-		{
-			"data": {
-				"capsule_id": "74cf5765-d490-4ff8-accc-8cca3cbd05ae"
-			},
-			"id": "capsule_aind_ophys_mesoscope_image_splitter_10",
-			"position": {
-				"x": 595.3329705536478,
-				"y": -1119.8874617516963
-			},
 			"selected": false,
 			"type": "capsule"
 		},
@@ -390,10 +374,10 @@
 			},
 			"id": "capsule_aind_ophys_decrosstalk_split_session_json_2",
 			"position": {
-				"x": 705.598958409638,
-				"y": -674.8158848056007
+				"x": 582.2656250763047,
+				"y": -638.1492181389341
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -410,7 +394,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "5e1d659c-e149-4a57-be83-12f5a448a0c9"
+				"capsule_id": "c9f136a2-67d7-4adf-b15a-e02af4237fa4"
 			},
 			"id": "capsule_aind_ophys_extraction_suite_2_p_4",
 			"position": {
@@ -455,18 +439,6 @@
 		},
 		{
 			"data": {
-				"capsule_id": "d51df783-d892-4304-a129-238a9baea72a"
-			},
-			"id": "capsule_aind_pipeline_processing_metadata_aggregator_11",
-			"position": {
-				"x": 330.7200660766514,
-				"y": 657.7374211035302
-			},
-			"selected": false,
-			"type": "capsule"
-		},
-		{
-			"data": {
 				"capsule_id": "91a8ed4d-3b9a-49c6-9283-3f16ea5482bf"
 			},
 			"id": "capsule_aind_ophys_motion_correction_1",
@@ -499,23 +471,15 @@
 			"type": "capsule"
 		},
 		{
-			"id": "1d41a92d-2f10-40d1-830d-83ba23aca8bd",
-			"position": {
-				"x": 220.06422842942686,
-				"y": -1528.761341822782
-			},
-			"type": "dataset"
-		},
-		{
 			"data": {
 				"capsule_id": "4f0eb1d2-88ce-4dfb-82b2-00bb6e2b6546"
 			},
 			"id": "capsule_aind_ophys_movie_qc_15",
 			"position": {
-				"x": 1371.2572561883715,
-				"y": -344.1858706971228
+				"x": 1355.2572561883715,
+				"y": -370.85253736378945
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -524,17 +488,49 @@
 			},
 			"id": "capsule_aind_ophys_quality_control_aggregator_16",
 			"position": {
-				"x": 1336.7500202694432,
-				"y": 448.814877650282
+				"x": 1327.41668693611,
+				"y": 446.1482109836153
 			},
-			"selected": true,
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"id": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
+			"position": {
+				"x": 220.06422842942686,
+				"y": -1528.761341822782
+			},
+			"type": "dataset"
+		},
+		{
+			"data": {
+				"capsule_id": "56956b65-72a4-4248-9718-468df22b23ff"
+			},
+			"id": "capsule_aind_pophys_converter_capsule_10",
+			"position": {
+				"x": 595.3329705536478,
+				"y": -1119.8874617516963
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "24091c9b-d9a0-427b-90fb-52c90d29304a"
+			},
+			"id": "capsule_aind_pipeline_processing_metadata_aggregator_11",
+			"position": {
+				"x": 330.7200660766514,
+				"y": 657.7374211035302
+			},
+			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1751997397122,
+	"timestamp": 1754929669500,
 	"viewport": {
-		"x": -349.9290085319776,
-		"y": 421.9487027380296,
-		"zoom": 0.6940415030017923
+		"x": 273.24206860764775,
+		"y": 634.6884079891988,
+		"zoom": 0.3
 	}
 }
