@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:ca1d1b96ce6de3923d5397b769a16d1e57c3bdc2e1679dcd1510977bdc12b0cb
+// hash:sha256:e794a8ddbf438eff8975ca990b069d3ce2cf6cedf49eb500802d29c7d39529e5
 
 nextflow.enable.dsl = 1
 
@@ -173,8 +173,8 @@ process capsule_aind_ophys_decrosstalk_split_session_json_2 {
 
 // capsule - aind-ophys-decrosstalk-roi-images
 process capsule_aind_ophys_decrosstalk_roi_images_3 {
-	tag 'capsule-4612268'
-	container "$REGISTRY_HOST/capsule/e31d29f8-7eee-446b-8f0a-2f027fe6f39b:90a11d3c7a5fc33f1fabb2b9a86ac8f4"
+	tag 'capsule-1533578'
+	container "$REGISTRY_HOST/published/1383b25a-ecd2-4c56-8b7f-cde811c0b053:v11"
 
 	cpus 16
 	memory '120 GB'
@@ -200,7 +200,7 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=e31d29f8-7eee-446b-8f0a-2f027fe6f39b
+	export CO_CAPSULE_ID=1383b25a-ecd2-4c56-8b7f-cde811c0b053
 	export CO_CPUS=16
 	export CO_MEMORY=128849018880
 
@@ -211,11 +211,10 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4612268.git" capsule-repo
+		git clone --filter=tree:0 --branch v11.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1533578.git" capsule-repo
 	else
-		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4612268.git" capsule-repo
+		git clone --branch v11.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1533578.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 9c163db8435f3200c561aea73469ae44c8620a11 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -230,8 +229,8 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 
 // capsule - aind-ophys-extraction
 process capsule_aind_ophys_extraction_suite_2_p_4 {
-	tag 'capsule-3592435'
-	container "$REGISTRY_HOST/capsule/c9f136a2-67d7-4adf-b15a-e02af4237fa4:3d1825eb10b984d0abe5c9b8ebd0175f"
+	tag 'capsule-9911715'
+	container "$REGISTRY_HOST/published/5e1d659c-e149-4a57-be83-12f5a448a0c9:v13"
 
 	cpus 1
 	memory '7.5 GB'
@@ -256,7 +255,7 @@ process capsule_aind_ophys_extraction_suite_2_p_4 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=c9f136a2-67d7-4adf-b15a-e02af4237fa4
+	export CO_CAPSULE_ID=5e1d659c-e149-4a57-be83-12f5a448a0c9
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -267,11 +266,10 @@ process capsule_aind_ophys_extraction_suite_2_p_4 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3592435.git" capsule-repo
+		git clone --filter=tree:0 --branch v13.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9911715.git" capsule-repo
 	else
-		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3592435.git" capsule-repo
+		git clone --branch v13.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9911715.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 0ecc97a8e3cf4522dcb302d1902489156e2a80ee --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -339,8 +337,8 @@ process capsule_aind_ophys_dff_5 {
 
 // capsule - aind-ophys-oasis-event-detection
 process capsule_aind_ophys_oasis_event_detection_9 {
-	tag 'capsule-0298748'
-	container "$REGISTRY_HOST/capsule/382062c4-fd31-4812-806b-cc81bad29bf4:67251ad8ae4e0aac237c4c5d89c9ab11"
+	tag 'capsule-8957649'
+	container "$REGISTRY_HOST/published/c6394aab-0db7-47b2-90ba-864866d6755e:v9"
 
 	cpus 1
 	memory '7.5 GB'
@@ -363,7 +361,7 @@ process capsule_aind_ophys_oasis_event_detection_9 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=382062c4-fd31-4812-806b-cc81bad29bf4
+	export CO_CAPSULE_ID=c6394aab-0db7-47b2-90ba-864866d6755e
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -374,11 +372,10 @@ process capsule_aind_ophys_oasis_event_detection_9 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0298748.git" capsule-repo
+		git clone --filter=tree:0 --branch v9.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8957649.git" capsule-repo
 	else
-		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0298748.git" capsule-repo
+		git clone --branch v9.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8957649.git" capsule-repo
 	fi
-	git -C capsule-repo checkout ff130fe918cb3baaaa5e25c9cbe9c71623765cdf --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -393,8 +390,8 @@ process capsule_aind_ophys_oasis_event_detection_9 {
 
 // capsule - aind-pophys-converter-capsule
 process capsule_aind_pophys_converter_capsule_10 {
-	tag 'capsule-0547799'
-	container "$REGISTRY_HOST/capsule/56956b65-72a4-4248-9718-468df22b23ff:c7806a0e35cd578ceecf193d079d3850"
+	tag 'capsule-2840051'
+	container "$REGISTRY_HOST/published/d05f6de4-c0fb-46af-8c9f-a4acb4081497:v3"
 
 	cpus 16
 	memory '120 GB'
@@ -412,7 +409,7 @@ process capsule_aind_pophys_converter_capsule_10 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=56956b65-72a4-4248-9718-468df22b23ff
+	export CO_CAPSULE_ID=d05f6de4-c0fb-46af-8c9f-a4acb4081497
 	export CO_CPUS=16
 	export CO_MEMORY=128849018880
 
@@ -423,11 +420,10 @@ process capsule_aind_pophys_converter_capsule_10 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0547799.git" capsule-repo
+		git clone --filter=tree:0 --branch v3.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2840051.git" capsule-repo
 	else
-		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0547799.git" capsule-repo
+		git clone --branch v3.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2840051.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 37e10ba4b12bf6e65a6d677cc94e6d59d3e40acc --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -442,8 +438,8 @@ process capsule_aind_pophys_converter_capsule_10 {
 
 // capsule - aind-pipeline-processing-metadata-aggregator
 process capsule_aind_pipeline_processing_metadata_aggregator_11 {
-	tag 'capsule-1036076'
-	container "$REGISTRY_HOST/capsule/24091c9b-d9a0-427b-90fb-52c90d29304a:bd71a7af034314ca5a9719efd9c39421"
+	tag 'capsule-8324994'
+	container "$REGISTRY_HOST/published/22261566-0b4f-42aa-bcaa-58efa55bf653:v1"
 
 	cpus 1
 	memory '7.5 GB'
@@ -467,7 +463,7 @@ process capsule_aind_pipeline_processing_metadata_aggregator_11 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=24091c9b-d9a0-427b-90fb-52c90d29304a
+	export CO_CAPSULE_ID=22261566-0b4f-42aa-bcaa-58efa55bf653
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -478,11 +474,10 @@ process capsule_aind_pipeline_processing_metadata_aggregator_11 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1036076.git" capsule-repo
+		git clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8324994.git" capsule-repo
 	else
-		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1036076.git" capsule-repo
+		git clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8324994.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 9335ec6fc6f3456a4ede9eacf0d9872969cc4936 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -604,8 +599,8 @@ process capsule_nwb_packaging_subject_capsule_13 {
 
 // capsule - aind-ophys-movie-qc
 process capsule_aind_ophys_movie_qc_15 {
-	tag 'capsule-2921644'
-	container "$REGISTRY_HOST/capsule/4f0eb1d2-88ce-4dfb-82b2-00bb6e2b6546:5d9cd8bf7135e57df12d4e323ee49523"
+	tag 'capsule-0300037'
+	container "$REGISTRY_HOST/published/f52d9390-8569-49bb-9562-2d624b18ee56:v7"
 
 	cpus 8
 	memory '60 GB'
@@ -627,7 +622,7 @@ process capsule_aind_ophys_movie_qc_15 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=4f0eb1d2-88ce-4dfb-82b2-00bb6e2b6546
+	export CO_CAPSULE_ID=f52d9390-8569-49bb-9562-2d624b18ee56
 	export CO_CPUS=8
 	export CO_MEMORY=64424509440
 
@@ -638,11 +633,10 @@ process capsule_aind_ophys_movie_qc_15 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2921644.git" capsule-repo
+		git clone --filter=tree:0 --branch v7.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0300037.git" capsule-repo
 	else
-		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2921644.git" capsule-repo
+		git clone --branch v7.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0300037.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 4a22cc7de94dc1baad4d7153245d200c75de057e --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -657,8 +651,8 @@ process capsule_aind_ophys_movie_qc_15 {
 
 // capsule - aind-ophys-quality-control-aggregator
 process capsule_aind_ophys_quality_control_aggregator_16 {
-	tag 'capsule-4691390'
-	container "$REGISTRY_HOST/capsule/05b8a796-f8c7-4177-b486-82abfc146e49:403e107d59039fd6f96ee2fc6c1b673e"
+	tag 'capsule-4044810'
+	container "$REGISTRY_HOST/published/4a698b5c-f5f6-4671-8234-dc728d049a68:v4"
 
 	cpus 1
 	memory '7.5 GB'
@@ -685,7 +679,7 @@ process capsule_aind_ophys_quality_control_aggregator_16 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=05b8a796-f8c7-4177-b486-82abfc146e49
+	export CO_CAPSULE_ID=4a698b5c-f5f6-4671-8234-dc728d049a68
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -696,11 +690,10 @@ process capsule_aind_ophys_quality_control_aggregator_16 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4691390.git" capsule-repo
+		git clone --filter=tree:0 --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4044810.git" capsule-repo
 	else
-		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4691390.git" capsule-repo
+		git clone --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4044810.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 75488a629f19a0a182ae7990ac49431e836b7f67 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
