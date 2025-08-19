@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:811c714dfa32276f26913f2566dff25b8641aec5777491e0f33d067b4233c531
+// hash:sha256:c86f16a81d3497624ca5ca53b01ab4b558b0e754008429c958cbe465d48b04d5
 
 nextflow.enable.dsl = 1
 
@@ -637,7 +637,7 @@ process capsule_aind_ophys_movie_qc_15 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1646132.git" capsule-repo
 	fi
-	git -C capsule-repo checkout be911ec079541733ff4feb453ffd14140668f832 --quiet
+	git -C capsule-repo checkout bf9a24a12d792b7d80789c1d26ee810b8e67064c --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
