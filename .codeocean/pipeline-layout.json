@@ -472,18 +472,6 @@
 		},
 		{
 			"data": {
-				"capsule_id": "f52d9390-8569-49bb-9562-2d624b18ee56"
-			},
-			"id": "capsule_aind_ophys_movie_qc_15",
-			"position": {
-				"x": 1355.2572561883715,
-				"y": -370.85253736378945
-			},
-			"selected": false,
-			"type": "capsule"
-		},
-		{
-			"data": {
 				"capsule_id": "4a698b5c-f5f6-4671-8234-dc728d049a68"
 			},
 			"id": "capsule_aind_ophys_quality_control_aggregator_16",
@@ -525,12 +513,19 @@
 			},
 			"selected": false,
 			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "ae1f5b8c-4a2d-4771-bbb2-212815c180ce"
+			},
+			"id": "capsule_aind_ophys_movie_qc_15",
+			"position": {
+				"x": 1355.2572561883715,
+				"y": -370.85253736378945
+			},
+			"selected": true,
+			"type": "capsule"
 		}
 	],
-	"timestamp": 1755132925190,
-	"viewport": {
-		"x": 298.7712447106194,
-		"y": 437.3773380475568,
-		"zoom": 0.3
-	}
+	"timestamp": 1755619624208
 }

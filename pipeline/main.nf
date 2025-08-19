@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:e794a8ddbf438eff8975ca990b069d3ce2cf6cedf49eb500802d29c7d39529e5
+// hash:sha256:15f14d02d2d0217157017dd629af0848145944b6fa0264be283a9e2e7f2fe45d
 
 nextflow.enable.dsl = 1
 
@@ -493,7 +493,7 @@ process capsule_aind_pipeline_processing_metadata_aggregator_11 {
 // capsule - aind-ophys-nwb
 process capsule_aind_ophys_nwb_12 {
 	tag 'capsule-9383700'
-	container "$REGISTRY_HOST/published/8c436e95-8607-4752-8e9f-2b62024f9326:v13"
+	container "$REGISTRY_HOST/published/8c436e95-8607-4752-8e9f-2b62024f9326:v14"
 
 	cpus 1
 	memory '7.5 GB'
@@ -535,9 +535,9 @@ process capsule_aind_ophys_nwb_12 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v13.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9383700.git" capsule-repo
+		git clone --filter=tree:0 --branch v14.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9383700.git" capsule-repo
 	else
-		git clone --branch v13.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9383700.git" capsule-repo
+		git clone --branch v14.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9383700.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
@@ -599,11 +599,11 @@ process capsule_nwb_packaging_subject_capsule_13 {
 
 // capsule - aind-ophys-movie-qc
 process capsule_aind_ophys_movie_qc_15 {
-	tag 'capsule-0300037'
-	container "$REGISTRY_HOST/published/f52d9390-8569-49bb-9562-2d624b18ee56:v7"
+	tag 'capsule-1646132'
+	container "$REGISTRY_HOST/capsule/ae1f5b8c-4a2d-4771-bbb2-212815c180ce"
 
-	cpus 8
-	memory '60 GB'
+	cpus 16
+	memory '120 GB'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
@@ -622,9 +622,9 @@ process capsule_aind_ophys_movie_qc_15 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=f52d9390-8569-49bb-9562-2d624b18ee56
-	export CO_CPUS=8
-	export CO_MEMORY=64424509440
+	export CO_CAPSULE_ID=ae1f5b8c-4a2d-4771-bbb2-212815c180ce
+	export CO_CPUS=16
+	export CO_MEMORY=128849018880
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -633,9 +633,9 @@ process capsule_aind_ophys_movie_qc_15 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v7.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0300037.git" capsule-repo
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1646132.git" capsule-repo
 	else
-		git clone --branch v7.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0300037.git" capsule-repo
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1646132.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo

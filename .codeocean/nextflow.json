@@ -356,7 +356,7 @@
 				"id": "8c436e95-8607-4752-8e9f-2b62024f9326",
 				"name": "aind-ophys-nwb",
 				"slug": "9383700",
-				"version": 13
+				"version": 14
 			},
 			"resources": {
 				"cpus": 1,
@@ -511,14 +511,13 @@
 		{
 			"name": "capsule_aind_ophys_movie_qc_15",
 			"capsule": {
-				"id": "f52d9390-8569-49bb-9562-2d624b18ee56",
+				"id": "ae1f5b8c-4a2d-4771-bbb2-212815c180ce",
 				"name": "aind-ophys-movie-qc",
-				"slug": "0300037",
-				"version": 7
+				"slug": "1646132"
 			},
 			"resources": {
-				"cpus": 8,
-				"memory": 64
+				"cpus": 16,
+				"memory": 128
 			},
 			"inputs": [
 				{
@@ -548,7 +547,7 @@
 				}
 			],
 			"results": {
-				"id": "f52d9390-8569-49bb-9562-2d624b18ee56"
+				"id": "ae1f5b8c-4a2d-4771-bbb2-212815c180ce"
 			}
 		},
 		{
