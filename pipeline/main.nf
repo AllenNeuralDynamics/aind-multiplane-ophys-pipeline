@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:15f14d02d2d0217157017dd629af0848145944b6fa0264be283a9e2e7f2fe45d
+// hash:sha256:5c67578f09f53a02c7877e3e3049384d1e3a4927dfed62477ac25a2d4a1a313a
 
 nextflow.enable.dsl = 1
 
@@ -44,7 +44,7 @@ capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_aind_ophys_nwb_12_36 = chan
 capsule_aind_ophys_decrosstalk_roi_images_3_to_capsule_aind_ophys_nwb_12_37 = channel.create()
 capsule_nwb_packaging_subject_capsule_13_to_capsule_aind_ophys_nwb_12_38 = channel.create()
 ophys_mount_to_nwb_packaging_subject_capsule_39 = channel.fromPath(params.ophys_mount_url + "/", type: 'any')
-ophys_mount_to_aind_ophys_movie_qc_40 = channel.fromPath(params.ophys_mount_url + "/session.json", type: 'any')
+ophys_mount_to_aind_ophys_movie_qc_40 = channel.fromPath(params.ophys_mount_url + "/", type: 'any')
 capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_movie_qc_15_41 = channel.create()
 capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_movie_qc_15_42 = channel.create()
 ophys_mount_to_aind_ophys_quality_control_aggregator_43 = channel.fromPath(params.ophys_mount_url + "/*.json", type: 'any')
@@ -600,7 +600,7 @@ process capsule_nwb_packaging_subject_capsule_13 {
 // capsule - aind-ophys-movie-qc
 process capsule_aind_ophys_movie_qc_15 {
 	tag 'capsule-1646132'
-	container "$REGISTRY_HOST/capsule/ae1f5b8c-4a2d-4771-bbb2-212815c180ce"
+	container "$REGISTRY_HOST/capsule/ae1f5b8c-4a2d-4771-bbb2-212815c180ce:c588d43760f7993054eb672e255481a3"
 
 	cpus 16
 	memory '120 GB'
@@ -608,7 +608,7 @@ process capsule_aind_ophys_movie_qc_15 {
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	input:
-	path 'capsule/data/raw/' from ophys_mount_to_aind_ophys_movie_qc_40.collect()
+	path 'capsule/data/raw' from ophys_mount_to_aind_ophys_movie_qc_40.collect()
 	path 'capsule/data/zstacks/' from capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_movie_qc_15_41.collect()
 	path 'capsule/data/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_movie_qc_15_42.flatten()
 
@@ -637,6 +637,7 @@ process capsule_aind_ophys_movie_qc_15 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1646132.git" capsule-repo
 	fi
+	git -C capsule-repo checkout efb2df9d23ce642e1300bb1edbb19e577b6248ba --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 

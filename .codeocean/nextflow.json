@@ -513,7 +513,9 @@
 			"capsule": {
 				"id": "ae1f5b8c-4a2d-4771-bbb2-212815c180ce",
 				"name": "aind-ophys-movie-qc",
-				"slug": "1646132"
+				"slug": "1646132",
+				"commit": "efb2df9d23ce642e1300bb1edbb19e577b6248ba",
+				"image_tag": "c588d43760f7993054eb672e255481a3"
 			},
 			"resources": {
 				"cpus": 16,
@@ -525,7 +527,7 @@
 					"source_id": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
 					"type": "dataset",
 					"name": "ophys_mount",
-					"source_path": "ophys_mount/session.json",
+					"source_path": "ophys_mount/",
 					"target_path": "raw",
 					"collect": true
 				},
