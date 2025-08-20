@@ -514,7 +514,7 @@
 				"id": "ae1f5b8c-4a2d-4771-bbb2-212815c180ce",
 				"name": "aind-ophys-movie-qc",
 				"slug": "1646132",
-				"commit": "0bb839e8a6d410ee412bec1eec0072a0424646b0",
+				"commit": "fbac01e3115dfb31e0dbf759f780dcf3fa00d4f3",
 				"image_tag": "c588d43760f7993054eb672e255481a3"
 			},
 			"resources": {
