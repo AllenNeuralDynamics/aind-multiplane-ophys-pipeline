@@ -350,10 +350,10 @@
 			},
 			"id": "capsule_aind_ophys_decrosstalk_roi_images_3",
 			"position": {
-				"x": 286.1215858355213,
-				"y": -738.733756879909
+				"x": 102.74835152171053,
+				"y": -732.3629819055395
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -499,7 +499,7 @@
 				"x": 595.3329705536478,
 				"y": -1119.8874617516963
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -520,12 +520,17 @@
 			},
 			"id": "capsule_aind_ophys_movie_qc_15",
 			"position": {
-				"x": 1355.2572561883715,
-				"y": -370.85253736378945
+				"x": 1338.5447229586528,
+				"y": -362.1891659101927
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1755619624208
+	"timestamp": 1756479456544,
+	"viewport": {
+		"x": 107.09443004062996,
+		"y": 368.2354428735993,
+		"zoom": 0.3
+	}
 }
