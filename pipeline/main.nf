@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:e932a004380b5b61ad22ff390aeb561235c5c6eb1536ae9d9034b52701a93bc7
+// hash:sha256:c890c0e18f316334a876331bc849a979b52f2ea542b6647278dc53f217834505
 
 nextflow.enable.dsl = 1
 
@@ -391,7 +391,7 @@ process capsule_aind_ophys_oasis_event_detection_9 {
 // capsule - aind-pophys-converter-capsule
 process capsule_aind_pophys_converter_capsule_10 {
 	tag 'capsule-2840051'
-	container "$REGISTRY_HOST/published/d05f6de4-c0fb-46af-8c9f-a4acb4081497:v3"
+	container "$REGISTRY_HOST/published/d05f6de4-c0fb-46af-8c9f-a4acb4081497:v7"
 
 	cpus 16
 	memory '120 GB'
@@ -420,9 +420,9 @@ process capsule_aind_pophys_converter_capsule_10 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v3.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2840051.git" capsule-repo
+		git clone --filter=tree:0 --branch v7.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2840051.git" capsule-repo
 	else
-		git clone --branch v3.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2840051.git" capsule-repo
+		git clone --branch v7.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2840051.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
