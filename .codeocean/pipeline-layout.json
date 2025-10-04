@@ -83,8 +83,8 @@
 			"target": "results"
 		},
 		{
-			"id": "reactflow__edge-capsule_aind_pophys_converter_capsule_10-capsule_aind_ophys_motion_correction_1",
-			"source": "capsule_aind_pophys_converter_capsule_10",
+			"id": "reactflow__edge-capsule_copy_of_aind_pophys_converter_capsule_v_7_10-capsule_aind_ophys_motion_correction_1",
+			"source": "capsule_copy_of_aind_pophys_converter_capsule_v_7_10",
 			"target": "capsule_aind_ophys_motion_correction_1"
 		},
 		{
@@ -114,9 +114,9 @@
 			"target": "results"
 		},
 		{
-			"id": "reactflow__edge-8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_aind_pophys_converter_capsule_10",
+			"id": "reactflow__edge-8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_copy_of_aind_pophys_converter_capsule_v_7_10",
 			"source": "8293d0e8-5bdb-4ccc-9986-e93d85e81657",
-			"target": "capsule_aind_pophys_converter_capsule_10"
+			"target": "capsule_copy_of_aind_pophys_converter_capsule_v_7_10"
 		},
 		{
 			"id": "reactflow__edge-8293d0e8-5bdb-4ccc-9986-e93d85e81657-capsule_aind_ophys_motion_correction_1",
@@ -247,8 +247,8 @@
 			"target": "capsule_aind_ophys_decrosstalk_roi_images_3"
 		},
 		{
-			"id": "xy-edge__capsule_aind_pophys_converter_capsule_10-capsule_aind_ophys_decrosstalk_roi_images_3",
-			"source": "capsule_aind_pophys_converter_capsule_10",
+			"id": "xy-edge__capsule_copy_of_aind_pophys_converter_capsule_v_7_10-capsule_aind_ophys_decrosstalk_roi_images_3",
+			"source": "capsule_copy_of_aind_pophys_converter_capsule_v_7_10",
 			"target": "capsule_aind_ophys_decrosstalk_roi_images_3"
 		},
 		{
@@ -319,8 +319,8 @@
 			"target": "capsule_aind_ophys_quality_control_aggregator_16"
 		},
 		{
-			"id": "xy-edge__capsule_aind_pophys_converter_capsule_10-capsule_aind_ophys_movie_qc_15",
-			"source": "capsule_aind_pophys_converter_capsule_10",
+			"id": "xy-edge__capsule_copy_of_aind_pophys_converter_capsule_v_7_10-capsule_aind_ophys_movie_qc_15",
+			"source": "capsule_copy_of_aind_pophys_converter_capsule_v_7_10",
 			"target": "capsule_aind_ophys_movie_qc_15"
 		},
 		{
@@ -353,7 +353,7 @@
 				"x": 102.74835152171053,
 				"y": -732.3629819055395
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -492,18 +492,6 @@
 		},
 		{
 			"data": {
-				"capsule_id": "d05f6de4-c0fb-46af-8c9f-a4acb4081497"
-			},
-			"id": "capsule_aind_pophys_converter_capsule_10",
-			"position": {
-				"x": 595.3329705536478,
-				"y": -1119.8874617516963
-			},
-			"selected": false,
-			"type": "capsule"
-		},
-		{
-			"data": {
 				"capsule_id": "22261566-0b4f-42aa-bcaa-58efa55bf653"
 			},
 			"id": "capsule_aind_pipeline_processing_metadata_aggregator_11",
@@ -525,12 +513,19 @@
 			},
 			"selected": false,
 			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "635d1f55-3d01-4962-b641-89eb6d0c852d"
+			},
+			"id": "capsule_copy_of_aind_pophys_converter_capsule_v_7_10",
+			"position": {
+				"x": 2148.7456756474385,
+				"y": -1475.6840843255734
+			},
+			"selected": true,
+			"type": "capsule"
 		}
 	],
-	"timestamp": 1756479456544,
-	"viewport": {
-		"x": 107.09443004062996,
-		"y": 368.2354428735993,
-		"zoom": 0.3
-	}
+	"timestamp": 1759522897952
 }

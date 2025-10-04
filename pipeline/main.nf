@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:c890c0e18f316334a876331bc849a979b52f2ea542b6647278dc53f217834505
+// hash:sha256:9f16f516a12b01fdb35468beb6ed532b9d2cd1630b4b3946eaccb3e5c0056f8f
 
 nextflow.enable.dsl = 1
 
@@ -8,12 +8,12 @@ params.ophys_mount_url = 's3://aind-private-data-prod-o5171v/multiplane-ophys_78
 ophys_mount_to_aind_ophys_motion_correction_1 = channel.fromPath(params.ophys_mount_url + "/*json", type: 'any')
 ophys_mount_to_aind_ophys_motion_correction_2 = channel.fromPath(params.ophys_mount_url + "/pophys", type: 'any')
 ophys_mount_to_aind_ophys_motion_correction_3 = channel.fromPath(params.ophys_mount_url + "/*/*.h5", type: 'any')
-capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_motion_correction_1_4 = channel.create()
+capsule_copy_of_aind_pophys_converter_capsule_v_7_10_to_capsule_aind_ophys_motion_correction_1_4 = channel.create()
 capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_split_session_json_2_5 = channel.create()
 ophys_mount_to_aind_ophys_decrosstalk_split_session_json_6 = channel.fromPath(params.ophys_mount_url + "/session.json", type: 'any')
 ophys_mount_to_aind_ophys_decrosstalk_roi_images_7 = channel.fromPath(params.ophys_mount_url + "/*.json", type: 'any')
 ophys_mount_to_aind_ophys_decrosstalk_roi_images_8 = channel.fromPath(params.ophys_mount_url + "/pophys", type: 'any')
-capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_decrosstalk_roi_images_3_9 = channel.create()
+capsule_copy_of_aind_pophys_converter_capsule_v_7_10_to_capsule_aind_ophys_decrosstalk_roi_images_3_9 = channel.create()
 capsule_aind_ophys_decrosstalk_split_session_json_2_to_capsule_aind_ophys_decrosstalk_roi_images_3_10 = channel.create()
 capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_roi_images_3_11 = channel.create()
 ophys_mount_to_aind_ophys_extraction_12 = channel.fromPath(params.ophys_mount_url + "/*.json", type: 'any')
@@ -23,7 +23,7 @@ capsule_aind_ophys_extraction_suite_2_p_4_to_capsule_aind_ophys_dff_5_15 = chann
 capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_dff_5_16 = channel.create()
 ophys_mount_to_aind_ophys_oasis_event_detection_17 = channel.fromPath(params.ophys_mount_url + "/*.json", type: 'any')
 capsule_aind_ophys_dff_5_to_capsule_aind_ophys_oasis_event_detection_9_18 = channel.create()
-ophys_mount_to_aind_pophys_converter_capsule_19 = channel.fromPath(params.ophys_mount_url + "/", type: 'any')
+ophys_mount_to_copy_of_aind_pophys_converter_capsule_v7_19 = channel.fromPath(params.ophys_mount_url + "/", type: 'any')
 capsule_aind_ophys_classifier_17_to_capsule_aind_pipeline_processing_metadata_aggregator_11_20 = channel.create()
 capsule_aind_ophys_oasis_event_detection_9_to_capsule_aind_pipeline_processing_metadata_aggregator_11_21 = channel.create()
 capsule_aind_ophys_dff_5_to_capsule_aind_pipeline_processing_metadata_aggregator_11_22 = channel.create()
@@ -45,7 +45,7 @@ capsule_aind_ophys_decrosstalk_roi_images_3_to_capsule_aind_ophys_nwb_12_37 = ch
 capsule_nwb_packaging_subject_capsule_13_to_capsule_aind_ophys_nwb_12_38 = channel.create()
 ophys_mount_to_nwb_packaging_subject_capsule_39 = channel.fromPath(params.ophys_mount_url + "/", type: 'any')
 ophys_mount_to_aind_ophys_movie_qc_40 = channel.fromPath(params.ophys_mount_url + "/", type: 'any')
-capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_movie_qc_15_41 = channel.create()
+capsule_copy_of_aind_pophys_converter_capsule_v_7_10_to_capsule_aind_ophys_movie_qc_15_41 = channel.create()
 capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_movie_qc_15_42 = channel.create()
 ophys_mount_to_aind_ophys_quality_control_aggregator_43 = channel.fromPath(params.ophys_mount_url + "/*.json", type: 'any')
 capsule_aind_ophys_oasis_event_detection_9_to_capsule_aind_ophys_quality_control_aggregator_16_44 = channel.create()
@@ -74,7 +74,7 @@ process capsule_aind_ophys_motion_correction_1 {
 	path 'capsule/data/' from ophys_mount_to_aind_ophys_motion_correction_1.collect()
 	path 'capsule/data/' from ophys_mount_to_aind_ophys_motion_correction_2.collect()
 	path 'capsule/data/' from ophys_mount_to_aind_ophys_motion_correction_3.collect()
-	path 'capsule/data/' from capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_motion_correction_1_4.flatten()
+	path 'capsule/data/' from capsule_copy_of_aind_pophys_converter_capsule_v_7_10_to_capsule_aind_ophys_motion_correction_1_4.flatten()
 
 	output:
 	path 'capsule/results/*'
@@ -184,7 +184,7 @@ process capsule_aind_ophys_decrosstalk_roi_images_3 {
 	input:
 	path 'capsule/data/' from ophys_mount_to_aind_ophys_decrosstalk_roi_images_7.collect()
 	path 'capsule/data/' from ophys_mount_to_aind_ophys_decrosstalk_roi_images_8.collect()
-	path 'capsule/data/' from capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_decrosstalk_roi_images_3_9.collect()
+	path 'capsule/data/' from capsule_copy_of_aind_pophys_converter_capsule_v_7_10_to_capsule_aind_ophys_decrosstalk_roi_images_3_9.collect()
 	path 'capsule/data/' from capsule_aind_ophys_decrosstalk_split_session_json_2_to_capsule_aind_ophys_decrosstalk_roi_images_3_10.flatten()
 	path 'capsule/data/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_decrosstalk_roi_images_3_11.collect()
 
@@ -388,28 +388,28 @@ process capsule_aind_ophys_oasis_event_detection_9 {
 	"""
 }
 
-// capsule - aind-pophys-converter-capsule
-process capsule_aind_pophys_converter_capsule_10 {
-	tag 'capsule-2840051'
-	container "$REGISTRY_HOST/published/d05f6de4-c0fb-46af-8c9f-a4acb4081497:v7"
+// capsule - Copy of aind-pophys-converter-capsule v7
+process capsule_copy_of_aind_pophys_converter_capsule_v_7_10 {
+	tag 'capsule-0757717'
+	container "$REGISTRY_HOST/capsule/635d1f55-3d01-4962-b641-89eb6d0c852d:e77b47a7a4a2a3dbcd0a61384b91c807"
 
 	cpus 16
 	memory '120 GB'
 
 	input:
-	path 'capsule/data' from ophys_mount_to_aind_pophys_converter_capsule_19.collect()
+	path 'capsule/data' from ophys_mount_to_copy_of_aind_pophys_converter_capsule_v7_19.collect()
 
 	output:
-	path 'capsule/results/*_[0-9]' into capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_motion_correction_1_4
-	path 'capsule/results/*/*' into capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_decrosstalk_roi_images_3_9
-	path 'capsule/results/*' into capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_movie_qc_15_41
+	path 'capsule/results/*_[0-9]' into capsule_copy_of_aind_pophys_converter_capsule_v_7_10_to_capsule_aind_ophys_motion_correction_1_4
+	path 'capsule/results/*/*' into capsule_copy_of_aind_pophys_converter_capsule_v_7_10_to_capsule_aind_ophys_decrosstalk_roi_images_3_9
+	path 'capsule/results/*' into capsule_copy_of_aind_pophys_converter_capsule_v_7_10_to_capsule_aind_ophys_movie_qc_15_41
 
 	script:
 	"""
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=d05f6de4-c0fb-46af-8c9f-a4acb4081497
+	export CO_CAPSULE_ID=635d1f55-3d01-4962-b641-89eb6d0c852d
 	export CO_CPUS=16
 	export CO_MEMORY=128849018880
 
@@ -420,17 +420,18 @@ process capsule_aind_pophys_converter_capsule_10 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v7.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2840051.git" capsule-repo
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0757717.git" capsule-repo
 	else
-		git clone --branch v7.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2840051.git" capsule-repo
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0757717.git" capsule-repo
 	fi
+	git -C capsule-repo checkout 0e6c5ff3bd5a90f1fb1a2e3c56bd6dce5a686d78 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run ${params.capsule_aind_pophys_converter_capsule_10_args}
+	./run ${params.capsule_copy_of_aind_pophys_converter_capsule_v_7_10_args}
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -609,7 +610,7 @@ process capsule_aind_ophys_movie_qc_15 {
 
 	input:
 	path 'capsule/data/raw' from ophys_mount_to_aind_ophys_movie_qc_40.collect()
-	path 'capsule/data/zstacks/' from capsule_aind_pophys_converter_capsule_10_to_capsule_aind_ophys_movie_qc_15_41.collect()
+	path 'capsule/data/zstacks/' from capsule_copy_of_aind_pophys_converter_capsule_v_7_10_to_capsule_aind_ophys_movie_qc_15_41.collect()
 	path 'capsule/data/' from capsule_aind_ophys_motion_correction_1_to_capsule_aind_ophys_movie_qc_15_42.flatten()
 
 	output:

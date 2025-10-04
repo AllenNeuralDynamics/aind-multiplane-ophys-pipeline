@@ -41,9 +41,9 @@
 				},
 				{
 					"id": "e3ILeCgPeE-S53SaaV6PR",
-					"source_id": "capsule_aind_pophys_converter_capsule_10",
+					"source_id": "capsule_copy_of_aind_pophys_converter_capsule_v_7_10",
 					"type": "capsule",
-					"name": "aind-pophys-converter-capsule",
+					"name": "Copy of aind-pophys-converter-capsule v7",
 					"source_path": "*_[0-9]",
 					"flatten": true
 				}
@@ -118,9 +118,9 @@
 				},
 				{
 					"id": "kCRtPyFKfilDA6Ts",
-					"source_id": "capsule_aind_pophys_converter_capsule_10",
+					"source_id": "capsule_copy_of_aind_pophys_converter_capsule_v_7_10",
 					"type": "capsule",
-					"name": "aind-pophys-converter-capsule",
+					"name": "Copy of aind-pophys-converter-capsule v7",
 					"source_path": "*/*",
 					"collect": true
 				},
@@ -252,12 +252,13 @@
 			}
 		},
 		{
-			"name": "capsule_aind_pophys_converter_capsule_10",
+			"name": "capsule_copy_of_aind_pophys_converter_capsule_v_7_10",
 			"capsule": {
-				"id": "d05f6de4-c0fb-46af-8c9f-a4acb4081497",
-				"name": "aind-pophys-converter-capsule",
-				"slug": "2840051",
-				"version": 7,
+				"id": "635d1f55-3d01-4962-b641-89eb6d0c852d",
+				"name": "Copy of aind-pophys-converter-capsule v7",
+				"slug": "0757717",
+				"commit": "0e6c5ff3bd5a90f1fb1a2e3c56bd6dce5a686d78",
+				"image_tag": "e77b47a7a4a2a3dbcd0a61384b91c807",
 				"app_panel": true
 			},
 			"resources": {
@@ -533,9 +534,9 @@
 				},
 				{
 					"id": "fasx3fSWdSFPxCaW",
-					"source_id": "capsule_aind_pophys_converter_capsule_10",
+					"source_id": "capsule_copy_of_aind_pophys_converter_capsule_v_7_10",
 					"type": "capsule",
-					"name": "aind-pophys-converter-capsule",
+					"name": "Copy of aind-pophys-converter-capsule v7",
 					"target_path": "zstacks",
 					"collect": true
 				},
