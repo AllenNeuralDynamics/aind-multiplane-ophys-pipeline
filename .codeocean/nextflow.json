@@ -53,16 +53,15 @@
 			}
 		},
 		{
-			"name": "capsule_aind_ophys_decrosstalk_split_session_json_2",
+			"name": "capsule_jinhos_copy_of_aind_ophys_decrosstalk_split_session_json_2",
 			"capsule": {
-				"id": "fc1b1e9a-fb4b-47e8-a223-b06d8eeb1462",
-				"name": "aind-ophys-decrosstalk-split-session-json",
-				"slug": "4425001",
-				"version": 1
+				"id": "f62f74da-6f46-4c62-bae7-77aac2192326",
+				"name": "Jinho's Copy of aind-ophys-decrosstalk-split-session-json",
+				"slug": "9107781"
 			},
 			"resources": {
-				"cpus": 2,
-				"memory": 16
+				"cpus": 1,
+				"memory": 8
 			},
 			"inputs": [
 				{
@@ -83,7 +82,7 @@
 				}
 			],
 			"results": {
-				"id": "76b52bbc-5e23-4e4b-9bc7-f48d24031e09"
+				"id": "f62f74da-6f46-4c62-bae7-77aac2192326"
 			}
 		},
 		{
@@ -126,9 +125,9 @@
 				},
 				{
 					"id": "41DF5BdXDa7xt6iEAutyw",
-					"source_id": "capsule_aind_ophys_decrosstalk_split_session_json_2",
+					"source_id": "capsule_jinhos_copy_of_aind_ophys_decrosstalk_split_session_json_2",
 					"type": "capsule",
-					"name": "aind-ophys-decrosstalk-split-session-json",
+					"name": "Jinho's Copy of aind-ophys-decrosstalk-split-session-json",
 					"flatten": true
 				},
 				{
@@ -352,12 +351,11 @@
 			}
 		},
 		{
-			"name": "capsule_aind_ophys_nwb_12",
+			"name": "capsule_jinhos_copy_of_aind_ophys_nwb_12",
 			"capsule": {
-				"id": "8c436e95-8607-4752-8e9f-2b62024f9326",
-				"name": "aind-ophys-nwb",
-				"slug": "9383700",
-				"version": 14
+				"id": "eca34d68-06e7-4d4b-aca4-2d92fbcad74b",
+				"name": "Jinho's Copy of aind-ophys-nwb",
+				"slug": "9882614"
 			},
 			"resources": {
 				"cpus": 1,
@@ -481,16 +479,16 @@
 				}
 			],
 			"results": {
-				"id": "8c436e95-8607-4752-8e9f-2b62024f9326"
+				"id": "eca34d68-06e7-4d4b-aca4-2d92fbcad74b"
 			}
 		},
 		{
 			"name": "capsule_nwb_packaging_subject_capsule_13",
 			"capsule": {
 				"id": "bdc9f09f-0005-4d09-aaf9-7e82abd93f19",
-				"name": "NWB-Packaging-Subject-Capsule",
+				"name": "NWB Packaging Subject",
 				"slug": "8198603",
-				"version": 2,
+				"version": 3,
 				"app_panel": true
 			},
 			"resources": {
@@ -554,12 +552,11 @@
 			}
 		},
 		{
-			"name": "capsule_aind_ophys_quality_control_aggregator_16",
+			"name": "capsule_jinhos_copy_of_aind_ophys_quality_control_aggregator_16",
 			"capsule": {
-				"id": "4a698b5c-f5f6-4671-8234-dc728d049a68",
-				"name": "aind-ophys-quality-control-aggregator",
-				"slug": "4044810",
-				"version": 4,
+				"id": "a3540977-81bb-4d55-ba2e-798576353f98",
+				"name": "Jinho's Copy of aind-ophys-quality-control-aggregator",
+				"slug": "9974400",
 				"app_panel": true
 			},
 			"resources": {
@@ -649,7 +646,7 @@
 				}
 			],
 			"results": {
-				"id": "4a698b5c-f5f6-4671-8234-dc728d049a68"
+				"id": "a3540977-81bb-4d55-ba2e-798576353f98"
 			}
 		},
 		{
