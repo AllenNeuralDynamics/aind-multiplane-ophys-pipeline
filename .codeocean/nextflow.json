@@ -57,7 +57,9 @@
 			"capsule": {
 				"id": "f62f74da-6f46-4c62-bae7-77aac2192326",
 				"name": "Jinho's Copy of aind-ophys-decrosstalk-split-session-json",
-				"slug": "9107781"
+				"slug": "9107781",
+				"commit": "eddcacddfaa71132eeae36e0caf2d2d8e46cef22",
+				"image_tag": "de893bc98b0d6be44026e2c92fee1f1a"
 			},
 			"resources": {
 				"cpus": 1,
@@ -256,7 +258,7 @@
 				"id": "635d1f55-3d01-4962-b641-89eb6d0c852d",
 				"name": "Copy of aind-pophys-converter-capsule v7",
 				"slug": "0757717",
-				"commit": "0e6c5ff3bd5a90f1fb1a2e3c56bd6dce5a686d78",
+				"commit": "3d8b8fd2c504afce5ae9fa1587868263940edc80",
 				"image_tag": "e77b47a7a4a2a3dbcd0a61384b91c807",
 				"app_panel": true
 			},
@@ -355,7 +357,9 @@
 			"capsule": {
 				"id": "eca34d68-06e7-4d4b-aca4-2d92fbcad74b",
 				"name": "Jinho's Copy of aind-ophys-nwb",
-				"slug": "9882614"
+				"slug": "9882614",
+				"commit": "15862ec565369cf93af2623d18bbff595614e127",
+				"image_tag": "b45bdc4c8bbe3e921199f122fa7cabfa"
 			},
 			"resources": {
 				"cpus": 1,
@@ -557,6 +561,8 @@
 				"id": "a3540977-81bb-4d55-ba2e-798576353f98",
 				"name": "Jinho's Copy of aind-ophys-quality-control-aggregator",
 				"slug": "9974400",
+				"commit": "95833442fea71eccd7769a89fc0baa898ea96020",
+				"image_tag": "0878b3d22a0cae9476546ddf4801069b",
 				"app_panel": true
 			},
 			"resources": {

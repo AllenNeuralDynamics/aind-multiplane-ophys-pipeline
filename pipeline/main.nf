@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:3302dcba464bdc7139feb3fd0888cab9ddd842278d4cdcee91610ed28d598e85
+// hash:sha256:b77979e04aff1dd2c70629bb3b5b533d5c9cb5b885b5ce0993c33ee432e8f773
 
 nextflow.enable.dsl = 1
 
@@ -124,7 +124,7 @@ process capsule_aind_ophys_motion_correction_1 {
 // capsule - Jinho's Copy of aind-ophys-decrosstalk-split-session-json
 process capsule_jinhos_copy_of_aind_ophys_decrosstalk_split_session_json_2 {
 	tag 'capsule-9107781'
-	container "$REGISTRY_HOST/capsule/f62f74da-6f46-4c62-bae7-77aac2192326"
+	container "$REGISTRY_HOST/capsule/f62f74da-6f46-4c62-bae7-77aac2192326:de893bc98b0d6be44026e2c92fee1f1a"
 
 	cpus 1
 	memory '7.5 GB'
@@ -159,6 +159,7 @@ process capsule_jinhos_copy_of_aind_ophys_decrosstalk_split_session_json_2 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9107781.git" capsule-repo
 	fi
+	git -C capsule-repo checkout eddcacddfaa71132eeae36e0caf2d2d8e46cef22 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -424,7 +425,7 @@ process capsule_copy_of_aind_pophys_converter_capsule_v_7_10 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0757717.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 0e6c5ff3bd5a90f1fb1a2e3c56bd6dce5a686d78 --quiet
+	git -C capsule-repo checkout 3d8b8fd2c504afce5ae9fa1587868263940edc80 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -494,7 +495,7 @@ process capsule_aind_pipeline_processing_metadata_aggregator_11 {
 // capsule - Jinho's Copy of aind-ophys-nwb
 process capsule_jinhos_copy_of_aind_ophys_nwb_12 {
 	tag 'capsule-9882614'
-	container "$REGISTRY_HOST/capsule/eca34d68-06e7-4d4b-aca4-2d92fbcad74b"
+	container "$REGISTRY_HOST/capsule/eca34d68-06e7-4d4b-aca4-2d92fbcad74b:b45bdc4c8bbe3e921199f122fa7cabfa"
 
 	cpus 1
 	memory '7.5 GB'
@@ -540,6 +541,7 @@ process capsule_jinhos_copy_of_aind_ophys_nwb_12 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9882614.git" capsule-repo
 	fi
+	git -C capsule-repo checkout 15862ec565369cf93af2623d18bbff595614e127 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -654,7 +656,7 @@ process capsule_aind_ophys_movie_qc_15 {
 // capsule - Jinho's Copy of aind-ophys-quality-control-aggregator
 process capsule_jinhos_copy_of_aind_ophys_quality_control_aggregator_16 {
 	tag 'capsule-9974400'
-	container "$REGISTRY_HOST/capsule/a3540977-81bb-4d55-ba2e-798576353f98"
+	container "$REGISTRY_HOST/capsule/a3540977-81bb-4d55-ba2e-798576353f98:0878b3d22a0cae9476546ddf4801069b"
 
 	cpus 1
 	memory '7.5 GB'
@@ -696,6 +698,7 @@ process capsule_jinhos_copy_of_aind_ophys_quality_control_aggregator_16 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9974400.git" capsule-repo
 	fi
+	git -C capsule-repo checkout 95833442fea71eccd7769a89fc0baa898ea96020 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
